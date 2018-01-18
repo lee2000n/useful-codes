@@ -1,0 +1,62 @@
+<p style="text-align: justify;"><span style="color: #f79646; font-size: 13px;"><strong><span style="color: #000000; font-size: 14px;">Personal Health Risk Assessment(PHRA)</span></strong><span style="color: #000000;"><br />
+<br />
+The Personal Health Risk Assessment can be used to create a health profile, build an action plan to support your health and wellness needs and track progress.</span><br />
+<br />
+</span>
+<br />
+<input class="button" id="BTN" type="button" value="Click to watch" /> <span style="color: #000000;">a short video about Personal Health Risk Assessment(PHRA).</span><br />
+<br />
+</p>
+<iframe id="PHRA" src="https://www.youtube.com/embed/VLiK3HeTRE4" frameborder="0" allowfullscreen="allowfullscreen" style="border: 110px currentColor; border-image: none; display: none;">
+</iframe>
+<script type="text/javascript"> 
+$(function () { 
+$("#BTN").click(function () { 
+ var div = $('#PHRA');
+ var elem = document.getElementById("BTN");
+    if (elem.value=="Click to watch") 
+{elem.value = "Click to stop watching";}
+    else if(elem.value=="Click to stop watching") 
+{
+ elem.value = "Click to watch";}
+    if (div.is(':hidden')) {
+      div.show(500);
+    }
+    else {$('#PHRA').attr('src', $('#PHRA').attr('src'));//stop playing
+      div.hide(500);
+    }
+}); 
+}); 
+</script>
+<span style="color: #4f81bd; font-size: 13px;"><span style="color: #4f81bd; font-size: 14px;"><strong><span style="font-family: Verdana;">
+<span class="line"></span>
+<span style="color: #000000;"><br />
+Review Benefits and Claim History</span></span></strong></span><br />
+<br />
+<br />
+<input class="button" id="btn4" type="button" value="Click to watch" /> <span style="color: #000000;">a short video about how to review your
+benefits and claims history.</span><br />
+<br />
+<iframe id="hi4" src="https://www.youtube.com/embed/gsONjHMjYbY?rel=0&amp;modestbranding=1&amp;controls=2&amp;cc_load_policy=1'" frameborder="0" allowfullscreen="allowfullscreen" style="display: none;">
+</iframe>
+<script type="text/javascript"> 
+$(function () { 
+$("#btn4").click(function () { 
+ var div = $('#hi4');
+ var elem = document.getElementById("btn4");
+    if (elem.value=="Click to watch") 
+{elem.value = "Click to stop watching";}
+    else if(elem.value=="Click to stop watching") 
+{
+ elem.value = "Click to watch";}
+    if (div.is(':hidden')) {
+      div.show(500);
+    }
+    else {$('#hi4').attr('src', $('#hi4').attr('src'));//stop playing
+      div.hide(500);
+    }
+
+}); 
+}); 
+</script>
+</span>
