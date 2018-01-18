@@ -1,0 +1,20 @@
+<script>
+
+  if(localStorage.getItem('popState') != 'shown'){  //detect if it poped up before
+    $('#modal').show();
+ $('#buttons1').click(function(){ //call radio function             
+ localStorage.setItem('popState','shown');       //set cookie  
+$('#modal').hide();
+   alert("Thank you for the rating.")      
+});      
+   } 
+else
+{ 
+$('#modal').hide();
+
+
+
+}
+
+
+</script>
