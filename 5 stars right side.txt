@@ -1,0 +1,203 @@
+<link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" />
+<style>
+    @media (max-width: 3767px) and (min-width: 768px)
+    {   #text {  visibility: hidden;
+    }
+    #ratingsForm:hover #text {
+    visibility: visible;
+    }
+    }
+    @media (max-width: 767px) and (min-width: 546px)
+    {
+    #word
+    {display:none;
+    }
+    #text
+    {width:94%;
+    padding-top: 0px;
+    padding-right: 0px;
+    padding-bottom: 0px;
+    padding-left: 36%;
+    visibility: visible;
+    }
+    }
+    @media (max-width: 545px) and (min-width: 450px)
+    { #word
+    {display:none;
+    }
+    #text
+    {width:94%;
+    padding-top: 0px;
+    padding-right: 0px;
+    padding-bottom: 0px;
+    padding-left: 33%;  visibility: visible;
+    }
+    }
+    @media (max-width: 449px) and (min-width: 391px)
+    { #word
+    {display:none;
+    }
+    #text
+    {width:94%;
+    padding-top: 0px;
+    padding-right: 0px;
+    padding-bottom: 0px;
+    padding-left: 29%; visibility: visible;
+    }
+    }
+    @media (max-width: 390px) and (min-width: 140px)
+    { #word
+    {display:none;
+    }
+    #text
+    {width:94%;
+    padding-top: 0px;
+    padding-right: 0px;
+    padding-bottom: 0px;
+    padding-left: 25%;  visibility: visible;
+    }
+    }
+</style>
+<style>
+    div.side-col.SiteContent--RightCol
+    {margin: 0 auto;
+    height:320px;
+    }
+    #text {
+    position:relative;
+    bottom:1px;
+    left:1px;
+    width: 200px;
+    font-size: 10px;
+    display:inline-block;
+    }
+</style>
+<style>
+    form .starss {
+    background: url("https://www.cssscript.com/demo/pure-css-star-rating-system/stars.png") repeat-x 0 0;
+    width: 150px;
+    margin: 0 auto;
+    background-color: #e3e3e3;
+    }
+    form .starss input[type="radio"] {
+    position: absolute;
+    opacity: 0;
+    filter: alpha(opacity=0);
+    }
+    form .starss input[type="radio"].star-5:checked ~ span { width: 100%; }
+    form .starss input[type="radio"].star-4:checked ~ span { width: 80%; }
+    form .starss input[type="radio"].star-3:checked ~ span { width: 60%; }
+    form .starss input[type="radio"].star-2:checked ~ span { width: 40%; }
+    form .starss input[type="radio"].star-1:checked ~ span { width: 20%; }
+    form .starss label {
+    display: block;
+    width: 30px;
+    height: 30px;
+    margin: 0!important;
+    padding: 0!important;
+    text-indent: -999em;
+    float: left;
+    position: relative;
+    z-index: 10;
+    background: transparent!important;
+    cursor: pointer;
+    }
+    form .starss label:hover ~ span { background-position: 0 -30px; }
+    form .starss label.star-5:hover ~ span { width: 100% !important; }
+    form .starss label.star-4:hover ~ span { width: 80% !important; }
+    form .starss label.star-3:hover ~ span { width: 60% !important; }
+    form .starss label.star-2:hover ~ span { width: 40% !important; }
+    form .starss label.star-1:hover ~ span { width: 20% !important; }
+    form .starss span {
+    display: block;
+    width: 0;
+    position: relative;
+    top: 0;
+    left: 0;
+    height: 30px;
+    background: url("https://www.cssscript.com/demo/pure-css-star-rating-system/stars.png") repeat-x 0 -60px;
+    -webkit-transition: -webkit-width 0.2s;
+    -moz-transition: -moz-width 0.2s;
+    -ms-transition: -ms-width 0.2s;
+    -o-transition: -o-width 0.2s;
+    transition: width 0.2s;
+    }
+</style>
+<div id="ratingsForm">
+<div id="text" style="color: black;">Please click star to rate on next page</div>
+<form>
+    <div class="starss">
+    <input type="radio" name="star" class="star-1" id="star-1" />
+    <label class="star-1" for="star-1">1</label>
+    <input type="radio" name="star" class="star-2" id="star-2" />
+    <label class="star-2" for="star-2">2</label>
+    <input type="radio" name="star" class="star-3" id="star-3" />
+    <label class="star-3" for="star-3">3</label>
+    <input type="radio" name="star" class="star-4" id="star-4" />
+    <label class="star-4" for="star-4">4</label>
+    <input type="radio" name="star" class="star-5" id="star-5" />
+    <label class="star-5" for="star-5">5</label>
+    <span></span></div>
+</form>
+</div>
+<style>
+    @import url('https://fonts.googleapis.com/css?family=Poppins'); body { font-family: 'Poppins', sans-serif; }
+</style>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-43999128-2', 'mystudentplan.ca');
+  ga('send', 'pageview');
+
+</script>
+<script>
+ document.getElementsByClassName('side-col SiteContent--RightCol')[0].appendChild(
+    document.getElementById('ratingsForm')
+  );
+</script>
+<script>
+
+var xx=document.querySelectorAll("section.footer-col.col2")[0];
+
+var x = document.querySelectorAll('section.footer-col.col1')[0];
+xx.style.display="block";
+x.getElementsByTagName("p")[0].innerHTML="Gallivan: Student Health and Wellness <br/>  a People Corporation company";
+if (/home/.test(window.location.href)){
+$('#ratingsForm').hide();
+} 
+else
+{
+  if(localStorage.getItem('popState') != 'shown'){  //detect if it poped up before
+
+ $('[id^=star-]').click(function(){ //call radio function             
+   openpopup();//if no get window poped up
+ localStorage.setItem('popState','shown');       //set cookie  
+$('#ratingsForm').hide();
+         
+});      
+   } 
+else
+{ 
+$('#ratingsForm').hide();
+
+}
+}
+
+</script>
+<script>
+function openpopup(){ 
+
+window.open("/ambrose/en/rate-experience","","width=600,height=500,resizable=no"); //set window size
+} 
+
+
+</script>
+<style>
+    @import url('https://fonts.googleapis.com/css?family=Poppins');
+    body {
+    font-family: 'Poppins', sans-serif;
+    }
+</style>
