@@ -1,2 +1,65 @@
-"# work-and-study" 
-"# work-and-study" 
+<style>
+    form .starss {
+    background: url("https://www.cssscript.com/demo/pure-css-star-rating-system/stars.png") repeat-x 0 0;
+    width: 150px;
+    margin: 0 auto;
+    }
+    form .starss input[type="radio"] {
+    position: absolute;
+    opacity: 0;
+    filter: alpha(opacity=0);
+    }
+    form .starss input[type="radio"].star-5:checked ~ span { width: 100%; }
+    form .starss input[type="radio"].star-4:checked ~ span { width: 80%; }
+    form .starss input[type="radio"].star-3:checked ~ span { width: 60%; }
+    form .starss input[type="radio"].star-2:checked ~ span { width: 40%; }
+    form .starss input[type="radio"].star-1:checked ~ span { width: 20%; }
+    form .starss label {
+    display: block;
+    width: 30px;
+    height: 30px;
+    margin: 0!important;
+    padding: 0!important;
+    text-indent: -999em;
+    float: left;
+    position: relative;
+    z-index: 10;
+    background: transparent!important;
+    cursor: pointer;
+    }
+    form .starss label:hover ~ span { background-position: 0 -30px; }
+    form .starss label.star-5:hover ~ span { width: 100% !important; }
+    form .starss label.star-4:hover ~ span { width: 80% !important; }
+    form .starss label.star-3:hover ~ span { width: 60% !important; }
+    form .starss label.star-2:hover ~ span { width: 40% !important; }
+    form .starss label.star-1:hover ~ span { width: 20% !important; }
+    form .starss span {
+    display: block;
+    width: 0;
+    position: relative;
+    top: 0;
+    left: 0;
+    height: 30px;
+    background: url("https://www.cssscript.com/demo/pure-css-star-rating-system/stars.png") repeat-x 0 -60px;
+    -webkit-transition: -webkit-width 0.2s;
+    -moz-transition: -moz-width 0.2s;
+    -ms-transition: -ms-width 0.2s;
+    -o-transition: -o-width 0.2s;
+    transition: width 0.2s;
+    }
+</style>
+<form id="ratingsForm">
+    <div class="starss">
+    <input type="radio" name="star" class="star-1" id="star-1" />
+    <label class="star-1" for="star-1">1</label>
+    <input type="radio" name="star" class="star-2" id="star-2" />
+    <label class="star-2" for="star-2">2</label>
+    <input type="radio" name="star" class="star-3" id="star-3" />
+    <label class="star-3" for="star-3">3</label>
+    <input type="radio" name="star" class="star-4" id="star-4" />
+    <label class="star-4" for="star-4">4</label>
+    <input type="radio" name="star" class="star-5" id="star-5" />
+    <label class="star-5" for="star-5">5</label>
+    <span></span>
+    </div>
+</form>
