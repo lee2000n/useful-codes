@@ -1,0 +1,477 @@
+<style>
+    div.card { display: inline-block;
+    margin: 48px;
+    max-width: 190px;
+    background:white;
+    perspective: 1000;
+    position: relative;
+    transition: all 0.3s 0s ease-in;
+    z-index: 1;
+    img {
+    margin-left: -20px;
+    max-width: 100px;
+    }
+    }
+    #whole
+    {margin: 40px auto;
+    max-width: 960px;
+    }
+    #click1
+    { margin-top:-25px;
+    margin-left: 160px;
+    height: 25px;
+    width: 25px;
+    border-radius: 50%;
+    border:1px solid white;
+    }
+    #click1:hover
+    { transform: translateY(-5px);
+    -webkit-transform: translateY(-5px);
+    box-shadow: 0 3px 0px 0 rgba(0, 0, 0, 0.26);
+    transition: all 0.2s 0s ease-out;
+    border: none;
+    }
+    #click2
+    { margin-top:-25px;
+    margin-left: 160px;
+    height: 25px;
+    width: 25px;
+    border-radius: 50%;
+    border:1px solid white;
+    }
+    #click2:hover
+    { transform: translateY(-5px);
+    -webkit-transform: translateY(-5px);
+    box-shadow: 0 3px 0px 0 rgba(0, 0, 0, 0.26);
+    transition: all 0.2s 0s ease-out;
+    border: none;
+    }
+    #click4
+    { margin-top:-47px;
+    margin-left: 160px;
+    height: 25px;
+    width: 25px;
+    border-radius: 50%;
+    border:1px solid white;
+    }
+    #click4:hover
+    { transform: translateY(-5px);
+    -webkit-transform: translateY(-5px);
+    box-shadow: 0 3px 0px 0 rgba(0, 0, 0, 0.26);
+    transition: all 0.2s 0s ease-out;
+    border: none;
+    }
+    #sp1,#sp2,#sp4
+    { position:center;    margin-top: 15px;}
+    #redx:hover
+    { transform: translateY(-5px);
+    -webkit-transform: translateY(-5px);
+    box-shadow: 0 3px 0px 0 rgba(0, 0, 0, 0.26);
+    transition: all 0.2s 0s ease-out;
+    border: none;
+    }
+    #c1
+    {height: 190px;
+    width: 190px;
+    text-align:center;
+    }
+    #c1:hover
+    {
+    -webkit-transform: scale(1.15) rotate(0.01deg);
+    transform: scale(1.15) rotate(0.01deg);
+    -webkit-transition: all 0.4s;
+    transition: all 0.4s;
+    background-color:#809cbf;
+    }
+    #redx {
+    border:1px solid white;
+    display:block;
+    height: 25px;
+    width: 25px;
+    border-radius: 50%;
+    background-color: #ff6666;
+    color: white;
+    text-align: top;
+    text-align: center;
+    font-size: 16px;
+    margin-top:-25px;
+    margin-left: 160px;
+    cursor:default;
+    }
+    #redx1 {
+    border:1px solid white;
+    display:block;
+    height: 25px;
+    width: 25px;
+    border-radius: 50%;
+    background-color: #ff6666;
+    color: white;
+    text-align: top;
+    text-align: center;
+    font-size: 16px;
+    margin-top:-25px;
+    margin-left: 160px;
+    cursor:default;
+    }
+    #redx4 {
+    border:1px solid white;
+    display:block;
+    height: 25px;
+    width: 25px;
+    border-radius: 50%;
+    background-color: #ff6666;
+    color: white;
+    text-align: top;
+    text-align: center;
+    font-size: 16px;
+    margin-top:-50px;
+    margin-left: 160px;
+    cursor:default;
+    }
+    a.btn
+    {
+    background: #0096a0;
+    border-radius: 4px;
+    box-shadow: 0 2px 0px 0 rgba(0,0,0,0.25);
+    color: white;
+    display: inline-block;
+    padding: 6px 30px 8px;
+    position: relative;
+    text-decoration: none;
+    transition: all 0.1s 0s ease-out;
+    }
+    a.btn:hover {
+    background: lighten(#0096a0);
+    box-shadow: 0px 8px 2px 0 rgba(0, 0, 0, 0.075);
+    transform: translateY(-2px);
+    transition: all 0.25s 0s ease-out;
+    }
+    a.btn:active {
+    background: darken(@teal,2.5);
+    box-shadow: 0 1px 0px 0 rgba(255,255,255,0.25);
+    transform: translate3d(0,1px,0);
+    transition: all 0.025s 0s ease-out;
+    }
+    #ww1
+    { background-color: #ffffff;
+    display:none;
+    @keyframe out {
+    from: display: block;
+    to: display:none;}
+    }
+    #ww2
+    { background-color: #ffffff;
+    display:none;
+    }
+    #ww4
+    { background-color: #ffffff;
+    display:none;
+    }
+    #testblur1:hover
+    {
+    -webkit-transform: scale(1.15) rotate(0.01deg);
+    transform: scale(1.15) rotate(0.01deg);
+    -webkit-transition: all 0.4s;
+    transition: all 0.4s;
+    background-color:#809cbf;
+    }
+    #testblur1{
+    height: 190px;
+    max-width: 190px;
+    text-align:center;
+    }
+    #c4{
+    height: 190px;
+    width: 190px;
+    text-align:center;
+    }
+    #c4:hover
+    {
+    -webkit-transform: scale(1.15) rotate(0.01deg);
+    transform: scale(1.15) rotate(0.01deg);
+    -webkit-transition: all 0.4s;
+    transition: all 0.4s;
+    background-color:#809cbf;
+    }
+    #toolboxtitle
+    { margin-left: 50px;
+    margin-top: -30px;
+    font-size:20px;
+    }
+    #toolboxtitle1
+    { margin-left: 50px;
+    font-size:15px;
+    }
+    .blureff
+    { -webkit-transform:scale(0.85); /* Safari and Chrome */
+    -moz-transform:scale(0.85); /* Firefox */
+    -ms-transform:scale(0.85); /* IE 9 */
+    -o-transform:scale(0.85); /* Opera */
+    transform:scale(0.85);
+    filter: blur(2px);
+    -webkit-filter:blur(2px);
+    -moz-filter:blur(2px);
+    -o-filter:blur(2px);
+    -ms-filter:blur(2px);
+    }
+    .blureff1
+    { -webkit-transform:scale(0.85); /* Safari and Chrome */
+    -moz-transform:scale(0.85); /* Firefox */
+    -ms-transform:scale(0.85); /* IE 9 */
+    -o-transform:scale(0.85); /* Opera */
+    transform:scale(0.85);
+    filter: blur(3px);
+    -webkit-filter:blur(2.5px);
+    -moz-filter:blur(2.5px);
+    -o-filter:blur(2.5px);
+    -ms-filter:blur(2.5px);
+    }
+    .blureff2
+    { -webkit-transform:scale(0.85); /* Safari and Chrome */
+    -moz-transform:scale(0.85); /* Firefox */
+    -ms-transform:scale(0.85); /* IE 9 */
+    -o-transform:scale(0.85); /* Opera */
+    transform:scale(0.85);
+    filter: blur(3px);
+    -webkit-filter:blur(2.2px);
+    -moz-filter:blur(2.2px);
+    -o-filter:blur(2.2px);
+    -ms-filter:blur(2.2px);
+    }
+</style>
+<div id="whole">
+<p id="toolboxtitle">Your Toolbox</p>
+<p id="toolboxtitle1">
+Your toolbox contains a wide variety of helpful solutions and important information.</p>
+<div id="c1" class="card">
+<table>
+    <tbody>
+        <tr>
+            <td><img id="sp1" src="/_uploads/images/NAITSA/helping-others-grey.png" alt="sa1" style="width: 100px;" />
+            <br />
+            <div id="w1">
+            <span style="font-size: 15px; text-align: center; color: #7f8287;"><strong>Stress Reduction
+            </strong></span></div>
+            <div id="click1">
+            <img alt="sa21" src="http://www.clker.com/cliparts/y/m/X/o/s/R/down-arrow-circle-hi.png" /></div>
+            <span id="redx"> &times; </span><br />
+            <div id="ww1">
+            <p style="text-align: left;">View the causes of stress and learn skills to cope and manage stress.</p>
+            <a id="outs" href="#" class="btn">Read more</a>
+            </div>
+            </td>
+        </tr>
+    </tbody>
+</table>
+</div>
+<div id="testblur1" class="card">
+<table>
+    <tbody>
+        <tr>
+            <td>
+            <img id="sp2" src="/_uploads/images/NAITSA/helping-others-grey.png" alt="333" style="border: none; width: 100px;" />
+            <br />
+            <div id="w2">
+            <span style="font-size: 15px; color: #7f8287;"><strong>Helping Yourself
+            </strong></span></div>
+            <div id="click2">
+            <img alt="sa21" src="http://www.clker.com/cliparts/y/m/X/o/s/R/down-arrow-circle-hi.png" /></div>
+            <span id="redx1"> &times; </span>
+            <br />
+            <div id="ww2">
+            <p style="text-align: left;">View the causes of stress and learn skills to cope and manage stress.</p>
+            <a href="#" class="btn">Read more</a>
+            </div>
+            </td>
+        </tr>
+    </tbody>
+</table>
+</div>
+<div id="c4" class="card">
+<table>
+    <tbody>
+        <tr>
+            <td>
+            <img id="sp4" src="/_uploads/images/NAITSA/helping-others-grey.png" alt="ere" style="border: none; width: 100px;" />
+            <div id="w4">
+            <span style="font-size: 15px; color: #7f8287;"><strong>Mental Health<br />
+            Essentials</strong>
+            </span></div>
+            <div id="click4">
+            <img alt="sa21" src="http://www.clker.com/cliparts/y/m/X/o/s/R/down-arrow-circle-hi.png" /></div>
+            <span id="redx4"> &times;</span><br />
+            <div id="ww4">
+            <p style="text-align: left;">View the causes of stress and learn skills to cope and manage stress.</p>
+            <a href="#" class="btn">Read more</a>
+            </div>
+            </td>
+        </tr>
+    </tbody>
+</table>
+</div>
+</div>
+<script>
+
+
+
+$("#redx").hide();$("#redx1").hide();$("#redx4").hide();
+
+$(document).ready(function () {
+    $("#redx").click(function () {
+ $("#redx").hide();
+$("#click1").show();
+$("#ww1").fadeOut();
+$('#c4').removeClass("blureff");
+$('#testblur1').removeClass("blureff");
+$('#c4').removeClass("blureff1");
+$('#testblur1').removeClass("blureff1");
+$('#c4').removeClass("blureff2");
+$('#testblur1').removeClass("blureff2");
+
+    });
+})
+$(document).ready(function () {
+    $("#redx1").click(function () {
+ $("#redx1").hide();
+$("#click2").show();
+$("#ww2").fadeOut();
+$('#c1').removeClass("blureff1");
+$('#c4').removeClass("blureff1");
+$('#c1').removeClass("blureff");
+$('#c4').removeClass("blureff");
+$('#c1').removeClass("blureff2");
+$('#c4').removeClass("blureff2");
+    });
+})
+$(document).ready(function () {
+    $("#redx4").click(function () {
+ $("#redx4").hide();
+
+$("#click4").show();
+$("#ww4").fadeOut();
+$('#testblur1').removeClass("blureff1");
+$('#c1').removeClass("blureff1");
+$('#testblur1').removeClass("blureff");
+$('#c1').removeClass("blureff");
+$('#testblur1').removeClass("blureff2");
+$('#c1').removeClass("blureff2");
+    });
+})
+$(document).ready(function () {
+    $("#click1").click(function () {
+ $("#click1").fadeOut();
+$("#redx").fadeIn();
+$("#ww1").show(500);
+$('#c4').addClass("blureff2");
+$('#testblur1').addClass("blureff");
+    });
+
+})
+
+$(document).ready(function () {
+    $("#click2").click(function () {
+ $("#click2").fadeOut();
+$("#redx1").fadeIn();
+$("#ww2").show(500);
+$('#c1').addClass("blureff1");
+$('#c4').addClass("blureff1");
+    });
+})
+
+$(document).ready(function () {
+    $("#click4").click(function () {
+ $("#click4").fadeOut();
+$("#redx4").fadeIn();
+$("#ww4").show(500);
+
+$('#testblur1').addClass("blureff2");
+$('#c1').addClass("blureff");
+
+ });
+})
+setInterval(function(){
+
+    if($('#c1').is(":hover")) {
+       $('#c1').removeClass("blureff2");
+       $('#c1').removeClass("blureff1");
+       $('#c1').removeClass("blureff");
+    }
+      if($('#c4').is(":hover")) {
+       $('#c4').removeClass("blureff2");
+       $('#c4').removeClass("blureff1");
+       $('#c4').removeClass("blureff");
+    }
+  if($('#testblur1').is(":hover")) {
+       $('#testblur1').removeClass("blureff2");
+       $('#testblur1').removeClass("blureff1");
+       $('#testblur1').removeClass("blureff");
+    }
+});
+
+setInterval(function(){
+var $sample = $("#c1");
+if($sample.is(":hover")) {
+$('#click2').show();
+$('#click4').show();
+$('#redx1').hide();
+$('#redx4').hide();
+$('#ww2').hide();
+$('#ww4').hide();
+$('#c4').addClass("blureff");
+$('#testblur1').addClass("blureff");
+$('#c42').css('position','absolute');
+$("#c42").css( 'top', '65.9%' );    
+//$('#whole').css('height','550px');
+}
+else
+{$('#c4').removeClass("blureff");
+$('#testblur1').removeClass("blureff");
+$('#c42').css('position','static');
+$('#whole').css('height','auto');
+$('#c42').css('top','0');
+}
+});
+setInterval(function(){
+var $sample1 = $("#click1");
+if($("#click1").data('clicked')) {
+$('#click1').show();
+$('#click4').show();
+$('#redx').hide();
+$('#redx4').hide();
+$('#ww1').hide();
+$('#ww4').hide();
+$('#c4').removeClass("blureff");
+$('#c4').addClass("blureff1");
+$('#c1').addClass("blureff");
+
+}
+else
+{$('#c4').removeClass("blureff1");
+$('#c1').removeClass("blureff");
+}
+});
+
+setInterval(function(){
+var $sample1 = $("#c4");
+if($sample1.is(":hover")) {
+$('#click1').show();
+$('#click2').show();
+$('#redx').hide();
+$('#redx2').hide();
+$('#ww1').hide();
+$('#ww2').hide();
+ $("#redx1").hide();
+$('#c1').addClass("blureff1");
+$('#testblur1').addClass("blureff1");
+
+}
+else
+{$('#c1').removeClass("blureff1");
+$('#testblur1').removeClass("blureff1");
+
+}
+});
+
+
+
+</script>
