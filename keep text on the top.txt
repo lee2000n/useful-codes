@@ -1,0 +1,25 @@
+$(document).scroll(function () {
+    var y = $(this).scrollTop();
+    if (y>150 && y<800) {
+        $('.bottomMenu').fadeIn();
+    } else {
+        $('.bottomMenu').fadeOut();
+    }
+
+});
+<style>
+ .bottomMenu {
+    display: none;
+    position:fixed;
+    left:20px;
+    top: 50%;
+    height: 3%;
+    width:92%;
+    background: grey;
+    z-index: 99;
+    }
+</style>
+
+<div class="bottomMenu">
+Please scroll horizontally if the content can not be seen
+</div>
