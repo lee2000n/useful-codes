@@ -1,0 +1,49 @@
+<script type = "text/javascript">
+
+var visits = getCookie("visitscounter");
+if (!visits) {visits = 0}
+visits = parseInt(visits) + 1;
+document.getElementById('visit').innerHTML= "Thank you for your  "+visits+" times visit ^_^";   // for testing
+var expdate = new Date (); 
+expdate.setTime(expdate.getTime() + (24 * 60 * 60 * 1000 * 365));  // cookie expires 365 days ahead
+setCookie("visitscounter", visits, expdate);
+
+function setCookie(isName,isValue,dExpires) {
+document.cookie = isName + "=" + isValue + ";expires=" + dExpires.toGMTString() ;   // path not specified so cookie only active for this page
+}
+
+function getCookie(isName){
+cookieStr = document.cookie;
+startSlice = cookieStr.indexOf(isName+"=");
+if (startSlice == -1) {return false}
+endSlice = cookieStr.indexOf(";",startSlice+1)
+if (endSlice == -1){endSlice = cookieStr.length}
+isData = cookieStr.substring(startSlice,endSlice)
+isValue = isData.substring(isData.indexOf("=")+1,isData.length);
+return isValue;
+}
+
+
+var message =  document.getElementById("visit").innerHTML;
+var msgCount = 0;
+var blinkCount = 0;
+var blinkFlg = 0;
+var timer1, timer2;
+var messageLabel = document.getElementById("visit");
+function textFunc() {
+messageLabel.innerHTML = message.substring(0, msgCount);
+if (msgCount == message.length) {
+// Stop Timer
+clearInterval(timer1);
+// Start blinking animation!
+} else {
+msgCount++;
+}
+
+
+}
+timer1 = setInterval("textFunc()", 150); // Every 150 milliseconds
+
+
+
+</script>
