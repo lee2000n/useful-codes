@@ -1,0 +1,88 @@
+<style>
+    div.BusyText{
+    width: 194%;
+    font-size: 22px;
+    padding-top: 5%;
+    color: #383739;
+    margin-left:-25px;
+    font-family: 'Poppins', sans-serif;
+    line-height:25px;
+    }
+    div.ScienceProves{
+    width: 194%;
+    font-size: 14px;;
+    margin-left: -25px;
+    font-family: 'Poppins', sans-serif;
+    color: #383739;
+    }
+</style>
+<style>
+    @media screen and (max-width: 701px) {
+    div.BusyText{
+    width: 275%;
+    padding-top: 15%;
+    font-size: 17px;
+    }
+    div.ScienceProves{
+    width: 220%;
+    }
+    }
+    @media screen and (max-width: 651px) {
+    div.BusyText{
+    width: 300%;
+    font-size: 17px;
+    }
+    }
+    @media screen and (max-width: 601px) {
+    div.BusyText {
+    width: 111%;
+    margin-top: -60px;
+    font-size: 17px;
+    }
+    div.ScienceProves{
+    width: 70%;
+    margin-bottom: -150px;
+    font-size: 12px;
+    }
+    }
+    @media screen and (max-width: 481px) {
+    div.ScienceProves{
+    margin-bottom: -60px;
+    font-size: 12px;
+    }
+    }
+    @media screen and (max-width: 421px){
+    div.BusyText{
+    width: 117%;
+    font-size: 17px;
+    }
+    div.ScienceProves{
+    width: 118%;
+    font-size: 12px;
+    }
+    }
+    @media screen and (max-width: 321px) {
+    div.ScienceProves{
+    width: 118%;
+    font-size: 12px;
+    }
+    div.BusyText {
+    font-size: 17px;
+    }
+    }
+</style>
+<div class="BusyText"><strong>No matter how busy you may be,<br />
+your mental health needs to be a priority.<!-- strong--></strong></div>
+<br />
+<div class="ScienceProves">
+Mental health affects your performance, your relationships, every aspect of your life. Science proves if you ignore your mental health, even your brain anatomy can change. With FeelingBetterNow<sup>&reg;</sup>, you can assess your mental health in 5-10 minutes and immediately access tools for stress reduction and for managing your symptoms.</div>
+<script>
+ var boom=  $(window).scroll(function(){
+if($("body").height()-$("body,html").scrollTop()&lt;=document.documentElement.clientHeight){
+$('html, body').animate({scrollTop: '500px'}, 10);
+}
+
+});
+
+setTimeout(boom,10);
+     </script>
