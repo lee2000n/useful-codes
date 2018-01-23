@@ -1,0 +1,230 @@
+<div id="modal">
+<div class="modalconent">
+<div id="result1">
+<p style="font-size: 16px;">You have rated us as 1 star. <br />
+Please tell us what to improve </p>
+<input type="text" name="result11" />
+</div>
+<div id="result2">
+<p style="font-size: 16px;">you have rated us as 2 stars. <br />
+Please tell us what to improve </p>
+<input type="text" name="result22" />
+</div>
+<div id="result3">
+<p style="font-size: 16px;">You have rated us as 3 stars. <br />
+Please tell us what to improve </p>
+<input type="text" name="result33" />
+</div>
+<div id="result4">
+<p style="font-size: 16px;">You have rated us as 4 stars. <br />
+Thank you for your high rating. </p>
+</div>
+<div id="result5">
+<p style="font-size: 16px;">You have rated us as 5 stars. <br />
+Thank you for your highest rating. </p>
+</div>
+<br />
+<button id="buttons1">Submit</button>
+</div>
+</div>
+<style>
+    #modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.8);
+    z-index: 99999;
+    height: 100%;
+    width: 100%;
+    display:none;
+    }
+</style>
+<style>
+    form .starss {
+    background: url("https://www.cssscript.com/demo/pure-css-star-rating-system/stars.png") repeat-x 0 0;
+    width: 150px;
+    background-color: #e3e3e3;
+    position: center;
+    }
+    form .starss input[type="radio"] {
+    position: absolute;
+    opacity: 0;
+    filter: alpha(opacity=0);
+    }
+    form .starss input[type="radio"].star-5:checked ~ span { width: 100%; }
+    form .starss input[type="radio"].star-4:checked ~ span { width: 80%; }
+    form .starss input[type="radio"].star-3:checked ~ span { width: 60%; }
+    form .starss input[type="radio"].star-2:checked ~ span { width: 40%; }
+    form .starss input[type="radio"].star-1:checked ~ span { width: 20%; }
+    form .starss label {
+    display: block;
+    width: 30px;
+    height: 30px;
+    margin: 0!important;
+    padding: 0!important;
+    text-indent: -999em;
+    float: left;
+    position: relative;
+    z-index: 10;
+    background: transparent!important;
+    cursor: pointer;
+    }
+    form .starss label:hover ~ span { background-position: 0 -30px; }
+    form .starss label.star-5:hover ~ span { width: 100% !important; }
+    form .starss label.star-4:hover ~ span { width: 80% !important; }
+    form .starss label.star-3:hover ~ span { width: 60% !important; }
+    form .starss label.star-2:hover ~ span { width: 40% !important; }
+    form .starss label.star-1:hover ~ span { width: 20% !important; }
+    form .starss span {
+    display: block;
+    width: 0;
+    position: relative;
+    top: 0;
+    left: 0;
+    height: 30px;
+    background: url("https://www.cssscript.com/demo/pure-css-star-rating-system/stars.png") repeat-x 0 -60px;
+    -webkit-transition: -webkit-width 0.2s;
+    -moz-transition: -moz-width 0.2s;
+    -ms-transition: -ms-width 0.2s;
+    -o-transition: -o-width 0.2s;
+    transition: width 0.2s;
+    }
+</style>
+<style>
+    #snackbar {
+    visibility: hidden;
+    min-width:150px;
+    margin-left: -125px;
+    background-color: #7f8287;
+    color: #fff;
+    border-radius: 2px;
+    padding: 15px;
+    position: fixed;
+    z-index: 1;
+    left: 50%;
+    bottom: 30px;
+    font-size: 11px;
+    }
+    #snackbar.show {
+    visibility: visible;
+    -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+    animation: fadein 0.5s, fadeout 0.5s 2.5s;
+    }
+    @-webkit-keyframes fadein {
+    from {bottom: 0; opacity: 0;}
+    to {bottom: 30px; opacity: 1;}
+    }
+    @keyframes fadein {
+    from {bottom: 0; opacity: 0;}
+    to {bottom: 30px; opacity: 1;}
+    }
+    @-webkit-keyframes fadeout {
+    from {bottom: 30px; opacity: 1;}
+    to {bottom: 0; opacity: 0;}
+    }
+    @keyframes fadeout {
+    from {bottom: 30px; opacity: 1;}
+    to {bottom: 0; opacity: 0;}
+    }
+</style>
+<div id="snackbar">
+<p style="margin-top: -10px;">Please rate your experience <br />
+by this one time survey</p>
+<div>
+<form>
+    <div id="forms1" class="starss">
+    <input type="radio" name="star" class="star-1" id="star-1" />
+    <label class="star-1" for="star-1">1</label>
+    <input type="radio" name="star" class="star-2" id="star-2" />
+    <label class="star-2" for="star-2">2</label>
+    <input type="radio" name="star" class="star-3" id="star-3" />
+    <label class="star-3" for="star-3">3</label>
+    <input type="radio" name="star" class="star-4" id="star-4" />
+    <label class="star-4" for="star-4">4</label>
+    <input type="radio" name="star" class="star-5" id="star-5" />
+    <label class="star-5" for="star-5">5</label>
+    <span></span></div>
+</form>
+</div>
+</div>
+<script>
+$('#result2').hide();
+$('#result3').hide();
+$('#result4').hide();
+$('#result5').hide();
+$('#result1').hide();
+
+    var x1 = document.getElementById("snackbar");
+  if(localStorage.getItem('popState') != 'shown'){  //detect if it poped up before
+   x1.className = "show";
+    setTimeout(function(){ x1.className = x1.className.replace("show", ""); }, 80000);
+
+ $('#star-1').click(function(){ 
+$('#modal').show();
+$('#buttons1').show();
+$('#result1').show();
+ $('#snackbar').hide();    
+        
+ localStorage.setItem('popState','shown');       //set cookie  
+
+});     
+
+ $('#star-2').click(function(){ 
+$('#modal').show();
+$('#buttons1').show();
+$('#result2').show();
+  $('#snackbar').hide();           
+ localStorage.setItem('popState','shown');       //set cookie  
+
+});     
+
+ $('#star-3').click(function(){ 
+$('#modal').show();
+$('#buttons1').show();
+$('#result3').show();
+  $('#snackbar').hide();           
+ localStorage.setItem('popState','shown');       //set cookie  
+
+});     
+
+
+ $('#star-4').click(function(){ 
+
+        $("#modal").fadeIn(4);
+$('#buttons1').show();
+$('#result4').show();
+ $('#snackbar').hide();       
+ localStorage.setItem('popState','shown');       //set cookie  
+ $('#snackbar').hide();    
+
+document.getElementById("buttons1").innerHTML="Close";
+});     
+
+
+ $('#star-5').click(function(){ 
+
+        $("#modal").fadeIn(4);
+        $('#buttons1').show();
+$('#result5').show();
+ localStorage.setItem('popState','shown');       //set cookie  
+ $('#snackbar').hide();    
+document.getElementById("buttons1").innerHTML="Close";
+});     
+
+   } 
+else
+{ 
+$('#modal').hide();
+$('#snackbar').hide();
+
+
+
+}
+
+
+   
+ $('#buttons1').click(function(){ 
+$('#modal').hide();
+alert("Thank you for your participation.\n Have a good day ^_^")
+});      
+</script>
