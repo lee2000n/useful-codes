@@ -1,0 +1,38 @@
+var element = document.querySelector('[aria-controls="menu-myWellness"]');
+element.href="https://mystudentplan.ca/cbusu/en/mywellness";
+
+
+//change https to http
+if (location.protocol != 'https:')
+{
+ location.href = 'http:' + window.location.href.substring(window.location.protocol.length);
+
+
+}
+
+
+//add www.
+script type="text/javascript">
+if ( document.domain.substring(0,4) != 'www.' ) {
+    window.location = document.URL.replace("//","//www."); 
+}
+</script>
+
+
+
+//add www and https
+if ( document.domain.substring(0,4) != 'www.' ) {
+window.location = document.URL.replace("//","//www.");
+}
+ else if (location.protocol != 'https:')
+{location.href = 'https:' + window.location.href.substring(window.location.protocol.length);
+}  
+
+
+//remove www and https
+if ( document.domain.substring(0,4) != 'myst' ) {
+window.location = document.URL.replace("//www.","//");
+}
+ else if (location.protocol != 'https:')
+{location.href = 'https:' + window.location.href.substring(window.location.protocol.length);
+}  
