@@ -1,0 +1,22 @@
+document.getElementById('ratingsForm').style.position="absolute";//set div position infornt of image 
+document.getElementById('ratingsForm').style.top="88px";//set div position infornt of image 
+document.getElementById('ratingsForm').style.left="266px";//set div position infornt of image 
+document.getElementById('text').innerHTML="&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;How was your experience with us today?";
+
+document.getElementsByClassName('web-image website')[0].prepend(
+    document.getElementById('ratingsForm')
+  );
+  if(localStorage.getItem('popState') != 'shown'){  //detect if it poped up before
+
+ $('[id^=star-]').click(function(){ //call radio function             
+   openpopup();//if no get window poped up
+ localStorage.setItem('popState','shown');       //set cookie  
+$('#ratingsForm').hide();
+         
+});      
+   } 
+else
+{ 
+$('#ratingsForm').hide();
+
+}

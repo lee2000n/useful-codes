@@ -1,0 +1,108 @@
+<style>
+    #snackbar {
+    visibility: hidden;
+    min-width:150px;
+    margin-left: -125px;
+    background-color: #7f8287;
+    color: #fff;
+    border-radius: 2px;
+    padding: 15px;
+    position: fixed;
+    z-index: 1;
+    left: 50%;
+    bottom: 30px;
+    font-size: 11px;
+    }
+    #snackbar.show {
+    visibility: visible;
+    -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+    animation: fadein 0.5s, fadeout 0.5s 2.5s;
+    }
+    @-webkit-keyframes fadein {
+    from {bottom: 0; opacity: 0;}
+    to {bottom: 30px; opacity: 1;}
+    }
+    @keyframes fadein {
+    from {bottom: 0; opacity: 0;}
+    to {bottom: 30px; opacity: 1;}
+    }
+    @-webkit-keyframes fadeout {
+    from {bottom: 30px; opacity: 1;}
+    to {bottom: 0; opacity: 0;}
+    }
+    @keyframes fadeout {
+    from {bottom: 30px; opacity: 1;}
+    to {bottom: 0; opacity: 0;}
+    }
+</style>
+<div id="snackbar">
+<p style="margin-top: -10px;">Please rate your experience <br />
+by this one time survey</p>
+<div>
+<form>
+    <div id="forms1" class="starss">
+    <input type="radio" name="star" class="star-1" id="starzz-1" />
+    <label class="star-1" for="starzz-1">1</label>
+    <input type="radio" name="star" class="star-2" id="starzz-2" />
+    <label class="star-2" for="starzz-2">2</label>
+    <input type="radio" name="star" class="star-3" id="starzz-3" />
+    <label class="star-3" for="starzz-3">3</label>
+    <input type="radio" name="star" class="star-4" id="starzz-4" />
+    <label class="star-4" for="starzz-4">4</label>
+    <input type="radio" name="star" class="star-5" id="starzz-5" />
+    <label class="star-5" for="starzz-5">5</label>
+    <span></span></div>
+</form>
+</div>
+</div>
+<script>
+    var x1 = document.getElementById("snackbar");
+
+  if(localStorage.getItem('popState') != 'shown'){  //detect if it poped up before
+   x1.className = "show";
+
+    setTimeout(function(){ x1.className = x1.className.replace("show", ""); }, 80000);
+ $('#starzz-1').click(function(){ 
+    $('#snackbar').hide(); 
+        
+ localStorage.setItem('popState','shown');       //set cookie  
+
+});     
+
+ $('#starzz-2').click(function(){ 
+
+  $('#snackbar').hide();           
+ localStorage.setItem('popState','shown');       //set cookie  
+
+});     
+
+ $('#starzz-3').click(function(){ 
+
+  $('#snackbar').hide();           
+ localStorage.setItem('popState','shown');       //set cookie  
+
+});     
+
+
+ $('#starzz-4').click(function(){ 
+       
+ localStorage.setItem('popState','shown');       //set cookie  
+ $('#snackbar').hide();    
+});     
+
+
+ $('#starzz-5').click(function(){ 
+
+ localStorage.setItem('popState','shown');       //set cookie  
+ $('#snackbar').hide();    
+});     
+
+   } 
+else
+{ 
+$('#snackbar').hide();
+
+
+
+}    
+</script>
