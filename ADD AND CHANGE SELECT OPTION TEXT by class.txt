@@ -1,0 +1,10 @@
+<script>
+$( ".service-provider-row" ).find('select').append($('<option>', {
+   value: 7,
+   text: 'Acupuncture is coming soon'
+}));
+</script>
+<script>
+$( ".service-provider-row" ).find('select option[value="4"]').text('Acupuncture');
+$('.schoolColor').text('Acupuncture');
+</script>
