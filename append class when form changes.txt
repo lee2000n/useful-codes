@@ -1,0 +1,15 @@
+<script>
+ $("body").on('DOMSubtreeModified', "#TheContent_mFullZoneBottom_mod79ec1512_397f_4537_911a_ce8c5f99f105_ctl00", function () {
+
+ if($('#TheContent_mFullZoneBottom_mod79ec1512_397f_4537_911a_ce8c5f99f105_pnlSubmitForm').is(":visible"))
+{
+$('#notes').show();
+$('#TheContent_mFullZoneBottom_mod79ec1512_397f_4537_911a_ce8c5f99f105_pnlSubmitForm').append($('#notes'));
+
+}
+
+ 
+
+ });
+
+</script>
