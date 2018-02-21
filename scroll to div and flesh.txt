@@ -11,3 +11,29 @@ $('#ratingsFormz').delay(1000).fadeOut().fadeIn().fadeOut().fadeIn().fadeOut().f
 
 
 });
+delay going back to top
+<script>
+$( document ).ready(function() {
+if($('#ratingsForm').is(":visible") )
+{
+
+
+$('html, body').animate({
+scrollTop: $("#ratingsForm").offset().top
+}, 1000);
+$('html, body').delay(2500).animate({
+scrollTop: $("#mMyWellnessHeader_hypHeader").offset().top
+}, 2000);
+}
+
+else if($('#ratingsForm2').is(":visible") )
+
+{$('html, body').animate({
+scrollTop: $("#ratingsForm2").offset().top
+}, 1000);
+$('html, body').delay(2500).animate({
+scrollTop: $("#mMyWellnessHeader_hypHeader").offset().top
+}, 2000);
+}
+
+});</script>
