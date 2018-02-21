@@ -1,0 +1,13 @@
+$( document ).ready(function() {
+if($('#ratingsFormz').is(":visible"))
+{
+    $('html, body').animate({
+        scrollTop: $("#ratingsFormz").offset().top
+    }, 1000);
+$('#ratingsFormz').delay(1000).fadeOut().fadeIn().fadeOut().fadeIn().fadeOut().fadeIn();
+}
+
+
+
+
+});
