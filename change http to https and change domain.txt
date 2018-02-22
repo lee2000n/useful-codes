@@ -3,7 +3,7 @@ element.href="https://mystudentplan.ca/cbusu/en/mywellness";
 
 
 //change https to http
-if (location.protocol != 'https:')
+if (location.protocol != 'http:')
 {
  location.href = 'http:' + window.location.href.substring(window.location.protocol.length);
 
