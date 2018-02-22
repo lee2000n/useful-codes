@@ -1,6 +1,7 @@
 <script>
 
 $(document).ready(function() {
+//change text with http or ftp to link 1
 var regEx= /(\b(https?|ftp|file):\/\/[-A-Z0-9+&amp;@#\/%?=~_|!:,.;]*[-A-Z0-9+&amp;@#\/%=~_|])/ig;
 $("#page td").filter(function() {
     return this.innerHTML.match(regEx);
@@ -9,9 +10,21 @@ $("#page td").filter(function() {
 });
 });
 
+//change text with http or ftp to link 2
+function replaceURLWithHTMLLinks(text) {
+ var exp = /(\b(https?|ftp|file):\/\/[-A-Z0-9+&amp;@#\/%?=~_|!:,.;]*[-A-Z0-9+&amp;@#\/%=~_|])/ig;
+
+    return text.replace(exp,"<a href='$1'>$1</a>"); 
+}
+
+window.onload = function(){
+  var elm =  document.getElementById("pages22");
+  var modifiedHtml = replaceURLWithHTMLLinks(elm.innerHTML);
+  elm.innerHTML = modifiedHtml ;
+}
 
    
-
+//cellphone number conversion
 if( /Android|webOS|iPhone|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
 
   
@@ -25,7 +38,6 @@ var spechars = new RegExp("([- \(\)\.:]|\\s|" + delimiters + ")","gi") //Special
 var phonereg = new RegExp("((^|[^0-9])(href=[\"']tel:)?((?:" + phonedef + ")[\"'][^&gt;]*?&gt;)?(" + phonedef + ")($|[^0-9]))","gi")
  
 function ReplacePhoneNumbers(oldhtml) {
-//Created by Jon Meck at LunaMetrics.com - Version 1.0
 var newhtml = oldhtml.replace(/href=['"]callto:/gi,'href="tel:')
 newhtml = newhtml.replace(phonereg, function ($0, $1, $2, $3, $4, $5, $6) {
 
@@ -46,6 +58,7 @@ $("#page").html(ReplacePhoneNumbers($("#page").html()))
 
 </script>
 <script type="text/javascript">
+//change text to email
 $(document).ready(function() {
 var regEx = /(\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*)/ig;
 $("#page td").filter(function() {
