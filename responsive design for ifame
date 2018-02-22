@@ -1,0 +1,18 @@
+<div class="videoWrapper">
+<iframe id="adds" src="https://www.youtube.com/embed/x0mywTntG5U" frameborder="0"></iframe>
+</div>
+<style>
+    .videoWrapper {
+    position: relative;
+    padding-bottom: 40.25%; /* 16:9 */
+    padding-top: 0px;
+    height: 0;
+    }
+    .videoWrapper iframe {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    position: absolute;;
+    }
+</style>
