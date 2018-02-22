@@ -1,0 +1,53 @@
+<p id="querstion" style="white-space: pre-wrap;"><span style="font-size: 15px; color: #c00000;">Please enter the date you lost the coverage</span></p>
+<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<input type="date" id="mydate" />
+<br />
+<span id="tips1" style="font-size: 9px;">please use format 'mm/dd/yyyy' if using Internet Explorer</span>
+<br />
+<input type="button" id="secondaryButton" name="text1" value="Submit" />
+<style>
+    #question
+    {
+    position:center;
+    }
+    #mydate
+    {
+    margin: 0 auto;
+    }
+</style>
+<script>
+$('#TheContent_mFullZoneTop_mod3d49c779_b053_4b9d_83c3_0e9bebd34432_pnlForm').hide();
+$( "#secondaryButton" ).click(function() {
+var today = new Date();
+var inputdate=document.getElementById("mydate").value;
+var date_to_reply = new Date(inputdate);
+var timeinmilisec = today.getTime() - date_to_reply.getTime();
+
+var result=Math.floor(timeinmilisec / (1000 * 60 * 60 * 24)); 
+
+
+if(result>30)
+{
+alert("the date you lost coverage is "+result+" days from today, please contact your SSC for more details.")
+window.location.href = "https://www.mystudentplan.ca/nscc/en/on-campus-care";
+}
+else if( result<0)
+{
+alert("It is early for you to opt in, please come back later.");
+}
+// for internet explorer
+else if (inputdate=="" || isNaN(result))
+{
+alert("Please enter the date as mm/dd/yyyy(01/31/yyyy) if you are using Internet Explorer,thank you.");
+}
+else
+{
+alert('You are eligible to opt in,congratulations !');
+
+$('#TheContent_mFullZoneTop_mod3d49c779_b053_4b9d_83c3_0e9bebd34432_pnlForm').show();
+$('#mod77996ca5_1fbc_4be5_b7bb_48a92c05910c').hide();
+
+}
+});
+
+</script>
