@@ -1,0 +1,1310 @@
+<style>
+    div.card { display: inline-block;
+    max-width: 270px;
+    position: relative;
+    background:#666762;
+    perspective: 1000;
+    transition: all 0.3s 0s ease-in;
+    margin: 10px;
+    margin-top:40px;
+    }
+    #whole
+    {
+    margin-left:40px;
+    max-width: 960px;
+    }
+    #click1
+    { margin-top:-45px;
+    margin-left: 230px;
+    height: 25px;
+    width: 25px;
+    border-radius: 50%;
+    border:1px solid white;
+    }
+    #click1:hover
+    { transform: translateY(-5px);
+    -webkit-transform: translateY(-5px);
+    box-shadow: 0 3px 0px 0 rgba(0, 0, 0, 0.26);
+    transition: all 0.2s 0s ease-out;
+    border: none;cursor:pointer;
+    }
+    #click2
+    { margin-top:-45px;
+    margin-left: 230px;
+    height: 25px;
+    width: 25px;
+    border-radius: 50%;
+    border:1px solid white;
+    }
+    #click2:hover
+    { transform: translateY(-5px);
+    -webkit-transform: translateY(-5px);
+    box-shadow: 0 3px 0px 0 rgba(0, 0, 0, 0.26);
+    transition: all 0.2s 0s ease-out;
+    border: none;cursor:pointer;
+    }
+    #click4
+    { margin-top:-45px;
+    margin-left: 230px;
+    height: 25px;
+    width: 25px;
+    border-radius: 50%;
+    border:1px solid white;
+    }
+    #click4:hover
+    { transform: translateY(-5px);
+    -webkit-transform: translateY(-5px);
+    box-shadow: 0 3px 0px 0 rgba(0, 0, 0, 0.26);
+    transition: all 0.2s 0s ease-out;
+    border: none;cursor:pointer;
+    }
+    #click5
+    { margin-top:-45px;
+    margin-left: 230px;
+    height: 25px;
+    width: 25px;
+    border-radius: 50%;
+    border:1px solid white;
+    }
+    #click5:hover
+    { transform: translateY(-5px);
+    -webkit-transform: translateY(-5px);
+    box-shadow: 0 3px 0px 0 rgba(0, 0, 0, 0.26);
+    transition: all 0.2s 0s ease-out;
+    border: none;cursor:pointer;
+    }
+    #click6
+    { margin-top:-45px;
+    margin-left: 230px;
+    height: 25px;
+    width: 25px;
+    border-radius: 50%;
+    border:1px solid white;
+    }
+    #click6:hover
+    { transform: translateY(-5px);
+    -webkit-transform: translateY(-5px);
+    box-shadow: 0 3px 0px 0 rgba(0, 0, 0, 0.26);
+    transition: all 0.2s 0s ease-out;
+    border: none;cursor:pointer;
+    }
+    #click7
+    { margin-top:-45px;
+    margin-left: 230px;
+    height: 25px;
+    width: 25px;
+    border-radius: 50%;
+    border:1px solid white;
+    }
+    #click7:hover
+    { transform: translateY(-5px);
+    -webkit-transform: translateY(-5px);
+    box-shadow: 0 3px 0px 0 rgba(0, 0, 0, 0.26);
+    transition: all 0.2s 0s ease-out;
+    border: none;cursor:pointer;
+    }
+    #sp1,#sp2,#sp4,#sp5,#sp6,#sp7
+    { margin-left:75px;   margin-top: 10px;}
+    #redx:hover
+    { transform: translateY(-5px);
+    -webkit-transform: translateY(-5px);
+    box-shadow: 0 3px 0px 0 rgba(0, 0, 0, 0.26);
+    transition: all 0.2s 0s ease-out;
+    border: none;
+    }
+    #c1
+    {height: 186px;
+    width: 270px;
+    text-aligin:left;
+    }
+    #c5
+    {height: 186px;
+    width: 270px;
+    text-aligin:left;
+    }
+    #c6
+    {height: 186px;
+    width: 270px;
+    text-aligin:left;
+    }
+    #c7
+    {height: 186px;
+    width: 270px;
+    text-aligin:left;
+    }
+    .c11:hover
+    {
+    -webkit-transform: scale(1.15) rotate(0.01deg);
+    transform: scale(1.15) rotate(0.01deg);
+    -webkit-transition: all 0.4s;
+    transition: all 0.4s;
+    background-color:#809cbf;
+    }
+    #redx1 {
+    display:block;
+    height: 25px;
+    width: 25px;
+    border-radius: 50%;
+    color: white;
+    text-align: top;
+    text-align: center;
+    font-size: 16px;
+    margin-top:-45px;
+    margin-left: 230px;
+    cursor:default;
+    }
+    #redx1:hover
+    { transform: translateY(-5px);
+    -webkit-transform: translateY(-5px);
+    box-shadow: 0 3px 0px 0 rgba(0, 0, 0, 0.26);
+    transition: all 0.2s 0s ease-out;
+    border: none;cursor:pointer;
+    }
+    #redx {
+    display:block;
+    height: 25px;
+    width: 25px;
+    border-radius: 50%;
+    color: white;
+    text-align: top;
+    text-align: center;
+    font-size: 16px;
+    margin-top:-45px;
+    margin-left: 230px;
+    cursor:default;cursor:pointer;
+    }
+    #redx:hover
+    { transform: translateY(-5px);
+    -webkit-transform: translateY(-5px);
+    box-shadow: 0 3px 0px 0 rgba(0, 0, 0, 0.26);
+    transition: all 0.2s 0s ease-out;
+    border: none;cursor:pointer;
+    }
+    #redx4:hover
+    { transform: translateY(-5px);
+    -webkit-transform: translateY(-5px);
+    box-shadow: 0 3px 0px 0 rgba(0, 0, 0, 0.26);
+    transition: all 0.2s 0s ease-out;
+    border: none;cursor:pointer;
+    }
+    #redx4 {
+    display:block;
+    height: 25px;
+    width: 25px;
+    border-radius: 50%;
+    color: white;
+    text-align: top;
+    text-align: center;
+    font-size: 16px;
+    margin-top:-45px;
+    margin-left: 230px;
+    cursor:default;
+    }
+    #redx5 {
+    display:block;
+    height: 25px;
+    width: 25px;
+    border-radius: 50%;
+    color: white;
+    text-align: top;
+    text-align: center;
+    font-size: 16px;
+    margin-top:-45px;
+    margin-left: 230px;
+    cursor:default;
+    }
+    #redx5:hover
+    { transform: translateY(-5px);
+    -webkit-transform: translateY(-5px);
+    box-shadow: 0 3px 0px 0 rgba(0, 0, 0, 0.26);
+    transition: all 0.2s 0s ease-out;
+    border: none;cursor:pointer;
+    }
+    #redx6 {
+    display:block;
+    height: 25px;
+    width: 25px;
+    border-radius: 50%;
+    color: white;
+    text-align: top;
+    text-align: center;
+    font-size: 16px;
+    margin-top:-45px;
+    margin-left: 230px;
+    cursor:default;cursor:pointer;
+    }
+    #redx6:hover
+    { transform: translateY(-5px);
+    -webkit-transform: translateY(-5px);
+    box-shadow: 0 3px 0px 0 rgba(0, 0, 0, 0.26);
+    transition: all 0.2s 0s ease-out;
+    border: none;cursor:pointer;
+    }
+    #redx7 {
+    display:block;
+    height: 25px;
+    width: 25px;
+    border-radius: 50%;
+    color: white;
+    text-align: top;
+    text-align: center;
+    font-size: 16px;
+    margin-top:-45px;
+    margin-left: 230px;
+    cursor:default;
+    }
+    #redx7:hover
+    { transform: translateY(-5px);
+    -webkit-transform: translateY(-5px);
+    box-shadow: 0 3px 0px 0 rgba(0, 0, 0, 0.26);
+    transition: all 0.2s 0s ease-out;
+    border: none;cursor:pointer;
+    }
+    a.btn
+    {
+    background: #809cbf;
+    border-radius: 4px;
+    color: white;
+    display: inline-block;
+    padding: 6px 10px 8px;
+    position: relative;
+    text-align:center;
+    text-decoration: none;
+    border:none;
+    margin-left:90px;
+    }
+    a.btn:hover {cursor:pointer;
+    opacity:0.6
+    }
+    #ww1
+    { background-color: #ffffff;
+    display:none;
+    z-index:100;
+    }
+    #ww2
+    { background-color: #ffffff;
+    display:none;z-index:100;
+    }
+    #ww4
+    { background-color: #ffffff;
+    display:none;z-index:100;
+    }
+    #ww5
+    { background-color: #ffffff;
+    display:none;z-index:100;
+    }
+    #ww6
+    { background-color: #ffffff;
+    display:none;z-index:100;
+    }
+    #ww7
+    { background-color: #ffffff;
+    display:none;z-index:100;
+    }
+    .testblur:hover
+    {
+    -webkit-transform: scale(1.15) rotate(0.01deg);
+    transform: scale(1.15) rotate(0.01deg);
+    -webkit-transition: all 0.4s;
+    transition: all 0.4s;
+    background-color:#809cbf;
+    }
+    #c2{
+    height: 186px;
+    width: 270px;
+    }
+    #c4{
+    height: 186px;
+    width: 270px;
+    }
+    .c44:hover
+    {
+    -webkit-transform: scale(1.15) rotate(0.01deg);
+    transform: scale(1.15) rotate(0.01deg);
+    -webkit-transition: all 0.4s;
+    transition: all 0.4s;
+    background-color:#809cbf;
+    }
+    #toolboxtitle
+    {
+    margin-top: 10px;
+    font-size:20px;
+    color:#66676a;
+    font-weight:bold;
+    margin-left: 340px;
+    }
+    #toolboxtitle1
+    {
+    font-size:14px;
+    color:#66676a;
+    }
+    .blureff
+    { -webkit-transform:scale(0.85); /* Safari and Chrome */
+    -moz-transform:scale(0.85); /* Firefox */
+    -ms-transform:scale(0.85); /* IE 9 */
+    -o-transform:scale(0.85); /* Opera */
+    transform:scale(0.85);
+    filter: blur(2px);
+    -webkit-filter:blur(2px);
+    -moz-filter:blur(2px);
+    -o-filter:blur(2px);
+    -ms-filter:blur(2px);
+    }
+    .blureff1
+    { -webkit-transform:scale(0.85); /* Safari and Chrome */
+    -moz-transform:scale(0.85); /* Firefox */
+    -ms-transform:scale(0.85); /* IE 9 */
+    -o-transform:scale(0.85); /* Opera */
+    transform:scale(0.85);
+    filter: blur(3px);
+    -webkit-filter:blur(2.2px);
+    -moz-filter:blur(2.2px);
+    -o-filter:blur(2.2px);
+    -ms-filter:blur(2.2px);
+    }
+    .blureff2
+    { -webkit-transform:scale(0.85); /* Safari and Chrome */
+    -moz-transform:scale(0.85); /* Firefox */
+    -ms-transform:scale(0.85); /* IE 9 */
+    -o-transform:scale(0.85); /* Opera */
+    transform:scale(0.85);
+    filter: blur(3px);
+    -webkit-filter:blur(2.3px);
+    -moz-filter:blur(2.3px);
+    -o-filter:blur(2.3px);
+    -ms-filter:blur(2.3px);
+    }
+    .blureff3
+    { -webkit-transform:scale(0.85); /* Safari and Chrome */
+    -moz-transform:scale(0.85); /* Firefox */
+    -ms-transform:scale(0.85); /* IE 9 */
+    -o-transform:scale(0.85); /* Opera */
+    transform:scale(0.85);
+    filter: blur(3px);
+    -webkit-filter:blur(2.4px);
+    -moz-filter:blur(2.4px);
+    -o-filter:blur(2.4px);
+    -ms-filter:blur(2.4px);
+    }
+    .blureff4
+    { -webkit-transform:scale(0.85); /* Safari and Chrome */
+    -moz-transform:scale(0.85); /* Firefox */
+    -ms-transform:scale(0.85); /* IE 9 */
+    -o-transform:scale(0.85); /* Opera */
+    transform:scale(0.85);
+    filter: blur(3px);
+    -webkit-filter:blur(2.5px);
+    -moz-filter:blur(2.5px);
+    -o-filter:blur(2.5px);
+    -ms-filter:blur(2.5px);
+    }
+    .blureff5
+    { -webkit-transform:scale(0.85); /* Safari and Chrome */
+    -moz-transform:scale(0.85); /* Firefox */
+    -ms-transform:scale(0.85); /* IE 9 */
+    -o-transform:scale(0.85); /* Opera */
+    transform:scale(0.85);
+    filter: blur(3px);
+    -webkit-filter:blur(1.8px);
+    -moz-filter:blur(1.8px);
+    -o-filter:blur(1.8px);
+    -ms-filter:blur(1.8px);
+    }
+    .blureff6
+    { -webkit-transform:scale(0.85); /* Safari and Chrome */
+    -moz-transform:scale(0.85); /* Firefox */
+    -ms-transform:scale(0.85); /* IE 9 */
+    -o-transform:scale(0.85); /* Opera */
+    transform:scale(0.85);
+    filter: blur(3px);
+    -webkit-filter:blur(1.9px);
+    -moz-filter:blur(1.9px);
+    -o-filter:blur(1.9px);
+    -ms-filter:blur(1.9px);
+    }
+    .blureff7
+    { -webkit-transform:scale(0.85); /* Safari and Chrome */
+    -moz-transform:scale(0.85); /* Firefox */
+    -ms-transform:scale(0.85); /* IE 9 */
+    -o-transform:scale(0.85); /* Opera */
+    transform:scale(0.85);
+    filter: blur(3px);
+    -webkit-filter:blur(1.9px);
+    -moz-filter:blur(1.9px);
+    -o-filter:blur(1.9px);
+    -ms-filter:blur(1.9px);
+    }
+    #w1,#w2,#w4,#w5,#w6,#w7
+    {
+    background:white;
+    height:66px;
+    width:270px;
+    margin-top:3px;
+    margin-left:-3px;
+    }
+</style>
+<style>
+    @media screen and (max-width: 499px) and (min-width: 300px)
+    { #toolboxtitle1
+    {
+    margin-left: -10px;
+    }
+    }
+    @media screen and (max-width: 600px) and (min-width: 500px)
+    { #toolboxtitle1
+    {
+    margin-left: -90px;
+    }
+    }
+    @media screen and (max-width: 679px) and (min-width: 601px)
+    { #toolboxtitle1
+    {
+    margin-left: -120px;
+    }
+    }
+    @media screen and (max-width: 987px) and (min-width: 855px)
+    { #toolboxtitle1
+    {
+    margin-left: -120px;
+    }
+    }
+    @media screen and (max-width: 997px) and (min-width: 988px)
+    { #toolboxtitle1
+    {
+    margin-left: -140px;
+    }
+    #toolboxtitle
+    {
+    margin-left: 220px;
+    }
+    }
+    @media screen and (max-width: 988px) and (min-width: 909px)
+    {
+    #toolboxtitle
+    {
+    margin-left: 220px;
+    }
+    }
+    @media screen and (max-width: 908px) and (min-width: 861px)
+    {
+    #toolboxtitle
+    {
+    margin-left: 240px;
+    }
+    }
+    @media screen and (max-width: 860px) and (min-width: 820px)
+    {
+    #toolboxtitle
+    {
+    margin-left: 220px;
+    }
+    }
+    @media screen and (max-width: 820px) and (min-width: 800px)
+    {
+    #toolboxtitle
+    {
+    margin-left: 200px;
+    }
+    }
+    @media screen and (max-width: 799px) and (min-width: 680px)
+    {
+    #toolboxtitle
+    {
+    margin-left: 220px;
+    }
+    }
+    @media screen and (max-width: 679px) and (min-width: 624px)
+    {
+    #toolboxtitle
+    {
+    margin-left: 80px;
+    }
+    }
+    @media screen and (max-width: 623px) and (min-width: 575px)
+    {
+    #toolboxtitle
+    {
+    margin-left: 50px;
+    }
+    }
+    @media screen and (max-width: 574px) and (min-width: 496px)
+    {
+    #toolboxtitle
+    {
+    margin-left: 70px;
+    }
+    }
+    @media screen and (max-width: 497px) and (min-width: 461px)
+    {
+    #toolboxtitle
+    {
+    margin-left: 100px;
+    }
+    }
+    @media screen and (max-width: 460px) and (min-width: 320px)
+    {
+    #toolboxtitle
+    {
+    margin-left: 70px;
+    }
+    }
+    @media screen and (max-width: 997px) and (min-width: 904px)
+    {
+    #whole
+    {
+    margin-left:160px;
+    }
+    }
+    @media screen and (max-width: 904px) and (min-width: 854px)
+    {
+    #whole
+    {
+    margin-left:130px;
+    }
+    }
+    @media screen and (max-width: 855px) and (min-width: 826px)
+    {
+    #whole
+    {
+    margin-left:70px;
+    }
+    }
+    @media screen and (max-width: 825px) and (min-width: 800px)
+    {
+    #whole
+    {
+    margin-left:90px;
+    }
+    }
+    @media screen and (max-width: 679px) and (min-width: 300px)
+    { .breaks1
+    {
+    display:none;
+    }
+    }
+    @media screen and (max-width: 679px) and (min-width: 600px)
+    {
+    #whole
+    {
+    margin-left:150px;
+    }
+    }
+    @media screen and (max-width: 600px) and (min-width: 500px)
+    { .breaks1
+    {
+    display:none;
+    }
+    #whole
+    {
+    margin-left:100px;
+    }
+    }
+    @media screen and (max-width: 413px) and (min-width: 350px)
+    { .breaks1
+    {
+    display:none;
+    }
+    #whole
+    {
+    margin-left:10px;
+    }
+    }
+    @media screen and (max-width: 349px) and (min-width: 319px)
+    { .breaks1
+    {
+    display:none;
+    }
+    #whole
+    {
+    margin-left:-5px;
+    }
+    }
+</style>
+<div id="whole">
+<p id="toolboxtitle">&nbsp; Your Toolbox</p>
+<p id="toolboxtitle1">
+Your toolbox contains a wide variety of helpful solutions and important
+information to help you strengthen your mental health.</p>
+<div id="c1" class="card">
+<table>
+    <tbody>
+        <tr>
+            <td><img id="sp1" src="/_uploads/images/stress-reduction-white.png" alt="sa1" style="width: 120px;" />
+            <div id="w1">
+            <p style="font-size: 15px; text-align: left; color: #7f8287; padding-left: 8px;"><strong>
+            <br />
+            Stress Reduction
+            <br />
+            </strong></p>
+            </div>
+            <div id="click1">
+            <img alt="sa21" src="/_uploads/images/open_button.png" /></div>
+            <span id="redx"> <img alt="sa232" src="/_uploads/images/Close_Button.png" /></span>
+            <div id="ww1" style="height: 100px;">
+            <p style="text-align: left; font-size: 12px; padding-left: 5px;">View the causes of stress and learn skills to cope and manage stress.</p>
+            <a id="outs" href="https://www.mystudentplan.ca/georgian/en/mywellness/stress-reduction" class="btn">Explore &gt;</a>
+            </div>
+            </td>
+        </tr>
+    </tbody>
+</table>
+</div>
+<div id="c2" class="card">
+<table>
+    <tbody>
+        <tr>
+            <td>
+            <img id="sp2" src="/_uploads/images/helping-yourself-white.png" alt="333" style="border: none; width: 120px;" />
+            <div id="w2">
+            <p style="font-size: 15px; text-align: left; color: #7f8287; padding-left: 8px;"><strong>  <br />
+            Helping Yourself
+            </strong></p>
+            </div>
+            <div id="click2">
+            <img alt="sa21" src="/_uploads/images/open_button.png" /></div>
+            <span id="redx1"> <img alt="sa232" src="/_uploads/images/Close_Button.png" /></span>
+            <div id="ww2" style="height: 110px;">
+            <p style="text-align: left; font-size: 12px; padding-left: 5px;">Learn how to help yourself through helpful apps, books, self-guided online therapy, and more!</p>
+            <a href="https://www.mystudentplan.ca/georgian/en/mywellness/helping-yourself" class="btn">Explore &gt;</a>
+            </div>
+            </td>
+        </tr>
+    </tbody>
+</table>
+</div>
+<div id="c4" class="card">
+<table>
+    <tbody>
+        <tr>
+            <td>
+            <img id="sp4" src="/_uploads/images/helping-others-white.png" alt="ere" style="border: none; width: 120px;" />
+            <div id="w4">
+            <p style="font-size: 15px; text-align: left; color: #7f8287; padding-left: 8px;"><strong>  <br />
+            Helping Others</strong>
+            </p>
+            </div>
+            <div id="click4">
+            <img alt="sa21" src="/_uploads/images/open_button.png" /></div>
+            <span id="redx4"> <img alt="sa232" src="/_uploads/images/Close_Button.png" /></span>
+            <div id="ww4" style="height: 110px;">
+            <p style="text-align: left; font-size: 12px; padding-left: 5px;">Learn the symptoms of mental illness, and how to approach others with suicidal thoughts or mental illness.</p>
+            <a href="https://www.mystudentplan.ca/georgian/en/mywellness/helping-others" class="btn">Explore &gt;</a>
+            </div>
+            </td>
+        </tr>
+    </tbody>
+</table>
+</div>
+<div id="c5" class="card">
+<table>
+    <tbody>
+        <tr>
+            <td><img id="sp5" src="/_uploads/images/mental-health-basics-white.png" alt="sa1" style="width: 120px;" />
+            <div id="w5">
+            <p style="font-size: 15px; text-align: left; color: #7f8287; padding-left: 8px;"><strong>
+            <br />
+            Mental Health Essentials
+            <br />
+            </strong></p>
+            </div>
+            <div id="click5">
+            <img alt="sa21" src="/_uploads/images/open_button.png" /></div>
+            <span id="redx5"> <img alt="sa232" src="/_uploads/images/Close_Button.png" /></span>
+            <div id="ww5" style="height: 110px;">
+            <p style="text-align: left; font-size: 12px; padding-left: 5px;">Learn the importance of addressing issues, what good stress and bad stress are, and why we don&rsquo;t always seek help.</p>
+            <a id="outs" href="https://www.mystudentplan.ca/georgian/en/mywellness/mh-essentials" class="btn">Explore &gt;</a>
+            </div>
+            </td>
+        </tr>
+    </tbody>
+</table>
+</div>
+<div id="c6" class="card">
+<table>
+    <tbody>
+        <tr>
+            <td>
+            <img id="sp6" src="/_uploads/images/mental-health-problems-white.png" alt="333" style="border: none; width: 120px;" />
+            <div id="w6">
+            <p style="font-size: 15px; text-align: left; color: #7f8287; padding-left: 8px;"><strong> <br />
+            Mental Health Problems
+            </strong></p>
+            </div>
+            <div id="click6">
+            <img alt="sa21" src="/_uploads/images/open_button.png" /></div>
+            <span id="redx6"> <img alt="sa232" src="/_uploads/images/Close_Button.png" /></span>
+            <div id="ww6" style="height: 110px;">
+            <p style="text-align: left; font-size: 12px; padding-left: 5px;">Understand more about mental illnesses, such as symptoms, how it impacts a person, and treatment.</p>
+            <a href="https://www.mystudentplan.ca/georgian/en/mywellness/mh-problems" class="btn">Explore &gt;</a>
+            </div>
+            </td>
+        </tr>
+    </tbody>
+</table>
+</div>
+<div id="c7" class="card">
+<table>
+    <tbody>
+        <tr>
+            <td>
+            <img id="sp7" src="/_uploads/images/care-providers-white.png" alt="ere" style="border: none; width: 120px;" />
+            <div id="w7">
+            <p style="font-size: 15px; text-align: left; color: #7f8287; padding-left: 8px;"><strong>   <br />
+            Care Providers &amp; Therapies</strong>
+            </p>
+            </div>
+            <div id="click7">
+            <img alt="sa21" src="/_uploads/images/open_button.png" /></div>
+            <span id="redx7"> <img alt="sa232" src="/_uploads/images/Close_Button.png" /></span>
+            <div id="ww7" style="height: 100px;">
+            <p style="text-align: left; padding-left: 5px;">Learn about the different types of mental health professionals and types of therapy.</p>
+            <a href="https://www.mystudentplan.ca/georgian/en/mywellness/providers-therapies" class="btn">Explore &gt;</a>
+            </div>
+            </td>
+        </tr>
+    </tbody>
+</table>
+</div>
+</div>
+<script>
+
+ if ( $.browser.mozilla == true  )
+{
+$("#ww5,#ww6,#ww4,#ww2").css('height','110px');
+$("#redx,#redx1,#redx2,#redx4,#redx5,#redx6,#redx7").hide();
+
+
+$("#click1").click(function () {
+$("#redx7,#redx2,#redx4,#redx5,#redx6,#redx1,#click1").hide(100);
+$("#click7,#click4,#click5,#click6,#click2").show();
+$("#ww1").show(300);
+$('#c1').css('z-index','300');
+
+$('#c5,#c7,#c3,#c4,#c6,#c2').css('z-index','0');
+
+  $("#ww7,#ww4,#ww5,#ww6,#ww2").hide();
+$('#c1').addClass("c11");
+
+$("#redx").show();
+
+
+ });
+
+
+
+
+
+  $("#click2").click(function () {
+
+  $("#redx7,#redx4,#redx5,#redx6,#redx,#click2").hide(100);
+$("#click7,#click4,#click5,#click6,#click1").show();
+$("#ww2").show(300);
+$('#c2').css('z-index','300');
+
+$('#c5,#c7,#c3,#c4,#c6,#c1').css('z-index','0');
+
+  $("#ww7,#ww4,#ww5,#ww6,#ww1").hide();
+$('#c2').addClass("c11");
+
+$("#redx1").show();
+
+    });
+ 
+
+
+
+
+
+ $("#click4").click(function () {
+
+   $("#redx7,#redx2,#redx,#redx5,#redx6,#redx1,#click4").hide(100);
+$("#click7,#click1,#click5,#click6,#click2").show();
+$("#ww4").show(300);
+$('#c4').css('z-index','300');
+
+$('#c5,#c7,#c3,#c1,#c6,#c2').css('z-index','0');
+
+  $("#ww7,#ww1,#ww5,#ww6,#ww2").hide();
+$('#c4').addClass("c11");
+
+$("#redx4").show();
+
+  });
+
+ $("#click5").click(function () {
+$("#redx7,#redx2,#redx4,#redx,#redx6,#redx1,#click5").hide(100);
+$("#click7,#click4,#click1,#click6,#click2").show();
+$("#ww5").show(300);
+$('#c5').css('z-index','300');
+
+$('#c1,#c7,#c3,#c4,#c6,#c2').css('z-index','0');
+
+  $("#ww7,#ww4,#ww1,#ww6,#ww2").hide();
+$('#c5').addClass("c11");
+
+$("#redx5").show();
+
+   });
+ $("#click6").click(function () {
+$("#redx7,#redx2,#redx4,#redx5,#redx,#redx1,#click6").hide(100);
+$("#click7,#click4,#click5,#click1,#click2").show();
+$("#ww6").show(300);
+$('#c6').css('z-index','300');
+
+$('#c5,#c7,#c3,#c4,#c1,#c2').css('z-index','0');
+
+  $("#ww7,#ww4,#ww5,#ww1,#ww2").hide();
+$('#c6').addClass("c11");
+
+$("#redx6").show();
+
+   });
+
+
+
+ $("#click7").click(function () {
+$("#redx,#redx2,#redx4,#redx5,#redx6,#redx1,#click7").hide(100);
+$("#click1,#click4,#click5,#click6,#click2").show();
+$("#ww7").show(300);
+$('#c7').css('z-index','300');
+
+$('#c5,#c1,#c3,#c4,#c6,#c2').css('z-index','0');
+
+  $("#ww1,#ww4,#ww5,#ww6,#ww2").hide();
+$('#c7').addClass("c11");
+
+$("#redx7").show();
+
+ });
+
+ $("#redx1").click(function () {
+   $("#redx1").hide();
+  $('#c2').removeClass("blureff2");
+       $('#c2').removeClass("blureff1");
+       $('#c2').removeClass("blureff");
+$('#c2').css('z-index','300');
+   $("#ww1,#ww4,#ww5,#ww6,#ww2,#ww7").hide();
+$('#c1,#c4,#c2,#c5,#c6,#c7').removeClass("c11");
+$("#click1,#click4,#click5,#click6,#click7,#click2").show();
+    });
+ 
+
+ $("#redx").click(function () {
+ $("#click1,#click4,#click5,#click6,#click7,#click2").show();
+
+   $("#ww1,#ww4,#ww5,#ww6,#ww2,#ww7").hide();
+$('#c1,#c4,#c2,#c5,#c6,#c7').removeClass("c11");
+
+$('#c1').css('z-index','300');
+   $("#click1").show();
+
+   $("#redx").hide();
+    });
+ $("#redx4").click(function () {
+$("#click1,#click4,#click5,#click6,#click7,#click2").show();
+    $('#c4').removeClass("blureff2");
+       $('#c4').removeClass("blureff1");
+       $('#c4').removeClass("blureff");
+   $("#ww1,#ww4,#ww5,#ww6,#ww2,#ww7").hide();  
+   $("#redx4").hide();
+
+$('#c4').css('z-index','300');
+
+$('#c5,#c1,#c3,#c2,#c6,#c7').css('z-index','0');
+
+
+$('#c1,#c4,#c2,#c5,#c6,#c7').removeClass("c11");
+  });
+
+ $("#redx5").click(function () {
+ $("#click1,#click4,#click5,#click6,#click7,#click2").show();
+    $('#c5').removeClass("blureff5");
+   $("#ww1,#ww4,#ww5,#ww6,#ww2,#ww7").hide();   
+
+   $("#redx5").hide();
+$('#c5').css('z-index','300');
+
+$('#c2,#c1,#c3,#c4,#c6,#c7').css('z-index','0');
+
+ 
+$('#c1,#c4,#c2,#c5,#c6,#c7').removeClass("c11");
+   });
+ $("#redx6").click(function () {
+$("#click1,#click4,#click5,#click6,#click7,#click2").show(); 
+       $('#c6').removeClass("blureff6");
+     
+   $("#redx6").hide();
+   $("#ww1,#ww4,#ww5,#ww6,#ww2,#ww7").hide();
+$('#c6').css('z-index','300');
+
+$('#c5,#c1,#c3,#c4,#c6,#c2').css('z-index','0');
+
+
+$('#c1,#c4,#c2,#c5,#c6,#c7').removeClass("c11");
+   });
+
+
+
+ $("#redx7").click(function () {
+   $("#redx7").hide();
+$("#click1,#click4,#click5,#click6,#click7,#click2").show();
+       $('#c7').removeClass("blureff7");
+
+$('#c7').css('z-index','300');
+
+$('#c5,#c1,#c3,#c4,#c6,#c2').css('z-index','0');
+
+     $("#ww1,#ww4,#ww5,#ww6,#ww2,#ww7").hide();
+$('#c1,#c4,#c2,#c5,#c6,#c7').removeClass("c11");
+ });
+
+
+   
+   
+}
+
+else
+{
+
+$("#redx,#redx1,#redx2,#redx4,#redx5,#redx6,#redx7").hide();
+$(document).ready(function () {
+    $("#click2").click(function () {
+
+
+
+
+
+$('#c2').addClass("c11");
+
+ $("#click2").hide();
+$("#redx1").fadeIn();
+$("#ww2").show(500);
+$('#c1').addClass("blureff1");
+$('#c4').addClass("blureff1");
+$('#c5').addClass("blureff5");
+$('#c6').addClass("blureff6");
+$('#c7').addClass("blureff7");
+    });
+})
+$(document).ready(function () {
+    $("#click5").click(function () {
+$('#c5').css('z-index','300');
+
+
+
+
+$('#c5').addClass("c11");
+
+ $("#click5").hide();
+$("#redx5").fadeIn();
+$("#ww5").show(300);
+
+$('#c1').addClass("blureff1");
+$('#c4').addClass("blureff1");
+$('#c2').addClass("blureff2");
+$('#c6').addClass("blureff6");
+$('#c7').addClass("blureff7");
+    });
+})
+$(document).ready(function () {
+    $("#click6").click(function () {
+
+
+$('#c6').addClass("c11");
+$('#c6').css('z-index','300');
+ $("#click6").hide();
+$("#redx6").fadeIn();
+$("#ww6").show(500);
+$('#c1').addClass("blureff1");
+$('#c4').addClass("blureff1");
+$('#c5').addClass("blureff5");
+$('#c2').addClass("blureff2");
+$('#c7').addClass("blureff7");
+    });
+})
+$(document).ready(function () {
+    $("#click7").click(function () {
+
+$('#c7').css('z-index','300');
+$('#c7').addClass("c11");
+
+ $("#click7").hide();
+$("#redx7").fadeIn();
+$("#ww7").show(500);
+$('#c1').addClass("blureff1");
+$('#c4').addClass("blureff1");
+$('#c5').addClass("blureff5");
+$('#c6').addClass("blureff6");
+$('#c2').addClass("blureff2");
+
+    });
+})
+$(document).ready(function () {
+    $("#redx").click(function () {
+ $("#redx").hide();
+$("#click1").show();
+$("#ww1").hide();
+$('#c4').removeClass("blureff");
+$('#c2').removeClass("blureff");
+$('#c4').removeClass("blureff1");
+$('#c2').removeClass("blureff1");
+$('#c4').removeClass("blureff2");
+$('#c5').removeClass("blureff5");
+$('#c6').removeClass("blureff6");
+$('#c7').removeClass("blureff7");
+$('#c2').removeClass("blureff2");
+$('#c1,#c4,#c2,#c5,#c6,#c7').removeClass("c11");
+    });
+})
+$(document).ready(function () {
+    $("#redx5").click(function () {
+ $("#redx5").hide();
+$("#click5").show();
+$("#ww5").hide();
+$('#c4').removeClass("blureff");
+$('#c2').removeClass("blureff");
+$('#c4').removeClass("blureff1");
+$('#c2').removeClass("blureff1");
+$('#c4').removeClass("blureff2");
+$('#c1').removeClass("blureff1");
+$('#c6').removeClass("blureff6");
+$('#c7').removeClass("blureff7");
+$('#c2').removeClass("blureff2");
+$('#c1,#c4,#c2,#c6,#c7,#c5').removeClass("c11");
+    });
+})
+$(document).ready(function () {
+    $("#redx6").click(function () {
+ $("#redx6").hide();
+$("#click6").show();
+$("#ww6").hide();
+$('#c4').removeClass("blureff");
+$('#c2').removeClass("blureff");
+$('#c4').removeClass("blureff1");
+$('#c2').removeClass("blureff1");
+$('#c4').removeClass("blureff2");
+$('#c5').removeClass("blureff5");
+$('#c1').removeClass("blureff1");
+$('#c7').removeClass("blureff7");
+$('#c2').removeClass("blureff2");
+$('#c1,#c4,#c2,#c5,#c7,#c6').removeClass("c11");
+    });
+})
+
+$(document).ready(function () {
+    $("#redx7").click(function () {
+ $("#redx7").hide();
+$("#click7").show();
+$("#ww7").hide();
+$('#c4').removeClass("blureff");
+$('#c2').removeClass("blureff");
+$('#c4').removeClass("blureff1");
+$('#c2').removeClass("blureff1");
+$('#c4').removeClass("blureff2");
+$('#c1').removeClass("blureff1");
+$('#c6').removeClass("blureff6");
+$('#c7').removeClass("blureff7");
+$('#c2').removeClass("blureff2");
+$('#c5').removeClass("blureff5");
+$('#c1,#c4,#c2,#c5,#c6,#c7').removeClass("c11");
+    });
+})
+
+
+
+
+
+$(document).ready(function () {
+    $("#redx1").click(function () {
+ $("#redx1").hide();
+$("#click2").show();
+$("#ww2").hide();
+$('#c1').removeClass("blureff1");
+$('#c4').removeClass("blureff1");
+$('#c1').removeClass("blureff");
+$('#c4').removeClass("blureff");
+$('#c1').removeClass("blureff2");
+$('#c4').removeClass("blureff2");
+$('#c5').removeClass("blureff5");
+$('#c6').removeClass("blureff6");
+$('#c7').removeClass("blureff7");
+$('#c1,#c4,#c2,#c5,#c6,#c7').removeClass("c11");
+    });
+})
+$(document).ready(function () {
+    $("#redx4").click(function () {
+ $("#redx4").hide();
+
+$("#click4").show();
+$("#ww4").hide();
+$('#c2').removeClass("blureff1");
+$('#c1').removeClass("blureff1");
+$('#c2').removeClass("blureff");
+$('#c1').removeClass("blureff");
+$('#c2').removeClass("blureff2");
+$('#c1').removeClass("blureff2");
+$('#c5').removeClass("blureff5");
+$('#c6').removeClass("blureff6");
+$('#c7').removeClass("blureff7");
+$('#c1,#c4,#c2,#c5,#c6,#c7').removeClass("c11");
+    });
+})
+$(document).ready(function () {
+    $("#click1").click(function () {
+
+
+
+$('#c1').addClass("c11");
+
+ $("#click1").hide();
+$("#redx").fadeIn();
+$("#ww1").show(500);
+$('#c4').addClass("blureff2");
+$('#c2').addClass("blureff");
+$('#c5').addClass("blureff5");$('#c6').addClass("blureff6");$('#c7').addClass("blureff7");
+    });
+
+})
+
+
+
+$(document).ready(function () {
+    $("#click4").click(function () {
+
+$('#c4').addClass("c11");
+
+
+ $("#click4").hide();
+$("#redx4").fadeIn();
+$("#ww4").show(500);
+
+$('#c2').addClass("blureff2");
+$('#c1').addClass("blureff");$('#c5').addClass("blureff5");$('#c6').addClass("blureff6");$('#c7').addClass("blureff7");
+
+ });
+})
+setInterval(function(){
+
+    if($('#c1').is(":hover")) 
+{
+$('#c1').css('z-index','300');
+$('#c5,#c2,#c3,#c4,#c6,#c7').css('z-index','0');
+$('#click2,#click4,#click5,#click6,#click7').show();
+
+
+$('#redx1').hide();
+$('#redx4').hide();
+$('#redx5,#redx6,#redx7').hide();
+
+$('#ww2').hide();
+$('#ww4').hide();
+$('#ww5,#ww6,#ww7').hide();
+       $('#c1').removeClass("blureff2");
+       $('#c1').removeClass("blureff1");
+       $('#c1').removeClass("blureff");
+$('#c4,#c2,#c5,#c6,#c7').removeClass("c11");
+    }
+  if($('#c4').is(":hover")) {
+
+$('#c4').css('z-index','300');
+
+$('#c5,#c2,#c3,#c1,#c6,#c7').css('z-index','0');
+$('#c7').css('z-index','0');
+$('#click1').show();
+$('#click2').show();
+$('#click5,#click6,#click7').show();
+$('#redx').hide();
+$('#redx2,#redx5,#redx6,#redx7').hide();
+
+$('#ww1').hide();
+$('#ww2,#ww5,#ww6,#ww7').hide();
+ $("#redx1").hide();
+       $('#c4').removeClass("blureff2");
+       $('#c4').removeClass("blureff1");
+       $('#c4').removeClass("blureff");
+$('#c1,#c2,#c5,#c6,#c7').removeClass("c11");
+    }
+
+ if($('#c2').is(":hover")) 
+{
+
+$('#c2').css('z-index','300');
+
+$('#c5,#c1,#c3,#c4,#c6,#c7').css('z-index','0');
+
+$('#click1').show();
+$('#click4,#click5,#click6,#click7').show();
+$('#redx').hide();
+$('#redx4,#redx5,#redx6,#redx7').hide();
+$('#ww1').hide();
+$('#ww4,#ww5,#ww6,#ww7').hide();
+       $('#c2').removeClass("blureff2");
+       $('#c2').removeClass("blureff1");
+       $('#c2').removeClass("blureff");
+$('#c2').removeClass("blureff5");
+
+$('#c1,#c4,#c5,#c6,#c7').removeClass("c11");
+
+    }
+  if($('#c5').is(":hover")) 
+{
+
+$('#click2,#click4,#click1,#click6,#click7').show();
+$('#c5').css('z-index','300');
+
+$('#c2,#c1,#c3,#c4,#c6,#c7').css('z-index','0');
+
+$('#redx1').hide();
+$('#redx4').hide();
+$('#redx,#redx6,#redx7').hide();
+
+$('#ww2').hide();
+$('#ww4').hide();
+$('#ww1,#ww6,#ww7').hide();
+       $('#c5').removeClass("blureff5");
+
+$('#c4,#c2,#c6,#c7').removeClass("c11");
+    }
+  if($('#c6').is(":hover")) 
+{$('#click2,#click4,#click5,#click1,#click7').show();
+$('#c6').css('z-index','300');
+
+$('#c5,#c1,#c3,#c4,#c2,#c7').css('z-index','0');
+
+$('#redx').hide();
+$('#redx4').hide();
+$('#redx5,#redx1,#redx7').hide();
+
+$('#ww2').hide();
+$('#ww4').hide();
+$('#ww5,#ww1,#ww7').hide();
+       $('#c6').removeClass("blureff6");
+
+$('#c4,#c2,#c5,#c1,#c7').removeClass("c11");
+    }
+  if($('#c7').is(":hover")) 
+{
+$('#c7').css('z-index','300');
+$('#c5,#c1,#c3,#c4,#c6,#c2').css('z-index','0');
+$('#click2,#click4,#click5,#click6,#click1').show();
+
+
+$('#redx').hide();
+$('#redx4').hide();
+$('#redx5,#redx6,#redx1').hide();
+
+$('#ww2').hide();
+$('#ww4').hide();
+$('#ww5,#ww6,#ww1').hide();
+       $('#c7').removeClass("blureff7");
+
+$('#c4,#c2,#c5,#c6,#c1').removeClass("c11");
+    }
+});
+
+
+
+}
+
+
+</script>
