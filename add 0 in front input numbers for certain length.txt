@@ -1,0 +1,26 @@
+<script >
+
+
+   $('#TheContent_mFullZoneTop_mod9c56f742_ab39_49b5_b462_4a70053df42a_txtSearch').on('change', function() {
+        if (/^\d+$/.test($(this).val())) 
+
+{var x= pad_with_zeroes($(this).val(), 8);
+$(this).val(x);
+}
+
+        
+    });
+
+function pad_with_zeroes(number, length) {
+
+    var my_string = '' + number;
+    while (my_string.length <length) {
+        my_string = '0' + my_string;
+    }
+
+    return my_string;
+
+}
+
+
+</script>
