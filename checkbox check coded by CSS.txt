@@ -1,0 +1,14 @@
+ <style>
+
+#expand-toggle:checked ~ .hiddendiv{
+    display: block;
+    }
+    .hiddendiv
+    {
+    display:none;
+    }
+
+checkbox #expand-toggle must not be in a different div or class.
+
+
+
