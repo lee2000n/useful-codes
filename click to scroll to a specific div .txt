@@ -1,0 +1,11 @@
+<script>
+$('#map_canvas').click(function() {
+if ($('div.service-item--selected').length)
+{
+var $container = $(".service-col");
+var $scrollTo = $('.service-item--selected');
+
+$container.animate({scrollTop: $scrollTo.offset().top - $container.offset().top + $container.scrollTop(), scrollLeft: 0},300);
+}
+});
+</script>
