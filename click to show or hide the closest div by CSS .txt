@@ -1,0 +1,19 @@
+<style>
+    .clicker {
+    outline:none;
+    }
+    .hiddendiv{
+    display:none;
+    }
+    .clicker:focus + .hiddendiv{
+    display:block;
+    }
+</style>
+
+
+<div class="clicker" tabindex="1">
+Coming soon.</div>
+<div class="hiddendiv">
+
+
+
