@@ -1,3 +1,4 @@
+// another way of searching text
 <script>
 var $searchBox = $('#search-weeazer');
 var $userDivs = $('.service-col .service-item');
@@ -26,115 +27,16 @@ $('.service-col').find($('.schoolColor')).append($('#searches'));
 
 
 
-                                 //second way
+                                 //click to scroll to a specific div
 
 <script>
+$('#map_canvas').click(function() {
+if ($('.service-item--selected').length)
+{
+var $container = $(".service-col");
+var $scrollTo = $('.service-item--selected');
 
-    $("#search-weeazer").keyup(function(){
-  var filter = $(this).val(), count = 0;
-        // Retrieve the input field text and reset the count to zero
-        var filter = $(this).val(), count = 0;
- 
-        // Loop through the comment list
-        $('.service-col .service-item').each(function(){
- 
-            // If the list item does not contain the text phrase fade it out
-            if ($(this).text().search(new RegExp(filter, "i"))<0) {
-           
-$(this).fadeOut();
-
-
-
-            // Show the list item if the phrase matches and increase the count by 1
-            } 
-else {
-
-                $(this).show();
-                count++;
-            }
-        });
- 
-        // Update the count
-      var numberItems = count;
-        $("#noresult").text("Number of results = "+count);
-       
-    });
-
-
-
-</script>
-
-
-<script>
-$(function() {
-    $('#search-weeazer').bind('keyup change', function(ev) {
-        // pull in the new value
-        var searchTerm = $(this).val();
-
-        // remove any old highlighted terms
-        $('.service-col .service-item').removeHighlight();
-
-        // disable highlighting if empty
-        if ( searchTerm ) {
-            // highlight the new term
-            $('.service-col .service-item').highlight( searchTerm );
-        }
-    });
+$container.animate({scrollTop: $scrollTo.offset().top - $container.offset().top + $container.scrollTop(), scrollLeft: 0},300);
+}
 });
-
-jQuery.fn.highlight = function(pat) {
- function innerHighlight(node, pat) {
-  var skip = 0;
-  if (node.nodeType == 3) {
-   var pos = node.data.toUpperCase().indexOf(pat);
-   if (pos >= 0) {
-    var spannode = document.createElement('span');
-    spannode.className = 'highlight';
-    var middlebit = node.splitText(pos);
-    var endbit = middlebit.splitText(pat.length);
-    var middleclone = middlebit.cloneNode(true);
-    spannode.appendChild(middleclone);
-    middlebit.parentNode.replaceChild(spannode, middlebit);
-    skip = 1;
-   }
-  }
-  else if (node.nodeType == 1 && node.childNodes && !/(script|style)/i.test(node.tagName)) {
-   for (var i = 0; i <node.childNodes.length; ++i) {
-    i += innerHighlight(node.childNodes[i], pat);
-   }
-  }
-  return skip;
- }
- return this.each(function() {
-  innerHighlight(this, pat.toUpperCase());
- });
-};
-
-jQuery.fn.removeHighlight = function() {
- function newNormalize(node) {
-    for (var i = 0, children = node.childNodes, nodeCount = children.length; i <nodeCount; i++) {
-        var child = children[i];
-        if (child.nodeType == 1) {
-            newNormalize(child);
-            continue;
-        }
-        if (child.nodeType != 3) { continue; }
-        var next = child.nextSibling;
-        if (next == null || next.nodeType != 3) { continue; }
-        var combined_text = child.nodeValue + next.nodeValue;
-        new_node = node.ownerDocument.createTextNode(combined_text);
-        node.insertBefore(new_node, child);
-        node.removeChild(child);
-        node.removeChild(next);
-        i--;
-        nodeCount--;
-    }
- }
-
- return this.find("span.highlight").each(function() {
-    var thisParent = this.parentNode;
-    thisParent.replaceChild(this.firstChild, this);
-    newNormalize(thisParent);
- }).end();
-};
 </script>
