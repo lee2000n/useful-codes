@@ -1,0 +1,20 @@
+<script>
+$('select').on('change', function() {
+
+$('#wholes').find('div').each(function() {
+var gaga=$('select option:selected').val();
+var ga1=$(this).attr('id');
+if(gaga==ga1)
+{
+$( "#" + ga1).show(300);
+}
+else
+{
+$( "#" + ga1).hide();
+}
+  });
+
+
+});
+
+</script>
