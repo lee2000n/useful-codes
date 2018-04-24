@@ -1,0 +1,35 @@
+$('#id').find('.textBox').each(function() {
+        $.data(this, 'default', 'Type Here');
+
+
+    }).css("color","gray").keyup(function(){
+if (/Type/i.test(this.value))
+{
+   $(this).css("color","red");
+}
+else
+{
+   $(this).css("color","black");
+}
+})
+    .focus(function() {
+        if (!$.data(this, 'edited')||$.data(this,'Type here')) {
+            this.value = "";
+            $(this).css("color","black");
+
+        }
+    }).change(function() {
+        $.data(this, 'edited', this.value != "");
+
+
+    }).blur(function() {
+        if (!$.data(this, 'edited')) {
+
+
+       this.value = $.data(this, 'default');
+            $(this).css("color","red");
+
+        }
+    });
+
+
