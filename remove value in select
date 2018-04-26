@@ -1,0 +1,2 @@
+$(".service-provider-row select option[value='5']").remove();
+    class name            select 
