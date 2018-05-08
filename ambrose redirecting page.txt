@@ -1,0 +1,76 @@
+<script>
+
+var url = window.location.href;
+var parts = url.split("/");
+var lastpart = parts[parts.length-1];
+
+if ($('#pageEdit').is(':visible'))
+{
+}
+
+else
+{
+
+
+if(lastpart=="mybenefits-at-a-glance"||lastpart=="prescription-drug"||lastpart=="vision"||lastpart=="supplemental-health"||lastpart=="other-insurances"||lastpart=="dental"||lastpart=="personal-health-risk-assessment"||lastpart=="exclusions")
+{
+$('.Background').html('<br/><br/><br/><br/><br/><br/><br/><br/><br/><h2  >Please wait....</h2>');
+location.replace('/ambrose/en/mybenefits');
+
+}
+
+
+else if(lastpart=="eligibility-criteria"||lastpart=="coverage-period"||lastpart=="family-coverage"||lastpart=="optional-coverage"||lastpart=="cob")
+{
+$('.Background').html('<br/><br/><br/><br/><br/><br/><br/><br/><br/><h2  >Please wait....</h2>');
+location.replace('/ambrose/en/am-i-covered');
+
+}
+
+
+
+else if(lastpart=="waiver-form"||lastpart=="enrolling-your-family"||lastpart=="individual-enrolment"||lastpart=="form-individual-enrolment"||lastpart=="family-add-on-form")
+{
+$('.Background').html('<br/><br/><br/><br/><br/><br/><br/><br/><br/><h2  >Please wait....</h2>');
+location.replace('/ambrose/en/forms');
+
+}
+
+
+else if(lastpart=="chiropractor"||lastpart=="d-savings"||lastpart=="massage"||lastpart=="Naturopath"||lastpart=="physiotherapy")
+{
+$('.Background').html('<br/><br/><br/><br/><br/><br/><br/><br/><br/><h2  >Please wait....</h2>');
+location.replace('/ambrose/en/what-is-select-savings');
+
+}
+
+else if(lastpart=="electronic-claims"||lastpart=="mobile-claims"||lastpart=="pay-direct-claims"||lastpart=="health-claim-form"||lastpart=="dental-claim-form"||lastpart=="review-benefits-and-claims-history")
+{
+$('.Background').html('<br/><br/><br/><br/><br/><br/><br/><br/><br/><h2  >Please wait....</h2>');
+location.replace('/ambrose/en/making-a-claim');
+
+}
+
+
+else if(lastpart=="eligibility-inquiries"||lastpart=="claims-inquiries"||/diy-videos/.test(lastpart)||lastpart=="card-generator"||lastpart=="prescription-search")
+{
+$('.Background').html('<br/><br/><br/><br/><br/><br/><br/><br/><br/><h2  >Please wait....</h2>');
+location.replace('/ambrose/en/assistance');
+
+}
+
+
+
+
+
+
+
+
+
+
+}
+
+
+
+
+</script>
