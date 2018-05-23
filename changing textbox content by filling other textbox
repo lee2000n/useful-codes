@@ -1,0 +1,6 @@
+<script>
+$('#TextboxChanging').on('input propertychange paste', function() {
+    $("#PutChangingTextinthisTextbox").val($('#TextboxChanging').val());
+});
+
+</script>
