@@ -1,0 +1,17 @@
+$(document).ready(function() {
+  $("#ddlSchool option[value]").filter(function() {
+    return +$(this).val() == 206;
+  }).hide();
+ $("#ddlSchool option[value]").filter(function() {
+    return +$(this).val() == 209;
+  }).hide();
+$("#ddlSchoolAbrev option[value]").filter(function() {
+return +$(this).val() == 209;
+}).hide();
+$("#ddlSchoolAbrev option[value]").filter(function() {
+return +$(this).val() == 206;
+}).hide();
+
+$('#ddlSchool option[value="209"]').hide();
+$('#ddlSchool option[value="206"]').hide();
+});
