@@ -1,0 +1,23 @@
+$('#Accidentdetail').click(function(){ 
+$('#s2').click();
+$('#soflow3 option[value=Accident1]').attr('selected','selected');
+
+$('#supplemental1').find('div').each(function() {
+var gaga=$('#soflow3 option:selected').val();
+var ga1=$(this).attr('id');
+if(gaga==ga1)
+{
+$( "#" + ga1).show(300);
+}
+else
+{
+$( "#" + ga1).hide();
+}
+  });
+
+
+
+
+
+
+});
