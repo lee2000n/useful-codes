@@ -1,0 +1,4 @@
+<script>
+$.getJSON("https://api.ipify.org/?format=json", function(e) {
+    alert(e.ip);
+});</script>
