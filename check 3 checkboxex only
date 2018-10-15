@@ -1,0 +1,4 @@
+$('.LCheckbox').click(function () {
+    $(this).next().next().prop('disabled', !this.checked)
+    $('.LCheckbox').not(':checked').prop('disabled', $('.LCheckbox:checked').length == 3);
+});
