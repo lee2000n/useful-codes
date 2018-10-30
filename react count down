@@ -1,0 +1,266 @@
+<style>
+    .App {
+    background: white;
+    text-align: center;
+    font-size: 22px;
+    font-family: 'Anton', sans-serif;
+    text-transform: uppercase;
+    width: 55%;
+    height: 410px;
+    padding-top: 40px;
+    margin: 8% auto;
+    /* border: 0.51px solid gray; */
+    border-radius: 1%;
+    box-shadow: 0px 0px 132px -22px turquoise;
+    }
+    .App input,
+    button {
+    margin-top: 25px;
+    text-transform: uppercase;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: 300;
+    border:1px solid turquoise;
+    text-align:center;
+    width: 54%;
+    margin:5px auto;
+    }
+    .deadline-input {
+    font-size: 8px;
+    }
+    .deadline-btn {
+    font-size: 6px;
+    }
+    .App input:hover,
+    button:hover {
+    outline: none;
+    outline-color: transparent;
+    }
+    .App-title {
+    display: inline;
+    font-size: 25px;
+    border-top: 1px solid turquoise;
+    /* border-left: 1px solid black; */
+    border-bottom: 1px solid turquoise;
+    text-shadow: 2px 2px turquoise;
+    width: 79%;
+    margin: 10px auto;
+    }
+    #app span {
+    color: turquoise;
+    font-size: 25px;
+    border-top: black 1px solid;
+    border-bottom: black 1px solid;
+    /* border-right: wheat 1px solid; */
+    text-decoration: underline wavy yellow;
+    text-shadow: 1px 1px black;
+    transition: all 1s ease;
+    }
+    #app span:hover{
+    letter-spacing: 9px;
+    }
+    .App-Clock-Days {
+    margin: 25px;
+    color: rgb(0, 197, 223);
+    text-decoration-line: underline;
+    text-decoration-style: wavy;
+    text-decoration-color: violet;
+    }
+    .App-Clock-Hours,
+    .App-Clock-Minutes,
+    .App-Clock-Seconds {
+    font-size: 13px;
+    display: inline;
+    margin: 25px;
+    font-style: italic;
+    text-decoration: overline black;
+    border-top: 1px gray solid;
+    }
+    .App-Clock-Hours {
+    color: rgb(0, 174, 255);
+    animation: pulse3 1s 0.6s infinite;
+    }
+    .App-Clock-Minutes {
+    color: turquoise;
+    animation: pulse2 1s 0.3s infinite;
+    }
+    .App-Clock-Seconds {
+    animation: pulse1 1s infinite;
+    color: rgb(255, 217, 0);
+    }
+    /* @keyframes pulse {
+    0% {
+    transform: scale(1);
+    }
+    50% {
+    transform: scale(1.1);
+    }
+    100% {
+    transform: scale(1);
+    }
+    } */
+    @keyframes pulse1 {
+    0% {
+    border-bottom: 2px solid rgba(246, 224, 101, 1);
+    border-bottom: 2px solid rgba(231, 204, 52, 1);
+    }
+    70% {
+    -moz-box-shadow: 0 0 0 10px rgba(167, 151, 62, 0);
+    box-shadow: 0 0 0 10px rgba(165, 140, 0, 0);
+    }
+    100% {
+    border-bottom: 2px solid rgba(206, 189, 94, 0);
+    border-bottom: 2px solid rgba(255, 240, 157, 0);
+    }
+    }
+    @keyframes pulse2 {
+    0% {
+    border-bottom: 2px solid rgb(21, 83, 77);
+    border-bottom: 2px solid turquoise;
+    }
+    70% {
+    -moz-box-shadow: 0 0 0 10px rgba(96, 235, 221, 0);
+    box-shadow: 0 0 0 10px rgba(2, 128, 115, 0);
+    }
+    100% {
+    border-bottom: 2px solid rgba(99, 240, 226, 0);
+    border-bottom: 2px solid rgba(150, 255, 245, 0);
+    }
+    }
+    @keyframes pulse3 {
+    0% {
+    border-bottom: 2px solid rgba(0, 174, 255, 0.4);
+    border-bottom: 2px solid rgba(0, 174, 255, 0.4);
+    }
+    70% {
+    -moz-box-shadow: 0 0 0 10px rgba(0, 174, 255, 0);
+    box-shadow: 0 0 0 10px rgba(0, 174, 255, 0);
+    }
+    100% {
+    border-bottom: 2px solid rgba(0, 174, 255, 0);
+    border-bottom: 2px solid rgba(0, 174, 255, 0);
+    }
+    }
+    .form-check-label{
+    margin-left:20px;
+    }
+    .form-check {
+    margin-top:30px;
+    }
+    .my-tippy {
+    background:red;
+    }
+    small {
+    font-size:10px;
+    }
+</style>
+<script src= "https://unpkg.com/react@16/umd/react.production.min.js"></script>
+<script src= "https://unpkg.com/react-dom@16/umd/react-dom.production.min.js"></script>
+<script src="https://unpkg.com/babel-standalone@6.15.0/babel.min.js"></script>
+<div id="root">&nbsp;</div>
+<script type="text/babel">
+class App extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      useDatePicker:false,
+      deadline: '25,December'+new Date().getFullYear(),
+      newDeadline: '',
+      days: 0,
+      hours: 0,
+      minutes: 0,
+      seconds: 0
+    };
+    
+        this.checkDatePicker = this.checkDatePicker.bind(this);
+
+  }
+
+  checkDatePicker(event){
+    const target = event.target;
+    const value = target.type === 'checkbox' ? target.checked : target.value;
+    this.setState({
+      useDatePicker: value
+    })
+  }
+  componentWillMount() {
+    this.getTimeUntil(this.state.deadline);
+  }
+
+  componentDidMount() {
+    setInterval(() =>;this.getTimeUntil(this.state.deadline), 1000);
+  }
+
+  leadingZero(num) {
+    return num <10 ? '0' + num : num;
+  }
+
+  getTimeUntil(deadline) {
+    const totalTime = Date.parse(deadline) - Date.parse(new Date());
+    const seconds = Math.floor((totalTime / 1000) % 60);
+    const minutes = Math.floor((totalTime / 1000 / 60) % 60);
+    const hours = Math.floor((totalTime / (1000 * 60 * 60)) % 24);
+    const days = Math.floor(totalTime / (1000 * 60 * 60 * 24));
+    this.setState({
+      days,
+      hours,
+      minutes,
+      seconds
+    });
+  }
+
+  changeDeadline() {
+    console.log('state', this.state);
+    this.setState({
+      deadline: this.state.newDeadline
+    });
+  }
+  render() {
+    var x = this.state.deadline;
+    var y = new Date(Date.parse(x)).getMonth();
+    var w = new Date(Date.parse(x)).getDate();
+    var z = new Date(Date.parse(x)).getFullYear();
+
+    var monthNames = [
+      'January',
+      'February',
+      'March',
+      'April',
+      'May',
+      'June',
+      'July',
+      'August',
+      'September',
+      'October',
+      'November',
+      'December'
+    ];
+
+    return (
+      <div className="App">
+        <div className="App-title">countdown to </div>
+        <span>{w + ' ' + monthNames[y] + ' ' + z}</span>
+
+        <div>
+          <p className="App-Clock-Days">
+            &nbsp; {this.leadingZero(this.state.days)+' Days'} &nbsp;
+          </p>
+          <p className="App-Clock-Hours">
+            {this.leadingZero(this.state.hours)} Hours
+          </p>
+          <p className="App-Clock-Minutes">
+            {this.leadingZero(this.state.minutes)} Minutes
+          </p>
+          <p className="App-Clock-Seconds">
+            {this.leadingZero(this.state.seconds)} Seconds
+          </p>
+        </div>
+        </div>
+ 
+    );
+  }
+}
+
+ReactDOM.render(<App />, document.getElementById('root'));
+
+
+</script>
