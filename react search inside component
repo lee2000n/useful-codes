@@ -1,0 +1,57 @@
+<div id="app2">&nbsp;</div>
+<script type="text/babel">
+
+class MyApp extends React.Component {
+
+    constructor() {
+        super();
+
+  this.state = {
+      fields:[
+        (<p>this is a dog</p>)
+  ]      
+    }
+        this.handleChange = this.handleChange.bind(this);
+    }
+
+    handleChange(e) {
+     
+        let object = this.refs.Progress1; // get your div component using refs
+  let fields = this.state.fields;
+
+        // now that you have the two strings you can do your search in your favorite way, for example:
+
+        let searchBarText = e.target.value;
+        let divText = object.textContent;
+let idx = divText.indexOf(searchBarText);
+        if (idx >=0) {
+  let newText = [divText .substring(0, idx), <strong>{divText .substring(idx, idx + searchBarText.length)}</strong>, divText .substring(idx + searchBarText.length)];
+
+this.setState({ fields:newText });
+
+        } else {
+         
+        }
+    }
+
+    render() {
+        return (
+            <div>
+                <input type="text" className="input" onChange={this.handleChange} placeholder="Search..." />
+                <p ref="Progress1" id="try">
+    {this.state.fields}
+
+                </p>
+            </div>
+        );
+    }
+}
+
+ReactDOM.render(<MyApp />, document.getElementById("app2"));
+</script>
+<style>
+    strong
+    {
+    color:red;
+    }
+</style>
