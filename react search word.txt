@@ -1,0 +1,158 @@
+<div id="app2">&nbsp;</div>
+<script type="text/babel">
+class MyApp extends React.Component {
+    constructor() {
+        super();
+
+        this.highlightSearch= this.highlightSearch.bind(this);
+    }
+
+highlightSearch() {
+
+     let text = document.getElementById("searchtt").value;
+
+if(text.match(/\S/) )
+{
+    let query = new RegExp("(\\b" + text + "\\b)", "gim");
+
+let ids="Progress";
+let buttonids="m";
+for (var i=1;i<3; i++)
+
+
+{
+    var e = document.getElementById(ids+i).innerHTML;
+
+    var enew = e.replace(/(<span>|<\/span>)/igm, "");
+
+    document.getElementById(ids+i).innerHTML = enew;
+if(enew)
+{
+var newe = enew.replace(query, "<span>$1</span>");
+ document.getElementById(ids+i).innerHTML =newe;
+
+}
+
+
+if(e.match(query))
+{
+document.getElementById(buttonids+i).style.color="red";
+}
+else
+{
+document.getElementById(buttonids+i).style.color="blue";
+}
+
+
+}
+
+
+
+
+
+
+}
+
+else
+{alert("invalid");
+
+}
+
+}
+
+    render() {
+        return (
+        <div>
+            <input
+                type="text" 
+                className="input" id="searchtt"
+             
+                placeholder="Search..."
+           />
+<input type="button" value="search" onClick={this.highlightSearch} />
+         <Apps />
+
+        </div>
+        );
+    }
+}
+
+class Ta extends React.Component {
+    render() {
+        return <p id="Progress1" className={this.props.aaa? 'all car' : 'allshow'}>this is a cat</p>;
+    }
+}
+
+class Ta1 extends React.Component {
+    render() {
+        return <p id="Progress2" className={this.props.aaaa? 'all car' : 'allshow'}>this is a lovely dog</p>;
+    }
+}
+
+class Apps extends React.Component {
+constructor() {
+        super();
+   this.state = {
+glance :true,
+glance1 :true,
+    };
+        this.showshowint = this.showshowint .bind(this);
+ this.showshowint1 = this.showshowint1 .bind(this);
+    }
+
+showshowint () {
+    // You can use redux for this.
+    this.setState({
+glance :false,glance1 :true,
+    });
+ }
+showshowint1 () {
+    // You can use redux for this.
+    this.setState({
+glance1 :false, glance :true,
+    });
+ }
+  
+
+
+
+render() {
+
+    return (
+      <p  >
+        <input type="button" className="btn btn-default" id="m1" value="myBenefits at a Glance" name="myBenefits at a Glance" onClick={this.showshowint} />
+        <input type="button" className="btn btn-default" id="m2" value="myBenefits" name="myBenefits" onClick={this.showshowint1} />
+<Ta aaa={this.state.glance } />
+<Ta1 aaaa={this.state.glance1 } />
+
+
+
+      </p>
+
+    );
+  }
+
+}
+
+
+ReactDOM.render(<MyApp />, document.getElementById("app2"));
+
+</script>
+<style>
+    .all
+    {
+    display:none;
+    }
+    .allshow
+    {
+    display:block;
+    }
+    strong
+    {
+    color:red;
+    }
+    #app2 span{
+    background-color:#FF9;
+    color:#555;
+    }
+</style>
