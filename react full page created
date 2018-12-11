@@ -1,0 +1,3006 @@
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" />
+<style>
+    .dropdown {
+    margin-left: 20px;
+    margin-top: 20px;
+    display: inline-block; /*If this is not applied, the hover function will work for entire row.*/
+    }
+    .menu {
+    background-color:white;
+    display: inline-block;
+    padding: 10px 20px;
+    color: black;
+    z-index: 99999;
+    position: fixed;
+    top: 2%;
+    left:75%;
+    }
+    .menu :hover
+    {
+    color:#9aa5a2;
+    font-weight: bold;
+    }
+    .dropdown-content {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    width: 72.5px;
+    display: none;
+    font-size:9px;
+    text-align:center;
+    }
+    .dropdown-content a {
+    text-decoration: underline;
+    color: black;
+    display: block;
+    }
+    .dropdown:hover .dropdown-content {
+    display: block;
+    position: fixed;
+    top: 6.5%;
+    left:75%;
+    z-index:9999;
+    -webkit-animation: fadeIn 0.5s;
+    animation: fadeIn 0.5s;
+    }
+    .mobilewrap
+    {
+    margin-top:100px;
+    }
+    .contactform{
+    margin: 20px;
+    }
+    input[type="text"] {
+    margin-bottom: 5px;
+    height: 20px;
+    border: 1px solid #d8d8d8;
+    padding: 3px;
+    }
+    textarea{
+    border: 1px solid #d8d8d8;
+    padding: 3px;
+    height:80px;
+    }
+    .error{
+    margin-left: 5px;
+    color: red;
+    }
+    .querytext
+    {width:100%;
+    height:300px;
+    }
+    #mod6286d02d_214e_4434_8718_c0a268984d8b,#mod068bc57b_c607_4837_88e5_2f587afb495d
+    {
+    display:none;
+    }
+    .Animate{
+    position: relative;
+    padding-bottom: 40.25%; /* 16:9 */
+    padding-top: 0px;
+    height: 0;
+    }
+    .Animate img {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    position: absolute;;
+    }
+    .savingtable
+    {
+    padding: 5px;
+    border-spacing: 0px;
+    border: 1pt solid #cccccc;
+    width: 60%;
+    }
+    .savingtables
+    {
+    padding: 5px;
+    border-spacing: 0px;
+    border: 1pt solid #cccccc;
+    width: 100%;
+    }
+    .savingtable tr,.savingtables tr
+    {
+    padding: 5px;
+    height: 15.4pt;
+    }
+    .savingtable td
+    {
+    border-width: 1pt medium medium; border-style: solid none none; border-color: #cccccc #f5f5f5 #f5f55f; padding: 5px; width: 50%; background-color: #cccccc;
+    }
+    .savingtables td:nth-child(1) {
+    background-color: white;
+    border-width: 1pt medium medium; border-style: solid none none; border-color: #cccccc #f5f5f5 #f5f55f; padding: 5px;
+    }
+    .savingtables td:nth-child(2) {
+    border-width: 1pt medium medium; border-style: solid none none; border-color: #bababa #f5f5f5 #f5f55f; padding: 5px; background-color: #cccccc;
+    }
+    .savingtables td:nth-child(3) {
+    background-color: #white;
+    border-width: 1pt medium medium; border-style: solid none none; border-color: #cccccc #f5f5f5 #f5f55f; padding: 5px;
+    }
+    .savingtables td:nth-child(4) {
+    border-width: 1pt medium medium; border-style: solid none none; border-color: #bababa #f5f5f5 #f5f55f; padding: 5px; background-color: #cccccc;
+    }
+    .savingtable p,.savingtables p
+    {
+    text-align: center;
+    }
+</style>
+<style>
+    .Animate{
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+    }
+    @-webkit-keyframes lightSpeedIn {
+    from {
+    -webkit-transform: translate3d(100%, 0, 0) skewX(-30deg);
+    transform: translate3d(100%, 0, 0) skewX(-30deg);
+    opacity: 0;
+    }
+    60% {
+    -webkit-transform: skewX(20deg);
+    transform: skewX(20deg);
+    opacity: 1;
+    }
+    80% {
+    -webkit-transform: skewX(-5deg);
+    transform: skewX(-5deg);
+    opacity: 1;
+    }
+    to {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+    opacity: 1;
+    }
+    }
+    @keyframes lightSpeedIn {
+    from {
+    -webkit-transform: translate3d(100%, 0, 0) skewX(-30deg);
+    transform: translate3d(100%, 0, 0) skewX(-30deg);
+    opacity: 0;
+    }
+    60% {
+    -webkit-transform: skewX(20deg);
+    transform: skewX(20deg);
+    opacity: 1;
+    }
+    80% {
+    -webkit-transform: skewX(-5deg);
+    transform: skewX(-5deg);
+    opacity: 1;
+    }
+    to {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+    opacity: 1;
+    }
+    }
+    .Animate {
+    -webkit-animation-name: lightSpeedIn;
+    animation-name: lightSpeedIn;
+    -webkit-animation-timing-function: ease-out;
+    animation-timing-function: ease-out;
+    }
+</style>
+<style>
+    .slick-slider {
+    margin: 30px auto 50px;
+    width: auto;
+    }
+    .cards h3 {
+    background: #00558b;
+    color: #fff;
+    line-height: 100px;
+    text-align: center;
+    font-size: 36px;
+    margin: 10px;
+    padding: 2%;
+    position: relative;
+    }
+    .cards {
+    padding: 8px;
+    position: relative;
+    margin: 15px;
+    box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.25);
+    border-top: 6px solid #d8d8d8;
+    transition: all 0.3s ease-in-out;
+    z-index: 1;
+    }
+    .cards:hover {
+    border-top: 6px solid #0080ad;
+    cursor: default;
+    transform: translateY(0px);
+    }
+    .cards h4 {
+    text-transform: uppercase;
+    color: #3e4042;
+    }
+    .cards p {
+    line-height: 1.5;
+    }
+    .slick-prev {
+    background: black;
+    }
+    .slick-next {
+    background: black;
+    }
+    .slick-dots li {
+    margin: 0 16px;
+    }
+    .slick-dots li button:before {
+    content: " ";
+    background: #d8d8d8;
+    opacity: 1;
+    height: 4px;
+    width: 40px;
+    }
+    .slick-dots li.slick-active button:before {
+    content: " ";
+    background: #0080ad;
+    opacity: 1;
+    height: 4px;
+    width: 40px;
+    }
+    .slider {
+    width: 100%;
+    height: 281px;
+    position: relative;
+    overflow: hidden;
+    }
+    .slider__slide {
+    transition: all 0.4s ease-in-out;
+    transform: scale(1.1);
+    position: absolute;
+    width: 100%;
+    height:100%;
+    opacity: 0;
+    }
+    .slider__slide img
+    {
+    width: 100%;
+    }
+    .slider__slide[data-active="true"] {
+    transform: scale(1);
+    z-index: 100;
+    opacity: 1;
+    }
+    .slider__next, .slider__previous {
+    transition: all 0.3s ease-in-out;
+    color: rgba(255, 255, 255, .6);
+    z-index: 200;
+    position: absolute;
+    }
+    .slider__next:hover, .slider__previous:hover {
+    color: rgba(255, 255, 255, .8);
+    transform: scale(1.1);
+    }
+    .slider__next {
+    bottom: 2%;
+    left:94%;
+    }
+    .slider__previous {
+    bottom:2%;
+    right: 94%;
+    }
+    @media (max-width: 2994px) and (min-width: 767px)
+    {
+    .dropdown
+    {
+    display:none;
+    }
+    }
+    @media (max-width: 767px) and (min-width: 167px)
+    {
+    .dropdown
+    {
+    display: block;
+    }
+    }
+    @media (max-width: 994px) and (min-width: 809px)
+    {    .slider__next {
+    bottom: 20%;
+    left:94%;
+    }
+    .slider__previous {
+    bottom:20%;
+    right: 94%;
+    }
+    .fa-4x
+    {
+    font-size: 4em;
+    }
+    .headerul li:hover
+    {
+    color:grey;
+    }
+    .headerul{
+    width:100%;
+    }
+    .slider__slide
+    {
+    height: 50%;
+    }
+    }
+    @media (max-width: 808px) and (min-width:614px)
+    {    .slider__next {
+    bottom: 40%;
+    left:94%;
+    }
+    .slider__previous {
+    bottom:40%;
+    right: 96%;
+    }
+    .fa-4x
+    {
+    font-size: 3em;
+    }
+    .headerul{
+    width:100%;
+    margin-top:-50px;
+    }
+    .mobilewrap
+    {
+    margin-top: -20px;
+    }
+    .slider__slide
+    {
+    height: 50%;
+    }
+    }
+    @media (max-width: 613px) and (min-width:590px)
+    {    .slider__next {
+    bottom: 40%;
+    left:95%;
+    }
+    .slider__previous {
+    bottom:40%;
+    right: 95%;
+    }
+    .fa-4x
+    {
+    font-size: 3em;
+    }
+    .slider__slide
+    {
+    height: 40%;
+    }
+    .mobilewrap
+    {
+    margin-top: 100px;
+    }
+    }
+    @media (max-width: 434px) and (min-width:190px)
+    {    .slider__next {
+    bottom: 70%;
+    left:93%;
+    }
+    .slider__previous {
+    bottom:70%;
+    right: 93%;
+    }
+    .fa-4x
+    {
+    font-size: 2.3em;
+    }
+    .mobilewrap
+    {
+    margin-top: -20px;
+    }
+    .slider__slide
+    {
+    height: 30%;
+    }
+    }
+    @media (max-width: 591px) and (min-width:434px)
+    {    .slider__next {
+    bottom: 60%;
+    left:94%;
+    }
+    .slider__previous {
+    bottom:60%;
+    right: 94%;
+    }
+    .fa-4x
+    {
+    font-size: 2.3em;
+    }
+    .mobilewrap
+    {
+    margin-top: 50px;
+    }
+    .slider__slide
+    {
+    height: 50%;
+    }
+    }
+    @media (max-width: 768px) and (min-width:132px)
+    {
+    .headerul{
+    display:none;
+    }
+    }
+</style>
+<style>
+    .headerul{
+    display: inline-block;
+    position: relative;
+    padding: 0;
+    list-style: none;
+    height: 38px;
+    z-index: 300;
+    background-color: #fff;
+    width: 104.3%;
+    }
+    .headerul li{
+    float: left;
+    width: 16%;
+    }
+    #root li:hover{
+    background: grey;
+    }
+    .headerul a{
+    color: #000;
+    font-weight: bold;
+    display: block;
+    padding: 10px 0;
+    text-align: center;
+    font-size: 1.167em;
+    text-decoration: none;
+    }
+    .headerul a:hover{
+    color: white;
+    text-decoration: underline;
+    }
+    .buttonposition
+    {position:relative;
+    top:10px;
+    width:105%;
+    }
+</style>
+<style>
+    @-webkit-keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+    }
+    @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+    }
+    .all{
+    display: none;
+    }
+    .all1
+    {
+    display: none;
+    -webkit-animation: fadeIn 1s;
+    animation: fadeIn 1s;
+    }
+    .allshow
+    {display:block;
+    -webkit-animation: fadeIn 1s;
+    animation: fadeIn 1s;
+    }
+    .tstyle
+    {
+    overflow:auto;
+    }
+    .tstyle td
+    {
+    border-width: 1px; border-style: solid; padding: 5px;
+    }
+    .tdstyle
+    {
+    border-width: 1px; border-style: solid; padding: 5px;
+    }
+</style>
+<div id="roots1">&nbsp;</div>
+<script type="text/babel">
+
+
+
+let slides = [
+  {
+    background: "https://www.mystudentplan.ca/_uploads/images/Sliders/Benefits_Coverage_Slider.jpg",
+
+    link: "https://www.mystudentplan.ca/redriver-international/en/homepage#/mybenefits#m1"
+  },
+  {
+    background: "/_uploads/images/Sliders/Plan_Coordination_Slider.jpg",
+
+    link: "https://www.mystudentplan.ca/redriver-international/en/homepage#/coverages#other"
+  },
+  {
+    background: "/_uploads/images/RSU/RXnet_960x281.jpg?actions=r|959-281",
+
+    link: "https://www.mystudentplan.ca/redriver-international/en/homepage#/savings"
+  }
+  
+]
+
+const Slide = React.createClass({
+
+  render: function(){
+  document.querySelector('#mod6286d02d_214e_4434_8718_c0a268984d8b').style.display= "none";
+   document.querySelector('#mod068bc57b_c607_4837_88e5_2f587afb495d').style.display= "none";
+
+ 
+
+
+
+
+    let background = this.props.background;
+
+    let link = this.props.link;
+    let active = this.props.active;
+         
+    let slideStyle = {
+      backgroundImage: 'url(' + background + ')'  
+    };
+    
+    return(
+    <a href={link}><div className="slider__slide" data-active={active} >
+<img
+        src={ background }  />
+ 
+      </div></a>
+
+      );
+  }
+});
+
+const Slider = React.createClass({
+  
+  getInitialState : function(){
+    return {
+      activeSlide: 0
+    }  
+  },
+  
+  nextSlide: function(){
+    let slide = this.state.activeSlide + 1< this.props.slides.length ? this.state.activeSlide + 1 : 0;
+    this.setState({
+      activeSlide: slide
+    });
+  },
+  
+  previousSlide: function(){
+    let slide = this.state.activeSlide - 1 <0 ? this.props.slides.length - 1:  this.state.activeSlide - 1;
+    this.setState({
+      activeSlide: slide
+    });
+  },
+  
+  render: function(){
+    let slides = this.props.slides;
+    
+    return(
+<div>
+      <div className="slider">
+      {slides.map((slide, index, array) =>
+         <Slide background={slide.background}  active={index === this.state.activeSlide} link={slide.link} /> )}
+            <div className="slider__next" onClick={this.nextSlide}><i className="fa fa-4x fa-arrow-circle-right"></i></div>
+            <div className="slider__previous" onClick={this.previousSlide}><i className="fa fa-4x fa-arrow-circle-left"></i>
+</div>
+
+            </div>
+<div className="mobilewrap">
+<Quicklink /></div>
+
+</div>
+    );
+  }
+});
+
+
+const {
+  HashRouter,
+  Switch,
+  Route,
+  Link
+} = ReactRouterDOM
+
+
+  
+
+const myBenefits= () =>(
+<span>
+    <Apps />
+</span>
+)
+
+const coverages= () => (
+    <span>
+
+    </span>
+)
+
+const forms= () => (
+<span>
+
+</span>
+
+)
+
+const savings= () =>(
+    <span>
+
+    </span>
+)
+
+const claim= () => (
+<span>
+</span>
+)
+
+const assistance= () =>(
+<span></span>
+
+
+
+
+)
+
+
+
+
+
+const Main = () =>(
+  <main>
+    <Switch>
+
+ 
+      <Route exact path="/coverages" component={Coverages} />
+      <Route exact path='/forms' component={Forms} />
+      <Route exact path="/savings" component={Savings} />
+      <Route exact path="/Claim" component={Claim} />
+      <Route exact path="/assistance" component={Assistance}  />
+     <Route exact path="/mybenefits" component={myBenefits} />
+<Slider slides={slides} />
+
+    </Switch>
+  </main>
+)
+
+const Header = () => (
+  <headers>
+    <nav>
+      <ul className="headerul">
+        <li><Link to="/mybenefits">myBenefits</Link></li>
+        <li><Link to="/coverages">Coverage</Link></li>
+        <li><Link to="/forms">Forms</Link></li>
+        <li><Link to="/savings">Savings</Link></li>
+        <li><Link to="/claim">Claim</Link></li> 
+        <li><Link to="/assistance">Assistance</Link></li> 
+      </ul>
+    </nav>
+
+
+  </headers>  
+)
+
+const App = () => (
+  <div>
+
+    <Header />
+    <Main />
+<Mobilemenu />
+
+  </div>
+
+  
+
+
+
+)
+
+
+
+
+
+class Apps extends React.Component {
+  constructor() {
+  document.querySelector('#mod6286d02d_214e_4434_8718_c0a268984d8b').style.display= "none";
+   document.querySelector('#mod068bc57b_c607_4837_88e5_2f587afb495d').style.display= "none";
+    super();
+    this.state = {
+glance :true,
+   intel:true,
+reshow : true,
+pres : true,
+dental: true,
+personal: true,
+exclusion: true
+    };
+
+    this.showshowint = this.showshowint .bind(this);
+ this.showshowglance= this.showshowglance.bind(this);
+ this.showshowrepates= this.showshowrepates.bind(this);
+ this.showprescription= this.showprescription.bind(this);
+ this.showdental= this.showdental.bind(this);
+ this.showpersonal= this.showpersonal.bind(this);
+ this.showexclusion= this.showexclusion.bind(this);
+  }
+
+showshowint () {
+    // You can use redux for this.
+    this.setState({
+glance :true,
+   intel:false,
+reshow: true,
+pres : true,dental: true, personal: true,
+
+exclusion: true
+    });
+ }
+
+
+
+  showshowglance() {
+    // You can use redux for this.
+    this.setState({
+glance :false,
+   intel: true,
+reshow: true,
+pres : true,dental: true, personal: true,
+exclusion: true
+    });
+ 
+  }
+
+ showshowrepates() {
+    // You can use redux for this.
+    this.setState({
+glance :true,
+   intel: true,
+reshow: false,
+pres : true,dental: true, personal: true,
+exclusion: true
+    });
+ 
+  }
+ showprescription() {
+    // You can use redux for this.
+    this.setState({
+glance :true,
+   intel: true,
+reshow: true,
+pres : false,dental: true, personal: true,
+exclusion: true
+    });
+ 
+  }
+ showdental() {
+    // You can use redux for this.
+    this.setState({
+glance :true,
+   intel: true,
+reshow: true,
+pres : true,dental: false, personal: true,
+exclusion: true
+    });
+ 
+  }
+
+showpersonal() {
+    // You can use redux for this.
+    this.setState({
+glance :true,
+   intel: true,
+reshow: true,
+pres : true,
+dental: true,
+personal: false,
+exclusion: true
+    });
+ 
+  }
+showexclusion() {
+    // You can use redux for this.
+    this.setState({
+glance :true,
+   intel: true,
+reshow: true,
+pres : true,
+dental: true,
+personal: true,
+exclusion: false
+    });
+ 
+  }
+
+
+  render() {
+
+    return (
+      <div className="buttonposition" >
+        <input type="button" className="btn btn-default" id="m1" value="myBenefits at a Glance" name="myBenefits at a Glance" onClick={this.showshowglance} />
+        <input type="button" value="International Insurance" className="btn btn-default" name="International Insurance" onClick={this.showshowint } />
+        <input type="button" value="Repatriation" className="btn btn-default" name="Repatriation" onClick={this.showshowrepates} />
+        <input type="button" value="Prescription Drug" className="btn btn-default" onClick={this.showprescription} />
+       <input type="button" value="Dental" className="btn btn-default" onClick={this.showdental} />
+       <input type="button" value="PHRA" className="btn btn-default" onClick={this.showpersonal} />
+       <input type="button" value="Exclusion" className="btn btn-default" onClick={this.showexclusion} />
+<br/><br/>
+<Showint aaa={this.state.intel} />
+<Showglance aa={this.state.glance} />
+<Showrepates rep={this.state.reshow} />
+<Prescription pres={this.state.pres} />
+<Dental den={this.state.dental} />
+<Personal vid={this.state.personal} />
+<Exclusion exc={this.state.exclusion} />
+
+
+<Quicklink />
+
+
+      </div>
+
+    );
+  }
+
+}
+
+class Showglance extends React.Component {
+
+
+
+  render() {
+
+
+
+
+    return (
+<p className={this.props.aa? 'all' : 'allshow'}>
+<p className="card mb-4 box-shadow"><p className="card-header"><h3>myBenefits at a Glance</h3></p><p className="card-body">The highlights below are provided as general information. Coverage for eligible costs is based on the contract detail. Select the benefit for additional coverage details.<br/><br/>
+<a ><strong>Vision: </strong></a><br/>
+Reimbursed at 100% of the reasonable and customary charges.
+<br />
+Limited to one trip per benefit year.
+<br />
+<br />
+<a id="Visiondetail"><strong>Vision:</strong></a><br />
+Reimbursed at 100% to maximum of $80 every 24 months for eye exam, and 100% to a maximum of $200 for glasses or contact lenses.<br />
+<br />
+<a id="Drugsdetail"><strong>Prescription Drugs:</strong></a><br />
+Reimbursed at 85% to a maximum of $3,000 per benefit year.<br />
+Based on the NASA Formulary with a generic rider.
+<br />
+<br />
+<a id="Practitionersdetail"><strong>Health Practitioners:</strong></a><br />
+Covered practitioners include: Acupuncturist, podiatrist/chiropodist, chiropractor, massage therapist, naturopath, dietitian, osteopath, physiotherapist, psychologist or registered social worker, and speech therapist. Practitioners must be registered and licensed in their field of practice. For detailing&rsquo;s outlining amounts covered please visit supplemental health.<br />
+<br />
+<a id="Medicaldetail"><strong>Medical Equipment & Supplies:</strong></a><br />
+Overall maximum of $2000 per benefit year. A physician's prescription is required. Pre-authorization is suggested. <br />
+<br />
+<a id="Dentaldetail"><span><strong>Dental Coverage:</strong></span></a><br />
+Exams covered at 90% once per benefit year. Overall plan maximum of $900 per benefit year.<br />
+<br />
+<span><a id="Accidentdetail"><strong>Dental Accident:</strong></a></span><br />
+Reimbursed at 100% to a maximum of $1,000 per accident.<br />
+(services must be started within 90 days of accident and completed within 12 months of accident; authorization required)
+<br />
+<br />
+<a id="Traveldetail"><strong>Travel Insurance:</strong></a><br />
+$5,000,000 of coverage for emergencies and illnesses while travelling.<br />
+<br />
+<a id="Tutorialdetail"><strong>Tutorial:</strong></a><br />
+After 15 days of confinement due to illness or injury.
+
+</p>
+
+</p>
+</p>
+
+)
+  }
+}
+
+
+
+
+
+
+
+class Showint extends React.Component {
+ constructor(props) {
+    super(props);
+    this.state = {
+      inverted: true,
+tdshide:true
+    };
+    this.toggleInverted = this.toggleInverted.bind(this);
+  }
+
+  toggleInverted(e) {
+
+if (e.target.value === "Ambulance1")
+{ 
+          this.setState({inverted: false, tdshide:true});
+
+
+        }
+else if (e.target.value === "Practitioners1")
+{ 
+          this.setState({inverted: true, tdshide: false});
+        }
+
+else
+{
+   this.setState({inverted: true, tdshide: true});
+}
+
+
+
+
+
+  }
+
+  render () {
+    const classNameDivs = this.state.inverted ? 'all' : 'allshow';
+    const classNameDivs1 = this.state.tdshide ? 'all' : 'allshow';
+    return(
+<p className={this.props.aaa? 'all1' : 'allshow'}>
+<p className="card mb-4 box-shadow">
+ <div className="card-header">
+<h3>International Insurance</h3>
+</div>
+<br />
+<br />
+<div className="card-body">
+
+<select onChange={this.toggleInverted}>
+
+<option>Please select an option to see details</option>
+<option value="Ambulance1" >Basic AD&D</option>
+<option value="Practitioners1" >Medical</option>
+</select><br />
+
+<br/>
+<div className={classNameDivs}>
+<h3>BASIC ACCIDENTAL DEATH & DISMEMBERMENT (AD&D) </h3>
+<br />
+<br />
+<div className="tstyle">
+<table>
+    <tbody>
+        <tr>
+            <td className="tdstyle">&nbsp;<strong>Benefit Schedule</strong></td>
+            <td   className="tdstyle">&nbsp;Flat amount of $50,000;
+            optional coverage up to $200,000</td>
+        </tr>
+        <tr>
+            <td   className="tdstyle">&nbsp;<strong>Maximum Benefit</strong></td>
+            <td   className="tdstyle">&nbsp;$200,000 (amount over
+            $50,000 optional at extra cost)</td>
+        </tr>
+        <tr>
+            <td   className="tdstyle">&nbsp;<strong>Termination Age</strong></td>
+            <td  className="tdstyle">&nbsp;70</td>
+        </tr>
+    </tbody>
+</table>
+</div>
+</div>
+<div className={classNameDivs1} >
+<h3>MEDICAL &ndash; ADVANTAGE PLAN</h3>
+<br />
+<br />
+<div className="tstyle">
+<table>
+    <tbody>
+        <tr>
+            <td><strong>Annual Maximum</strong>&nbsp;</td>
+            <td>&nbsp;$2,000,000</td>
+        </tr>
+        <tr>
+            <td>&nbsp;<strong>Hospital</strong></td>
+            <td>&nbsp;100%</td>
+        </tr>
+        <tr>
+            <td><strong>Physician and Diagnostic Procedures</strong></td>
+            <td>&nbsp;100%</td>
+        </tr>
+        <tr>
+            <td><strong>Prescription Drugs</strong></td>
+            <td>&nbsp;Outpatient: 100% up to 30 day supply per class of prescription drug, Inpatient:&nbsp; included when
+            due to covered sickness or injury.</td>
+        </tr>
+        <tr>
+            <td><strong>Annual Check-up</strong></td>
+            <td>&nbsp;One visit up to $175 per
+            policy year if coverage period is six or more continuous months</td>
+        </tr>
+        <tr>
+            <td><strong>Inpatient Psychotherapy</strong></td>
+            <td>&nbsp;Up to $25,000 per policy
+            year</td>
+        </tr>
+        <tr>
+            <td><strong>Outpatient Psychiatrist or Psychologist&nbsp;</strong></td>
+            <td>&nbsp;Up to $2,500 per policy
+            year</td>
+        </tr>
+        <tr>
+            <td><strong>Paramedical Services</strong></td>
+            <td>&nbsp;$500 per practitioner for
+            chiropractor, osteopath, naturopath, acupuncturist, chiropodist and podiatrist for charges outside of Hospital.&nbsp; Includes coverage for x-rays.</td>
+        </tr>
+        <tr>
+            <td><strong>Physiotherapy and Speech Therapy</strong></td>
+            <td>&nbsp;$1,000 combined maximum for
+            charges outside of Hospital</td>
+        </tr>
+        <tr>
+            <td><strong>Local Ambulance</strong></td>
+            <td>&nbsp;Full cost of licensed
+            ambulance service to nearest hospital and emergency transfers between hospitals
+            including user fee, OR taxi fare to or from a hospital or medical clinic for
+            eligible medical care to a maximum $100.&nbsp;&nbsp;</td>
+        </tr>
+        <tr>
+            <td><strong>Medical Equipment and Supplies</strong></td>
+            <td>&nbsp;When required due to an
+            emergency sickness or injury - Purchase of medical supplies including dressings
+            and prosthetic appliances; rental charges for wheelchairs, crutches, hospital
+            beds or other appliances not to exceed purchase price.&nbsp; Up to $200 for prescription glasses or
+            contact lenses or up to $300 for hearing aids.&nbsp;
+            Up to $300 for custom orthotics or up to $800 for custom knee
+            braces.&nbsp;&nbsp;</td>
+        </tr>
+        <tr>
+            <td><strong>Emergency Dental&nbsp;</strong></td>
+            <td>&nbsp;Up to $600 for relief of
+            pain and suffering</td>
+        </tr>
+        <tr>
+            <td><strong>Dental Accident</strong></td>
+            <td>&nbsp;Up to $4,000 for dental
+            treatment due to an accidental blow to the mouth</td>
+        </tr>
+        <tr>
+            <td><strong>HIV/AIDS</strong></td>
+            <td>&nbsp;Up to $10,000 per lifetime
+            for expenses incurred as a result of a positive HIV, AIDS or ARC diagnosis made
+            after coverage commenced</td>
+        </tr>
+        <tr>
+            <td><strong>Eye Examination</strong></td>
+            <td>&nbsp;Once per policy year to
+            $100 maximum if coverage period is six or more continuous months</td>
+        </tr>
+        <tr>
+            <td><strong>Maternity Care</strong></td>
+            <td>&nbsp;Pre-natal care,
+            complications, delivery and involuntary termination to a combined maximum of
+            $25,000 when pregnancy commences during period of coverage. . For pregnancies
+            commencing prior to cover effective date:&nbsp;
+            coverage for emergency complications up to maximum $5,000 for first 32
+            weeks of pregnancy.</td>
+        </tr>
+        <tr>
+            <td><strong>Air Evacuation</strong></td>
+            <td>&nbsp;Cost of transport to
+            nearest hospital or a hospital in Home Country</td>
+        </tr>
+        <tr>
+            <td><strong>Exceptional Hospitalization Benefit</strong></td>
+            <td>&nbsp;Up to $50,000 lifetime
+            aggregate for hospital medical and/or psychiatric treatment if admitted to
+            hospital for suicide, attempted suicide, self-inflicted injuries, mental or
+            emotional disorders (including but not limited to stress, anxiety, panic
+            attacks, depression, eating disorders or weight problems) or psychiatric
+            treatment</td>
+        </tr>
+        <tr>
+            <td><strong>Private Duty Nursing Care</strong></td>
+            <td>&nbsp;Up to $15,000 for services
+            of Registered Nurse, Registered Nurse Assistant or Home Care Worker</td>
+        </tr>
+        <tr>
+            <td><strong>Wart Treatment</strong></td>
+            <td>Up to $500 (excluding
+            treatment solely for cosmetic result)</td>
+        </tr>
+        <tr>
+            <td><strong>Tutorial Expenses</strong></td>
+            <td>Up to $15 per hour to maximum $500 for private tutorial services when confined to home or hospital for 30 consecutive days due to sickness or injury.</td>
+        </tr>
+        <tr>
+            <td><strong>Trauma Counselling</strong></td>
+            <td>Up to 6 sessions of trauma counselling within 90 days of accident covered under AD&D benefit that occurred during the coverage period</td>
+        </tr>
+        <tr>
+            <td><strong>Family Transportation and Subsistence Allowance</strong></td>
+            <td>Up to $5,000 for round trip transportation for two persons; Includes up to $1,500 for commercial accommodation and meals</td>
+        </tr>
+        <tr>
+            <td><strong>Repatriation or Burial of Deceased</strong></td>
+            <td>Up to $15,000 towards preparation and return of remains to home country or up to $5,000 for cost for cremation or burial in host country</td>
+        </tr>
+        <tr>
+            <td><strong>Return Home due to Family Emergency</strong></td>
+            <td>Up to $2,500 for round trip transportation</td>
+        </tr>
+        <tr>
+            <td><strong>Outside Canada</strong></td>
+            <td>Includes excursions outside Canada to 90 cumulative days per year with excursions the USA limited to 30 cumulative days per year. No coverage in Home country unless part of school or training program.</td>
+        </tr>
+        <tr>
+            <td><strong>Pre-existing Conditions</strong></td>
+            <td>Includes expenses that are medically recognized as emergency care of the pre-existing condition.</td>
+        </tr>
+        <tr>
+            <td><strong>Coverage in Home Country</strong></td>
+            <td>For Canadians returning to Canada coverage extended for 90 days until provincial healthcare becomes available</td>
+        </tr>
+    </tbody>
+</table>
+</div>
+</div>
+</div>
+
+      </p></p>
+    )
+  }
+
+}
+class Showrepates extends React.Component {
+ 
+
+  render () {
+  
+    return(
+<p className={this.props.rep? 'all1' : 'allshow'}>
+<p className="card mb-4 box-shadow">
+<div className="card-header">
+<h3>Repatriation</h3>
+</div>
+<div className="card-body">
+<strong>MORTAL REMAINS SERVICES</strong><br />
+<br />
+Benefit Maximum: $12,500 CAD<br />
+a) Towards reasonable and necessary costs for preparation and return of
+remains to the insured&rsquo;s Home Country in standard transportation
+container. Assist in obtaining the necessary clearance for cremation or the
+return of mortal remains. Coordinate the preparation and transportation of
+mortal remains to the insured&rsquo;s Home Country.
+<br />
+<strong>OR</strong><br />
+b) Towards cost of preparing the remains, cremation or burial and a burial
+plot in the location where death occurs. The costs for coffin, urn,
+headstone or funeral are excluded.
+<br />
+<br />
+<strong>Family Member Transportation
+</strong><br />
+<br />
+Benefit Maximum:
+$2,500 CAD
+<br />
+Round-trip economy flight and accommodations for a family member travelling
+to identify the deceased.</div>
+</p></p>
+    )
+  }
+
+}
+
+class Prescription extends React.Component{
+
+render(){
+
+return(
+<p className={this.props.pres? 'all1' : 'allshow'}>
+<div className="card mb-4 box-shadow">
+<div className="card-header">
+<h3>Prescription Drugs</h3>
+</div>
+<div className="card-body">
+Your drug plan covers 80% of the cost of most medications legally requiring a prescription to a maximum of $5,000 per benefit year.<br />
+<br />
+The maximum amount payable to an eligible brand name drug will be limited to the lowest priced item in the appropriate generic category.<br />
+<br />
+IMPORTANT! Advise your doctor and pharmacist that you are on the MB Provincial Formulary. <br />
+<br />
+<em>The MB Provincial Formulary </em>is a specific list of drugs that are eligible for reimbursement under your drug<br />
+benefit. Formularies are developed to ensure that prescription drugs are available on a cost-effective basis. It covers approximately 85% of the most frequently prescribed drugs.&nbsp; Formularies are reviewed regularly and as a result, updates are made on an ongoing basis.<br />
+<br />
+<em>Exception Process:</em> In the event that the drugs covered are not effective in treating&nbsp;your condition, an exception process is in place. To be eligible for an exception, you must have tried one alternative drug listed on the Formulary.&nbsp;An exception&nbsp;drug request form&nbsp;is&nbsp;available&nbsp;below or from&nbsp;the Student Benefits Plan Office and must be completed by your physician. Completed forms may be returned to the RRCSA Student Benefits Plan Office or can be&nbsp;faxed directly to the insurance company.<br />
+<br />
+<a href="/_uploads/documents/Drug%20Exception%20Form/exceptionform.pdf" target="_blank" class="standard">Request for Coverage of Exception Status Drug form</a>
+</div>
+</div>
+
+</p>
+
+
+)
+
+
+}
+
+
+}
+
+class Dental extends React.Component
+{constructor(props) {
+    super(props);
+    this.state = {
+      sdo1: true,
+sdo2:true,
+sdo3:true,
+sdo4:true,
+sdo5:true,
+sdo6:true
+    };
+    this.dentalselect= this.dentalselect.bind(this);
+  }
+
+  dentalselect(e) {
+
+if (e.target.value === "Major")
+{ 
+          this.setState({sdo1: false, sdo2: true , sdo3: true, sdo4: true, sdo5: true, sdo6: true});
+
+
+        }
+else if (e.target.value === "Periodontic")
+{ 
+        this.setState({sdo1: true, sdo2: false, sdo3: true, sdo4: true, sdo5: true, sdo6: true});
+        }
+
+else if (e.target.value === "Endodontic")
+{ 
+ this.setState({sdo1: true, sdo2: true , sdo3: false, sdo4: true, sdo5: true, sdo6: true});
+        }
+
+else if (e.target.value === "Extractions")
+{ 
+ this.setState({sdo1: true, sdo2: true , sdo3: true, sdo4: false, sdo5: true, sdo6: true});
+        }
+else if (e.target.value === "Restorative")
+{ 
+           this.setState({sdo1: true, sdo2: true , sdo3: true, sdo4: true, sdo5: false, sdo6: true});
+        }
+else if (e.target.value === "Diagnostic")
+{ 
+ this.setState({sdo1: true, sdo2: true , sdo3: true, sdo4: true, sdo5: true, sdo6: false});
+        }
+
+
+
+
+
+else
+{
+ this.setState({sdo1: true, sdo2: true , sdo3: true, sdo4: true, sdo5: true, sdo6: true});
+}
+
+
+
+
+
+  }
+
+  render () {
+    const do1= this.state.sdo1? 'all' : 'allshow';
+    const do2= this.state.sdo2? 'all' : 'allshow';
+    const do3= this.state.sdo3? 'all' : 'allshow';
+    const do4= this.state.sdo4? 'all' : 'allshow';
+    const do5= this.state.sdo5? 'all' : 'allshow';
+    const do6= this.state.sdo6? 'all' : 'allshow';
+
+    return(
+    <p className={this.props.den? 'all1' : 'allshow'}>
+<p className="card mb-4 box-shadow">
+ <div className="card-header">
+<h3>Dental</h3>
+</div>
+<div className="card-body">
+Payment of dental benefits is based on the General Practitioners Dental Association suggested fee guide or the Insurance Reimbursement Rate set by the Canadian Life and Health Insurance Association Inc. (CLHIA) when a fee guide is not available. For services provided by a dental specialist, payment is based upon the General Practitioners Dental Association suggested fee guide.<br />
+<br />
+Alternate Benefit - When there are two or more courses of treatment available to adequately correct a dental condition, reimbursement may be based on the cost of the least expensive treatment, which provides adequate care to the Insured. <br />
+<br />
+<strong>IMPORTANT!</strong> Please submit a pre-determination/pre-authorization to the insurance carrier prior to treatment of specialist services and any treatment plan exceeding $500.<br />
+<br />
+Your plan covers up to a maximum of $750 per benefit year.<br />
+<br />
+<select onChange={this.dentalselect}>
+<option>Please select an option to see details</option>
+<option value="Diagnostic">Diagnostic & Preventative</option>
+<option value="Restorative">Minor Restorative</option>
+<option value="Extractions">Oral Surgery</option>
+<option value="Periodontic">Periodontic</option>
+<option value="Endodontic">Endodontic</option>
+<option value="Major">Major Restorative</option>
+</select><br />
+
+<br/>
+<div className={do6}>
+<strong>Diagnostic & Preventative</strong><br />
+Your plan covers 80% of diagnostic and preventative procedures including:<br />
+&bull; examination, 1 per benefit year<br />
+&bull; complete series of x-rays (not eligible for dependents under 12) and periapical, up to 16 films including bitewings in any period of 36 months<br />
+&bull; bitewings, not more than 4 films per benefit year<br />
+&bull; panoramic, 1 in any period of 36 months<br />
+&bull; polishing, 1 unit per benefit year<br />
+&bull; scaling, 2 units per benefit year<br />
+&bull; fluoride, under 19 years of age, 2 treatments per benefit year<br />
+&bull; oral hygiene instruction, 1 treatment per lifetime<br />
+&bull; pit and fissure sealants, under 19 years of age, 1 per molar in any period of 36 months<br />
+&bull; space maintainers and maintenance, under 15 years of age<br />
+&bull; anaesthesia, eligible when done in conjunction with a covered dental procedure
+</div>
+
+<div className={do5}>
+<strong>Minor Restorative</strong><br />
+Your plan covers 70% for services associated with dental health restoration, including:<br />
+&bull; amalgam and tooth coloured fillings, 1 per tooth in any period of 24 months<br />
+&bull; stainless steel and plastic full coverage restorations, under 15 years of age, 1 per tooth in any period of 36 months<br />
+&bull; denture adjustments and repairs<br />
+&bull; relining, rebasing and tissue conditioning, one treatment in any period of 36 months
+</div>
+
+<div className={do4}>
+<strong>Oral Surgery</strong><br />
+Your plan covers 70% for services associated oral surgery, including:<br />
+&bull; extractions, limited to 2 wisdom teeth per benefit year
+</div>
+
+<div className={do3}>
+<strong>Endodontic</strong><br />
+Your plan covers 15% for endodontic services including:
+&bull; root canal therapy
+</div>
+
+<div className={do1}>
+<strong>Major Restorative</strong><br />
+Your plan covers 15% of major restorative services including:<br />
+&bull; inlays, onlays<br />
+&bull; crowns<br />
+&bull; veneers, other than for cosmetic purposes<br />
+&bull; bridges<br />
+&bull; dentures<br />
+<br />
+Replacement of an existing inlay, onlay, crown, veneer, and bridge is an eligible expense if the replacement is required to replace an existing inlay, onlay, crown, veneer, and bridge which was installed 5 years before the replacement.
+</div>
+
+<div className={do2} >
+<strong>Periodontic</strong><br />
+Your plan covers 15% for periodontic services including:<br />
+&bull; occlusal equilibration, not more than 4 units per benefit year<br />
+&bull; periodontal appliances, not more than 1 appliance per arch in any period of 24 months<br />
+&bull; periodontal appliance repairs, maintenance and adjustments, not more than 4 adjustments<br />
+per benefit year<br />
+&bull; other oral surgical services
+</div>
+</div>
+
+
+      </p></p>
+    )
+  }
+
+
+
+}
+
+class Personal extends React.Component
+{constructor(props) {
+    super(props);
+    this.state = {
+v1:true,
+vtext : "Click to watch",
+vlink: "https://www.youtube.com/embed/VLiK3HeTRE4"
+    };
+    this.selectv1= this.selectv1.bind(this);
+  }
+
+selectv1()
+{
+
+
+
+if (this.state.vtext==="Click to watch")
+{
+ this.setState({v1: false});
+ this.setState({vtext: "Close video"});
+ this.setState({vlink: "https://www.youtube.com/embed/VLiK3HeTRE4"});
+}
+else
+{
+ this.setState({v1: true});
+ this.setState({vtext : "Click to watch"});
+ this.setState({vlink: ""});
+}
+}
+
+
+
+
+render(){
+ const sv1= this.state.v1? 'all' : 'allshow';
+return(
+<p className={this.props.vid? 'all1' : 'allshow'}>
+<div className="card mb-4 box-shadow">
+<div className="card-header">
+<h3>Personal Health Risk Assessment</h3>
+</div>
+<div className="card-body">
+<span>The Personal Health Risk Assessment can be used to create a health profile, build an action plan to support your health and wellness needs and track progress.<br />
+<br />
+</span>
+<span>Watch a short video about Personal Health Risk Assessment.</span> <input class="button"  type="button" value={this.state.vtext} onClick={this.selectv1} /><br />
+<br />
+<div className={sv1}>
+<iframe src={this.state.vlink} frameborder="0" allowFullScreen>
+</iframe>
+</div>
+</div>
+</div>
+
+
+</p>
+
+
+)
+
+
+}
+
+
+}
+
+class Exclusion extends React.Component
+{
+render()
+{return(
+<p className={this.props.exc? 'all1' : 'allshow'}>
+<div className="card mb-4 box-shadow">
+<div className="card-header">
+<h3>Exclusions</h3>
+</div>
+<div className="card-body">
+Please refresh the page if the content is not displaying.
+<br />
+<iframe src="https://drive.google.com/viewerng/viewer?embedded=true&url=https://www.mystudentplan.ca/_uploads/documents/nscc/Exclusions.pdf" width="100%" height="500"></iframe>
+</div>
+</div>
+
+</p>
+
+
+
+
+)
+
+
+
+
+}
+
+
+}
+
+class Quicklink extends React.Component
+{
+
+
+componentDidMount()
+{ if(window.location.href.indexOf("pp1") > -1) {
+       document.querySelector("#pp1").focus();
+document.querySelector("#pp1").click();
+ 
+}
+ if(window.location.href.indexOf("s1") > -1) {
+       document.querySelector("#s1").focus();
+document.querySelector("#s1").click();
+ 
+}
+ if(window.location.href.indexOf("c1") > -1) {
+       document.querySelector("#c1").focus();
+document.querySelector("#c1").click();
+ 
+}
+ if(window.location.href.indexOf("m1") > -1) {
+       document.querySelector("#m1").focus();
+document.querySelector("#m1").click();
+
+
+
+    }
+
+ if(window.location.href.indexOf("other") > -1) {
+       document.querySelector("#other").focus();
+document.querySelector("#other").click();
+
+
+
+    }
+
+
+}
+showfocus()
+{ 
+ 
+if( document.querySelector("#pp1"))
+{
+window.location.href="https://www.mystudentplan.ca/redriver-international/en/homepage#/#pp1";
+       document.querySelector("#pp1").focus();
+
+ }
+
+    }
+
+showcg()
+{ 
+ 
+if( document.querySelector("#c1"))
+{
+window.location.href="https://www.mystudentplan.ca/redriver-international/en/homepage#/#c1";
+       document.querySelector("#c1").focus();
+
+ }
+
+    }
+
+showps()
+{ 
+ 
+if( document.querySelector("#s1"))
+{
+window.location.href="https://www.mystudentplan.ca/redriver-international/en/homepage#/#s1";
+       document.querySelector("#s1").focus();
+
+ }
+
+    }
+
+
+
+render()
+{
+var img1="/_images/quicklinks/schedule.png";
+var img2="/_images/quicklinks/benefits-card.png";
+var img3="/_images/quicklinks/prescription.png";
+var img4="/_images/quicklinks/links.png";
+
+
+
+
+return(
+<section className={this.props.showquicks? 'all1' : 'quick-links'}>
+
+        
+
+                    <a className="quick-links__item" href="https://www.mystudentplan.ca/redriver-international/en/homepage#/forms">
+                        <span className="quick-links__icon"><img src={img1} /></span>
+                        <span className="quick-links__text">
+                            <b className="quick-links__text-title">Opt Out</b><br/>
+                            Deadline: <strong>30 Days</strong> from the official start date of your program
+                        </span>
+                    </a>
+
+            
+
+                    <a className="quick-links__item" href="https://www.mystudentplan.ca/redriver-international/en/homepage#/assistance#c1" onClick={this.showcg}>
+                        <span className="quick-links__icon"><img src={img2} /></span>
+                        <span className="quick-links__text">
+                            <b className="quick-links__text-title">myBenefits Card</b><br/>
+                            <span>Register your benefit card today</span>
+                        </span>
+                    </a>
+
+            
+
+                    <a className="quick-links__item" href="https://www.mystudentplan.ca/redriver-international/en/homepage#/assistance#s1"  onClick={this.showps}>
+                        <span className="quick-links__icon"><img src={img3} /></span>
+                        <span className="quick-links__text">
+                            <b className="quick-links__text-title">Prescription Search </b><br/>
+                      Based on National Formulary
+                        </span>
+                    </a>
+
+            
+
+             
+                          <Link className="quick-links__item" to="/coverages#pp1" onClick={this.showfocus} >
+                        <span className="quick-links__icon"><img src={img4} /></span>
+                        <span className="quick-links__text">
+                            <b className="quick-links__text-title">Getting 100% Coverage</b><br/>
+                            Use more than 1 plan to maximize your coverage!
+                        </span>
+                  </Link>
+
+            
+    </section>
+
+
+
+)
+
+}
+
+
+}
+
+
+class Coverages extends React.Component
+{
+
+
+
+
+
+constructor() {
+   document.querySelector('#mod6286d02d_214e_4434_8718_c0a268984d8b').style.display= "none";
+   document.querySelector('#mod068bc57b_c607_4837_88e5_2f587afb495d').style.display= "none";
+    super();
+    this.state = {
+coverinfo :true,
+   intlinfo:true,
+einfo: true,
+familyinfo: true,
+purinfo: true,
+sponinfo: true,
+coinfo: true
+    };
+
+    this.showeinfo= this.showeinfo.bind(this);
+ this.showfamily= this.showfamily.bind(this);
+ this.showcoverage= this.showcoverage.bind(this);
+ this.showintl= this.showintl.bind(this);
+ this.showbuy= this.showbuy.bind(this);
+ this.showsponsor= this.showsponsor.bind(this);
+ this.showcoo= this.showcoo.bind(this);
+  }
+
+
+
+
+
+showeinfo() {
+    // You can use redux for this.
+    this.setState({
+coverinfo :true,
+   intlinfo:true,
+einfo: false,
+familyinfo: true,
+purinfo: true,
+sponinfo: true,
+coinfo: true
+    });
+ }
+
+
+
+  showfamily() {
+    // You can use redux for this.
+    this.setState({
+coverinfo :true,
+   intlinfo:true,
+einfo: true,
+familyinfo: false,
+purinfo: true,
+sponinfo: true,
+coinfo: true
+    });
+ 
+  }
+
+ showcoverage() {
+    // You can use redux for this.
+    this.setState({
+coverinfo :false,
+   intlinfo:true,
+einfo: true,
+familyinfo: true,
+purinfo: true,
+sponinfo: true,
+coinfo: true
+    });
+ 
+  }
+ showintl() {
+    // You can use redux for this.
+    this.setState({
+coverinfo :true,
+   intlinfo: false,
+einfo: true,
+familyinfo: true,
+purinfo: true,
+sponinfo: true,
+coinfo: true
+    });
+ 
+  }
+ showbuy() {
+    // You can use redux for this.
+    this.setState({
+coverinfo :true,
+   intlinfo:true,
+einfo: true,
+familyinfo: true,
+purinfo: false,
+sponinfo: true,
+coinfo: true
+    });
+ 
+  }
+
+showsponsor() {
+    // You can use redux for this.
+    this.setState({
+coverinfo :true,
+   intlinfo:true,
+einfo: true,
+familyinfo: true,
+purinfo: true,
+sponinfo: false,
+coinfo: true
+    });
+ 
+  }
+showcoo() {
+    // You can use redux for this.
+    this.setState({
+coverinfo :true,
+   intlinfo :true,
+einfo: true,
+familyinfo: true,
+purinfo: true,
+sponinfo: true,
+coinfo: false
+    });
+ 
+  }
+
+
+
+
+
+
+render()
+{
+return(
+
+<div className="buttonposition">
+<input type="button" className="btn btn-default"  value="Eligibility Criteria" name="Eligibility Criteria" onClick={this.showeinfo}/>
+
+<input type="button" className="btn btn-default" value="Coverage Period" name="Coverage Period" onClick={this.showcoverage}/>
+
+<input type="button" className="btn btn-default" value="Family Coverage" name="Family Coverage" onClick={this.showfamily}/>
+
+<input type="button" className="btn btn-default" value="International Students" name="International Students" onClick={this.showintl} />
+
+<input type="button" className="btn btn-default" value="Sponsored Students" name="Sponsored Students" onClick={this.showsponsor}/>
+
+<input type="button" className="btn btn-default" id="pp1" value="Purchase Optional Coverage" name="Purchase Optional Coverage" onClick={this.showbuy} />
+
+
+
+<input type="button" className="btn btn-default"  id="other" value="Coordination of Benefits" name="Coordination of Benefits"  onClick={this.showcoo}/>
+<br/><br/>< Amicovered am={this.state.einfo} />
+<Family fm={this.state.familyinfo} />
+<Covers cm={this.state.coverinfo } />
+<Intl intl={this.state.intlinfo } />
+<Purchase buy={this.state.purinfo} />
+<Sponsor spon={this.state.sponinfo} />
+<Coordination coo={this.state.coinfo} />
+<Quicklink />
+
+</div>
+
+)
+
+
+}
+
+}
+
+class Amicovered extends React.Component
+{render()
+{
+return(
+
+<p  className={this.props.am? 'all1' : 'allshow'}>
+<div className="card mb-4 box-shadow">
+<div className="card-header">
+<h3>Eligibility Criteria</h3>
+</div>
+<div className="card-body">
+The health and dental plans were approved by student referendum and as a result are now a requirement of your enrolment at Red River College through your membership in the Students' Association. The plans provide protection and security for eligible students minimizing the effects of injury or ailments. The cost of the plans is included in your institutional fees provided you meet the eligibility enrolment criteria:<br />
+<br />
+1) are a member of the Red River College Students' Association*,<br />
+2) are in an applicable program,<br />
+3) meet the full-time criteria*,<br />
+4) are residing in Canada, and<br />
+5) are under the age of 70.<br />
+<br />
+<em>*Exceptions for International Students attending the RRC Language Training Center. Please contact the Benefits Plan Office to confirm eligibility.</em><br />
+<br />
+<br />
+<strong>Disability Students</strong><br />
+Students who are taking part-time course load but are considered full-time by the institution <em>may</em> be eligible to opt in to the Student Health and Dental Plan. Please contact the <a href="https://www.mystudentplan.ca/redriver-international/en/homepage#/assistance">Benefits Plan Office</a> for further details, prior to the applicable deadline for your semester period of enrolment.
+<br />
+<br />
+<strong>International Students</strong><br />
+a) be 15 days of age or over and 65 years old or less;<br />
+b) be a student or dependent of the covered student (see Section II &ndash; Definitions);<br />
+c) not be eligible for a provincial or territorial government health insurance plan in Canada; and<br />
+d) know of no reason to seek medical attention at the time of purchase.<br />
+<br />
+<em>Note </em>: Each student and dependent must apply individually and will be covered under separate policies provided the appropriate premiums have been paid.
+<br />
+<br />
+Pre-existing Conditions: Includes expenses that are medically recognized as routine care of the pre-existing condition but excludes any treatment or surgery which can be reasonably delayed until return to home country or primary place of residency outside of Canada without causing irreversible or permanent damage. Includes coverage for for medical expenses incurred resulting from a change in the pre-existing condition.<br />
+Outside Canada: Includes excursions outside Canada up to 90 cumulative days with excursions to the USA limited to 30 cumulative days per policy year. No coverage in home country unless part of school or training program
+</div>
+</div></p>
+
+
+
+
+)
+
+
+}
+
+
+
+
+}
+
+class Family extends React.Component
+{render()
+{
+return(
+
+<p  className={this.props.fm? 'all1' : 'allshow'}>
+<div  className="card mb-4 box-shadow">
+<div className="card-header">
+<h3>Family Coverage</h3>
+</div>
+<div className="card-body">
+Each year, you are given one opportunity to purchase family coverage for your spouse and/or dependent(s) by completing an application through the RRCSA Student Benefits Plan Office and paying the family coverage fee. All family add-on forms and applicable fees must be received no later than 30 days after the start of your program. Your family can only be covered while you are a student on the plan(s).<br />
+<br />
+<strong>IMPORTANT:</strong> These fees are in addition to the student health and dental fee. <br />
+<br />
+<strong>2017 - 2018 Family Add-On Fees:</strong><br />
+Health (<strong>one or more</strong> dependent)	$135.00<br />
+Dental (one dependent) $160.00<br />
+Dental (<strong>two or more</strong> dependents)	$290.00<br />
+<br />
+<strong>International Family Add-On Fees:</strong><br />
+<br />
+<em>Please note:</em> Your optional family add-on is not automatically renewed. In order for your family add-on to continue, you must purchase the coverage each benefit year before the applicable deadline. <strong>FAMILY ADD-ON FEES ARE NON-REFUNDABLE</strong>.<br />
+<br />
+<strong>Spouse</strong> means the person who is a resident of Canada, and who is married to the student, or a person of either sex who has continuously co-habitated with the student for a period of at least one year and who is publicly represented as the student's wife or husband.<br />
+<br />
+<strong>Dependent</strong> means an unmarried child who is a resident of Canada, and entirely dependent on the student for maintenance and support, and who is:<br />
+1) under 21 years of age,<br />
+2) under 25 years of age and attending a college or university full-time, or<br />
+3) physically or mentally incapable of self-support and became incapable to that extent while entirely dependent on the student for maintenance and support and while eligible under 1) or 2) above.<br />
+<br />
+To add family coverage to your Student Health and Dental plan submit the completed <a href="https://www.mystudentplan.ca/redriver-international/en/homepage#/forms" className="standard">Family Add-On Form</a>, along with the required fees to the RRCSA Student Benefits Plan Office, before the established deadline.
+</div>
+</div></p>
+
+
+
+
+)
+
+
+}
+
+
+
+
+}
+
+class Covers extends React.Component
+{render()
+{
+return(
+
+<p  className={this.props.cm? 'all1' : 'allshow'}>
+<div className="card mb-4 box-shadow">
+<div className="card-header">
+<h3>Coverage Period</h3>
+</div>
+<div className="card-body">
+Eligible students will receive 12 months of coverage starting with the first day of the month your program begins.<br />
+<br />
+<strong>New eligible students</strong> will be added to the health and dental plan approximately 45 days from the start date of your program. Please keep your receipts for eligible expenses incurred during this time period for submission to the insurance carrier upon completion of the enrolment process.<br />
+<br />
+<strong>Returning eligible students</strong> may continue to access the health and dental plan without disruption by using their current <em>myBenefits Card</em> or by submitting reimbursement claims directly to the insurance carrier.
+</div>
+</div></p>
+
+
+
+
+)
+
+
+}
+
+
+
+
+}
+class Intl extends React.Component
+{render()
+{
+return(
+
+<p  className={this.props.intl? 'all1' : 'allshow'}>
+<div id="International" className="card mb-4 box-shadow">
+<div className="card-header">
+<h3>International Students</h3>
+</div>
+<div className="card-body">
+If you have been assessed the health and dental plan fees, included in the health fee is the Repatriation of Remains/Family Transportation Benefits.<br />
+<br />
+International Students that qualify for Manitoba Health will be automatically assessed for the Red River College Students' Association <strong>Repatriation of Remains / Family Transportation Benefit</strong>.<br />
+<br />
+The 12-Month coverage period begins on the first of the calendar month your program starts, and ends the last day of the twelfth month thereafter.<br />
+<br />
+<strong>Examples:</strong><br />
+For programs beginning in August 2012 the coverage period is August 1, 2012 through July 31, 2013;<br />
+For programs beginning in September 2012, the coverage period is September 1, 2012 through August 31, 2013, and so on.<br />
+<br />
+<strong>Important Note:</strong> During the 12-month coverage period for your program, the Repatriation of Remains / Family Transportation Benefit is valid <em>while you are outside your Home Country.</em> Therefore, your coverage is valid on <em>the later of</em>:<br />
+a) The first of the calendar month your program begins, and<br />
+b) The date you depart your Home Country for Canada;<br />
+<br />
+And, your coverage is valid until <em>the earlier of</em>:<br />
+a) The last day of the twelfth month after the first of the calendar month your program began; and<br />
+b) The date you return to your Home Country upon completion of your program;<br />
+<br />
+<em>**Students in certain programs may have been assessed less then a 12 month coverage period.**</em><br />
+<br />
+<br />
+<strong>What Is Covered?<br />
+</strong><br />
+The Repatriation of Remains / Family Transportation Benefit covers the following types of expenses:<br />
+<br />
+<strong>Repatriation or Burial of Deceased</strong>: If You sustain an injury or suffer a sudden and unexpected Illness that results in Your death, We will arrange and pay up to a maximum of $12,500 Canadian Dollars either:<br />
+a) towards the reasonable and necessary costs for the preparation and return of Your remains to Your Home Country in a standard transportation container. We will assist in obtaining the necessary clearances for Your cremation or the return of Your mortal remains. We will coordinate the preparation and transportation of Your mortal remains to Your Home Country.<br />
+or<br />
+b) towards the cost of preparing the remains, cremation or burial, and a burial plot in the location where death occurs. The costs for a coffin, urn, headstone, or funeral are excluded.<br />
+<br />
+<strong>Family Member Transportation:</strong> If You sustain an injury or suffer a sudden and unexpected Illness that results in Your death, We will arrange and pay up to $2,500 Canadian Dollars for a round-trip economy flight and accommodations for a family member traveling for purposes to identify the deceased.<br />
+<br />
+For additional information including benefit details, exclusions and terms and conditions; please download the Repatriation of Remains / Family Transportation Benefit brochure.<br />
+<br />
+<a href="/_uploads/documents/Red River International Students/BOOKLET 20160801.pdf"><img src="/_uploads/images/Red_River/RepatBrochure.jpg" /></a>
+</div>
+</div></p>
+
+
+
+
+)
+
+
+}
+
+
+
+
+}
+class Purchase extends React.Component
+{render()
+{
+return(
+
+<p  className={this.props.buy? 'all1' : 'allshow'}>
+<div className="card mb-4 box-shadow">
+<div className="card-header">
+<h3>Purchase Optional Coverage</h3>
+</div>
+<div className="card-body">
+Should your insurance coverage needs fall outside of what is provided through your Student Health & Dental plan, mystudentplan.ca provides the following optional insurance programs:<br />
+<br />
+<strong>Following-me Plan:</strong> This program will fit the needs of students who are no longer eligible for coverage through the Student Plan. Whether you are graduating, changing your enrolment status, or simply leaving school the Follow-me plan has no insurability requirements and provides various levels of coverage at cost effective rates.<br />
+<br />
+<a href="http://www.memberhealthplan.com/LH/AgentBroker/Consumer/PlanListing.jsp?lang=E&province=&module=P&assocId=ON2958&login=">Find out more about your Follow-me coverage options</a><br />
+<br />
+<strong>Flex-Care Individual Insurance:</strong> This program is available to students who are not eligible for coverage provided through the Student Benefit Plan or for family members who require coverage and are not eligible through the Family Add On option under the Student Plan. With the Flex-Care Individual Insurance you can investigate your individual coverage options.<br />
+<br />
+<a href="http://www.memberhealthplan.com/LH/AgentBroker/Consumer/PlanListing.jsp?lang=E&province=&module=P&assocId=ON2958&login=">Find out more about your Flex-Care Individual Insurance options</a><br />
+<br />
+<strong>Travel Insurance:</strong> This program is available to anyone who will be travelling outside of Canada and does not have travel benefits provided through the Student Plan and would like to purchase travel coverage for themselves and/or family members.<br />
+<br />
+<a href="https://hermes.manulife.com/can/affinity/travel/travel.nsf/public/wlhome?Open&as=wljbg">Find out more about your Travel Insurance options</a>
+</div>
+</div></p>
+
+
+
+
+)
+
+
+}
+
+
+
+
+}
+
+class Sponsor extends React.Component
+{render()
+{
+return(
+
+<p  className={this.props.spon? 'all1' : 'allshow'}>
+<div className="card mb-4 box-shadow">
+<div className="card-header">
+<h3>Sponsored Students</h3>
+</div>
+<div className="card-body">
+<strong>Status & Band Sponsored Students</strong><br />
+<br />
+You are included in the Student Health and Dental Plan based on the program and course load - see Eligibility (Eligibility Criteria button).<br />
+Please consult your Band contact regarding payment of your Health and Dental Plan fees.
+</div>
+</div></p>
+
+
+
+
+)
+
+
+}
+
+
+
+
+}
+
+
+class Coordination extends React.Component
+{render()
+{
+return(
+
+<p  className={this.props.coo? 'all1' : 'allshow'}>
+
+<div  className="card mb-4 box-shadow">
+<div className="card-header">
+<h3>Coordination of Benefits</h3>
+</div>
+<div className="card-body">
+<p><strong>How to Get 100% Coverage</strong><br />
+<br />
+Use <span>More Than One Plan</span> to
+Maximize Your Coverage!<br />
+<br />
+Do you have more than one
+benefit plan? Student Plan, Parent's Plan, Employer Plan or Spouse's Plan?<br />
+If so, those plans can work
+together to make sure you're getting the most out of your coverage. <br />
+One plan becomes your primary
+plan. It pays your claims first. Then the second plan pays toward the remaining
+cost.<br />
+<br />
+</p>
+<p>Students who have health or dental coverage through their school: <strong>these plans will always pay before any plan where the student is covered as a dependent.</strong></p>
+<table id="table1">
+    <tbody>
+        <tr>
+            <td>
+            <p><b>Example:<br />
+            </b>A student has health coverage through the university plan, but is also still eligible under a parent's plan as a dependent. Therefore - the school plan pays first.</p>
+            </td>
+        </tr>
+    </tbody>
+</table>
+<br />
+This process is called
+coordination of benefits and it's easy to do!<br />
+<br />
+<strong><span >IMPORTANT</span></strong> &ndash; Take a copy of your
+original receipt before you send it to your primary plan as you will need to
+send a copy to the secondary plan.<br />
+<br />
+<span >Submitting Claims For Yourself:</span><br />
+Submit the claim to your Student Plan first (this is your primary benefit plan).<br />
+Next, an unpaid portion can be submitted to your Parent's Plan, Employer Plan or Spouse's Plan (this is your secondary plan).<br />
+<br />
+<table id="table2">
+    <tbody>
+        <tr>
+            <td>
+            <p >If you have more than one plan where you are the primary insured (Student Plan and Employer Plan)&nbsp;<b>your primary plan is the one you have had the longest.&nbsp;</b>Submit the claim to the plan you have had the longest (this is your primary benefit plan). Next, an unpaid portion can be submitted to the plan you have had the <strong>second longest&nbsp;</strong>(this is your secondary plan).</p>
+            </td>
+        </tr>
+    </tbody>
+</table>
+<br />
+<br />
+<span >Submitting Claims for Your Spouse (if applicable):</span><br />
+Submit the claim to your spouse's plan first (this is their primary benefit plan).<br />
+Next, an unpaid portion can be submitted to your Student Plan (this is their secondary plan).<br />
+<br />
+<br />
+<span >Submitting Claims for a Dependent Child (if applicable):</span><br />
+Submit the claim to the parent's plan whose birthday falls first in the year (this is their primary benefit plan).<br />
+Next, an unpaid portion can be submitted the parent's plan whose birthday falls second in the year (this is their secondary plan).<br />
+<br />
+<br />
+<table id="table3">
+    <tbody>
+        <tr>
+            <td><strong><br />
+            ALWAYS REMEMBER!<br />
+            </strong>Include a copy of the <span>Explanation of Benefits statement received from the first claim submission</span> (primary plan), as well as a photocopy of the originally submitted receipt when you submit to your secondary plan.<br />
+            <br />
+            </td>
+        </tr>
+    </tbody>
+</table>
+</div>
+</div>
+
+</p>
+
+)
+
+
+}
+
+
+
+
+}
+
+class Forms extends React.Component
+{
+
+ constructor() {
+  document.querySelector('#mod6286d02d_214e_4434_8718_c0a268984d8b').style.display= "none";
+   document.querySelector('#mod068bc57b_c607_4837_88e5_2f587afb495d').style.display= "none";
+    super();
+ }
+
+
+
+
+render()
+{return(
+<div>
+<span>The deadline for applications has passed.</span><br/><br/>
+<div className="Animate">
+
+<img src="/_uploads/images/Closed.jpg" alt="Closed sign" /></div>
+<br/>
+<Quicklink />
+
+</div>
+)
+
+
+
+}
+
+}
+
+class Savings extends React.Component
+{
+
+
+constructor() {
+   document.querySelector('#mod6286d02d_214e_4434_8718_c0a268984d8b').style.display= "none";
+   document.querySelector('#mod068bc57b_c607_4837_88e5_2f587afb495d').style.display= "none";
+    super();
+    this.state = {
+chrio :true,
+   den : true,
+massage: true,
+
+    };
+
+    this.showchrio= this.showchrio.bind(this);
+ this.showden= this.showden.bind(this);
+ this.showmass= this.showmass.bind(this);
+}
+
+showchrio() {
+    // You can use redux for this.
+    this.setState({
+chrio :false,
+   den :true ,
+massage: true,
+
+    });
+ }
+
+
+
+  showden() {
+    // You can use redux for this.
+    this.setState({
+chrio :true,
+   den :false,
+massage: true,
+
+    });
+ 
+  }
+
+ showmass() {
+    // You can use redux for this.
+    this.setState({
+chrio :true,
+   den :true,
+massage: false,
+
+    });
+ 
+  }
+ 
+
+
+
+
+
+
+render()
+{return(
+<div className="buttonposition" >
+
+<input type="button"className="btn btn-default"  value="Chiropractors" name="Chiropractors" onClick={this.showchrio}/>
+
+<input type="button"  className="btn btn-default" value="Dental" name="Coverage Period" onClick={this.showden}/>
+
+<input type="button"  className="btn btn-default" value="Massage" name="Massage" onClick={this.showmass}/>
+
+<br/><br/>
+< Chrio ch={this.state.chrio} />
+
+< Den dens={this.state.den} />
+< Massage massa={this.state.massage} />
+< Quicklink />
+
+</div>
+
+
+
+)
+
+
+
+}
+
+}
+class Chrio extends React.Component
+{render()
+{
+return(
+
+<p  className={this.props.ch? 'all1' : 'allshow'}>
+
+<div  className="card mb-4 box-shadow">
+<div className="card-header">
+<h3>Chiropractors</h3>
+</div>
+<div className="card-body">
+To enhance your existing coverage, select Chiropractors have agreed to help students by providing savings on services. You must present your <em>myBenefits Card</em> at each visit.<br />
+<br />
+Chiropractors accessed through the network can offer services at the rates provided below:<br />
+<br />
+<table className="savingtable" >
+    <tbody>
+        <tr >
+            <td >
+            <strong>Current Coverage</strong>
+            </td>
+            <td>
+            <p ><strong>Assessment<br />
+            Fee</strong></p>
+            </td>
+            <td >
+            <p ><strong>Treatment<br />
+            Fee</strong></p>
+            </td>
+        </tr>
+        <tr>
+            <td >
+            Reimbursed at 80%,<br />
+            $350 per benefit year
+            </td>
+            <td >
+            <p >Up to $30</p>
+            </td>
+            <td >
+       
+            <p>Up to $25</p>
+            </td>
+        </tr>
+        <tr >
+            <td colSpan={3} style={{"backgroundColor" : "transparent"}}>
+            <em>Xrays not included in discount.</em>
+            </td>
+        </tr>
+    </tbody>
+</table>
+<br />
+<strong>IMPORTANT: Benefits are payable after any Provincial Health Care benefits have been exhausted.</strong><br />
+<br />
+To take advantage of the savings brought to you by your student organization, use "Find a Practitioner" to access a Select Chiropractor Partner in your area.
+</div>
+</div>
+
+</p>
+
+)
+
+
+}
+
+
+
+
+}
+
+class Den extends React.Component
+{render()
+{
+return(
+
+<p  className={this.props.dens? 'all1' : 'allshow'}>
+
+<div  className="card mb-4 box-shadow">
+<div className="card-header">
+<h3>Dental</h3>
+</div>
+<div className="card-body">
+To enhance your existing coverage, select dentists have agreed to help students by providing savings on certain plan eligible services. In order to access the select savings you must present your <em>myBenefits Card</em> each visit.<br />
+<br />
+NOTE TO STUDENT: Dentists are not restricted to the fee guide the insurance company uses. Therefore, total coverage may not be exactly as shown.<br />
+<br />
+<table className="savingtables">
+    <tbody>
+        <tr >
+            <td >
+<strong>Current Coverage</strong>
+            </td>
+            <td >
+            <p ><strong>Insured<br />
+            Portion*</strong></p>
+            </td>
+            <td >
+            <p ><strong>Dental<br />
+            Partner<br />
+            Savings</strong></p>
+            </td>
+            <td >
+            <p><strong>Total<br />
+            Coverage</strong></p>
+            </td>
+        </tr>
+        <tr >
+            <td >
+            <strong>Diagnostic and Preventative</strong><br />
+            &bull; annual exam**
+            </td>
+            <td >
+            <p >80%</p>
+            </td>
+            <td>
+            <p>20%</p>
+            </td>
+            <td >
+            <p >100%</p>
+            </td>
+        </tr>
+        <tr >
+            <td>
+            <strong>Minor Restorative</strong><br />
+            &bull; fillings, denture adjustment & repairs
+            </td>
+            <td >
+            <p>70%</p>
+            </td>
+            <td >
+            <p>20%</p>
+            </td>
+            <td >
+            <p>90%</p>
+            </td>
+        </tr>
+        <tr>
+            <td >
+            <strong>Extractions</strong><br />
+            &bull; limited to 2 wisdom teeth per benefit year
+            </td>
+            <td >
+            <p>70%</p>
+            </td>
+            <td >
+            <p >20%</p>
+            </td>
+            <td >
+            <p >90%</p>
+            </td>
+        </tr>
+        <tr>
+            <td >
+            <strong>Endodontic & Periodontic</strong>
+            </td>
+            <td >
+            <p >15%</p>
+            </td>
+            <td >
+            <p >20%</p>
+            </td>
+            <td >
+            <p>35%</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+            <strong>Major Restorative</strong><br />
+            &bull; inlays, onlays, bridges, crowns & dentures</td>
+            <td >
+            <p>15%</p>
+            </td>
+            <td>
+            <p>20%</p>
+            </td>
+            <td >
+            <p >35%</p>
+            </td>
+        </tr>
+        <tr >
+            <td colSpan={4} style={{"backgroundColor" : "transparent"}}>
+            Benefit year maximum of $750 and specific limits may also apply.
+            </td>
+        </tr>
+    </tbody>
+</table>
+<br/>
+<br/>
+*Insured portion is based on insurer's current eligible fee for services rendered; as a result, total coverage amount may differ, depending on the fees charged at the dental office. Discount not applicable to laboratory fees.<br />
+<br />
+** Exam includes: diagnosis, x-rays, two units of scaling and one unit of polishing.&nbsp;Limited to once per benefit year.</div>
+</div>
+
+</p>
+
+)
+
+
+}
+
+
+
+
+}
+
+class Massage extends React.Component
+{render()
+{
+return(
+
+<p  className={this.props.massa? 'all1' : 'allshow'}>
+
+<div  className="card mb-4 box-shadow">
+<div className="card-header">
+<h3>Massage</h3>
+</div>
+<div className="card-body">
+To enhance your existing coverage, select Licensed Massage Therapists have agreed to help students by providing savings on services. You must present your <em>myBenefits Card</em> at each visit.<br />
+<br />
+Licensed Massage Therapists accessed through the network can offer services at the rates provided below:<br />
+<br />
+<table className="savingtable">
+    <tbody>
+        <tr>
+            <td >
+            <strong>Current Coverage</strong>
+            </td>
+            <td >
+            <p><strong>30 Minute<br />
+            Treatment</strong></p>
+            </td>
+            <td >
+            <p ><strong>60 Minute<br />
+            Treatment</strong></p>
+            </td>
+        </tr>
+        <tr >
+            <td >
+            Reimbursed at 80%,<br />
+            $350 per benefit year
+            </td>
+            <td >
+            <p>Up to $25</p>
+            </td>
+            <td >
+            <p >Up to $50</p>
+            </td>
+        </tr>
+        <tr >
+            <td colSpan={3} style={{"backgroundColor" : "white"}}>
+            </td>
+        </tr>
+    </tbody>
+</table>
+</div>
+</div>
+
+</p>
+
+)
+
+
+}
+
+
+
+
+}
+
+
+
+
+
+
+
+class Claim extends React.Component {
+ constructor()
+{
+   document.querySelector('#mod6286d02d_214e_4434_8718_c0a268984d8b').style.display= "none";
+   document.querySelector('#mod068bc57b_c607_4837_88e5_2f587afb495d').style.display= "none";
+super();
+}
+
+  render() {
+    return (
+      <div>
+        <div>
+          <div className="cards">
+            <h4>Policy Information</h4>
+            <p>
+             When accessing the Health and/or Dental claim form please use the below information as a guide to complete the required sections of the form:<br />
+<ul>
+    <li><strong>Plan Number:</strong> 330827 </li>
+    <li><strong>Division Number:</strong> Not Applicable Leave Blank </li>
+    <li><strong>Plan Name:</strong> Red River College Students' Association (RRCSA)</li>
+    <li><strong>Employee Identification Number:</strong> Your Student ID </li>
+    <li><strong>Employee Name & Address:</strong> Your Name & Current Mailing Address</li>
+</ul>
+         You are required to submit original copies of your claim form, receipts and doctor's referral (if required) when sending in your claim to the insurance carrier. Remember to always keep copies for your records.<br />
+<br />
+<strong>Please note:</strong> You have <strong><span style={{"textDecoration" : "underline"}}>15 months</span></strong> from the date the eligible expense is incurred to submit claims to Great-West Life for consideration under your student plan.   </p>
+          </div>
+        </div>
+        <div>
+          <div className="cards">
+            <h4>Making Eclaim</h4>
+            <p>
+           When registering for GroupNet you will need to provide:<br />
+<ul>
+    <li>Plan Number: <strong>330827</strong></li>
+    <li>ID Number: <strong>Red River College Student ID</strong></li>
+</ul>
+Visit <a href="https://groupnet.greatwestlife.com"><span style={{"color": "#009900"}}>groupnet.greatwestlife.com</span></a> for access to Member eClaims.
+            </p>
+          </div>
+        </div>
+        <div>
+          <div className="cards">
+            <h4>Health Claim Form</h4>
+            <p>
+              To submit a manual claim, complete an insurance <a href="/_uploads/documents/Claim Forms/RRCSA_Health.pdf">Health Claim Form</a>, attach the original receipts and documents, and mail to the insurer. Remember to keep a copy of all original documents for your records.
+            </p>
+          </div>
+        </div>
+
+        <div>
+          <div className="cards">
+            <h4>Dental Claim Form</h4>
+            <p>
+           To submit a manual claim, complete an insurance <a href="/_uploads/documents/Claim Forms/RRCSA_Dental.pdf">Dental Claim Form</a>, attach the original receipts and documents, and mail to the insurer. Remember to keep a copy of all original documents for your records.
+            </p>
+          </div>
+        </div>
+        
+        <Quicklink />
+
+      </div>
+    );
+  }
+}
+
+class Assistance extends React.Component {
+
+
+
+
+
+
+
+
+
+constructor()
+{ 
+
+
+
+
+
+
+
+
+
+super();
+this.state = {
+oncampuscare :true,
+faq:true,
+hidequicks: false,
+querys: true
+
+    };
+ this.showfaq= this.showfaq.bind(this);
+ this.showcare= this.showcare.bind(this);
+ this.showpsearch= this.showpsearch.bind(this);
+ this.showcardgen= this.showcardgen.bind(this);
+ this.showquerys= this.showquerys.bind(this);
+}
+  
+
+showpsearch()
+{
+   document.querySelector('#mod6286d02d_214e_4434_8718_c0a268984d8b').style.display= "block";
+   document.querySelector('#mod068bc57b_c607_4837_88e5_2f587afb495d').style.display= "none";
+
+ this.setState({
+      oncampuscare : true,
+faq: true,
+hidequicks: true,querys: true
+    });
+
+}
+
+showcardgen()
+{
+   document.querySelector('#mod068bc57b_c607_4837_88e5_2f587afb495d').style.display= "block";
+   document.querySelector('#mod6286d02d_214e_4434_8718_c0a268984d8b').style.display= "none";
+
+ this.setState({
+      oncampuscare : true,
+faq: true,
+hidequicks: true,querys: true
+    });
+}
+
+showcare()
+{   document.querySelector('#mod068bc57b_c607_4837_88e5_2f587afb495d').style.display= "none";
+   document.querySelector('#mod6286d02d_214e_4434_8718_c0a268984d8b').style.display= "none";
+ this.setState({
+      oncampuscare : false,
+faq: true,
+hidequicks: false,querys: true
+    });
+}
+
+showfaq()
+{
+  document.querySelector('#mod068bc57b_c607_4837_88e5_2f587afb495d').style.display= "none";
+   document.querySelector('#mod6286d02d_214e_4434_8718_c0a268984d8b').style.display= "none";
+ this.setState({
+      oncampuscare : true,
+faq: false,
+hidequicks: false,querys: true
+    });
+
+}
+
+showquerys()
+{
+  document.querySelector('#mod068bc57b_c607_4837_88e5_2f587afb495d').style.display= "none";
+   document.querySelector('#mod6286d02d_214e_4434_8718_c0a268984d8b').style.display= "none";
+ this.setState({
+      oncampuscare : true,
+faq: true,
+hidequicks: true,querys: false
+    });
+
+}
+
+
+submitq()
+{
+ 
+
+}
+
+  render() {
+  
+    return (
+      <p> 
+           <input type="button" className="btn btn-default" value="Contact Us" name="Contact Us" onClick={this.showquerys} />
+         <input type="button" className="btn btn-default" id="s1" value="Prescription Search" name="Prescription Search" onClick={this.showpsearch} />
+         <input type="button" className="btn btn-default" id="c1" value="Card Geneator" name="Card Geneator" onClick={this.showcardgen} />
+
+   <input type="button" className="btn btn-default" value="On Campus Care" name="On Campus Care" onClick={this.showcare} />
+
+
+
+   <input type="button" className="btn btn-default" value="FAQ" name="faq" onClick={this.showfaq} />
+<div>
+<br/><br/>
+<div className={this.state.oncampuscare ? 'all1' : 'allshow card mb-4 box-shadow'}>
+
+<div className="card-header">
+<h3>On Campus Care</h3>
+</div>
+<div className="card-body">
+Your Benefits Plan Office, Student Service Coordinator is fully acquainted with the details of health and dental benefits and has been selected based on their understanding of the unique needs of students along with their personal service skills. The following is a partial  list of services that are available from the RRCSA Student Benefits Plan Office:<br />
+<br />
+&bull; pick up your Manitoba Pharmacare Registration Form<br />
+&bull; pick up your <em>myBenefits Card</em><br />
+&bull; pick up forms<br />
+&bull; purchase coverage for your spouse and/or dependent(s) <br />
+&bull; plan inquiries<br />
+<br />
+Please feel free to contact the Student Service Coordinator on any matter in which you require personal attention. The RRCSA Student Benefits Plan Office is located: <br />
+<br />
+<table>
+    <thead>
+    </thead>
+    <tbody>
+        <tr>
+            <td><span><strong>Notre Dame Campus</strong><br />
+            Room CM75C<br />
+            2055 Notre Dame Ave&nbsp;<br />
+            Winnipeg MB R3H 0J9<br />
+            Phone: 204-632-2503<br />
+            </span></td>
+            <td><span><strong>&nbsp; &nbsp; Roblin Centre EDC<br />
+            </strong>&nbsp; &nbsp; SA Office P-110<br />
+            &nbsp; &nbsp; 160 Princess Street<br />
+            &nbsp; &nbsp; Winnipeg MB &nbsp;R3B 1K9<br />
+            &nbsp; &nbsp; Phone: 204-949-8537</span></td>
+        </tr>
+        <tr>
+            <td  colSpan={2}><span>Fax: 204-633-1930<br />
+            Email: </span><span><a href="mailto:redriverplan@mystudentplan.ca" className="standard">redriverplan@mystudentplan.ca</a></span><br />
+            </td>
+        </tr>
+    </tbody>
+</table>
+</div>
+</div>
+
+<div className={this.state.faq? 'all1' : 'allshow card mb-4 box-shadow'}>
+<div className="card-header">
+<h3>FAQ</h3>
+</div>
+<div className="card-body">
+<strong>Who do I contact for claims related issues?</strong><br />
+Students must contact <span >Great-West Life </span> customer service directly to inquire about payment status and claims history details. Your RRCSA Student Benefits Plan Office does not have access to your claims details. <br />
+<br />
+<strong>Who do I contact for eligibility and enrolment inquiries?</strong><em><br />
+</em>Students must contact the RRCSA Student Benefits Plan Office (On Campus Care button) for&nbsp;eligibility and/or enrolment status.<br />
+<br />
+<strong>Why a health and dental plan?</strong><em><strong></strong><br />
+</em>Costs for dental and health services are at an all time high and show no sign of reprieve. Students on fixed incomes are especially susceptible to these increases, and the last thing they want to spend these fixed monies on is an unforeseen accident, dental or medical procedure. Putting even routine procedures off can have monumental effects for students, as missing classes or study time can have disastrous consequences. Considering these points, the RRCSA has worked to design and implement a reasonably priced health and dental insurance plan. This plan can aid students in maintaining a quality of health, which can ensure that avoidable medical emergencies do not endanger the pursuit of their studies.<br />
+<br />
+<strong>Why is the plan mandatory?</strong><em><br />
+</em>With a mandatory plan, the insurance risk is spread over a larger number of students, thereby lowering the cost per student, making the fee in a range that is affordable to students. An individual health and dental plan can cost as much as 5 times the current student fee.<br />
+<br />
+<strong>Is this plan the same as my provincial health care?</strong><em><br />
+</em>No. The Student Benefits Plan is an extended health and dental plan, which supplements your existing provincial health care. It DOES NOT replace your provincial health care. Student benefits are payable after any provincial health care benefits have been exhausted. This plan does not cover user fees.<br />
+<br />
+<strong>How do I pay the fee?</strong><em><br />
+</em>The fees for the health and dental plans will be assessed automatically by the institution at registration if you meet the eligibility criteria previously listed.<br />
+<br />
+<strong>What if I already have coverage? </strong><em><br />
+</em><em>Co-ordination of Benefits:</em> Benefits under the two plans can be co-ordinated to increase your coverage up to a total of 100% of the actual expense(s) incurred. For example, following payment under this plan you can submit outstanding balances to the other plan for consideration. <br />
+<br />
+<em>Opting Out of the Student Benefits:</em> If you are an eligible student and have comparable health and/or dental coverage you may apply to opt-out of the benefits. Each student is given an opportunity to opt-out of the benefits under the health and/or dental plan(s) each year. All Opt-Out Forms must be completed online or through the RRCSA Student Benefits Plan Office and must be received by the applicable deadline.<br />
+<br />
+<strong>What if I miss the Opt-Out deadline?</strong><em><br />
+</em>You will not be able to opt-out of coverage at any other point during the school year. For example, if your program starts in September, you must opt-out prior to the end of the Fall deadline. The same rule applies for opting in (unless you lose your comparable coverage, see below for loss of coverage information). <strong>NO EXCEPTIONS will be made if the deadline is missed. </strong>It is the student's responsibility to pay the plan fees, should they miss the applicable opt-out deadline.<br />
+<br />
+<strong>What if I or my family loses our comparable coverage?</strong><em><br />
+</em>If comparable coverage used to opt-out of the student plan(s) terminates, or coverage provided to cover your family terminates you have 30 days from loss of coverage to notify the RRCSA Student Benefits Plan Office in order to be covered under the health and/or dental plan(s). Confirmation of loss of coverage is also required on re-application for coverage. It is your responsibility to apply for benefits and provide payment of the family coverage fee prior to the 30-day deadline.
+
+</div>
+</div>
+</div>
+
+
+
+<div className={this.state.querys? 'all1' : 'allshow card mb-4 box-shadow'}>
+<div className="card-header">
+<h3>Your Query</h3>
+</div>
+<div className="card-body">
+<Querys />
+</div>
+</div>
+<Quicklink showquicks ={this.state.hidequicks} />
+
+      </p> 
+
+
+
+    );
+  }
+}
+
+class Querys extends React.Component {
+  constructor(props){
+    super(props);
+
+    this.state = {
+      fields: {},
+      errors: {}
+    }
+  }
+
+  handleValidation(){
+    let fields = this.state.fields;
+    let errors = {};
+    let formIsValid = true;
+
+    //Name
+    if(!fields["name"]||!fields["phone"]){
+      formIsValid = false;
+      errors["name"] = "Cannot be empty";
+      errors["phone"] = "Cannot be empty";
+    }
+
+  
+
+    //Email
+    if(!fields["email"]){
+      formIsValid = false;
+      errors["email"] = "Cannot be empty";
+    }
+
+    if(typeof fields["email"] !== "undefined"){
+      let lastAtPos = fields["email"].lastIndexOf('@');
+      let lastDotPos = fields["email"].lastIndexOf('.');
+
+      if (!(lastAtPos < lastDotPos &&lastAtPos > 0 &&fields["email"].indexOf('@@') == -1 &&lastDotPos > 2 &&(fields["email"].length - lastDotPos) > 2)) {
+        formIsValid = false;
+        errors["email"] = "Email is not valid";
+      }
+
+
+ 
+
+
+    
+   if(!fields["phone"]){
+      formIsValid = false;
+      errors["phone"] = "Cannot be empty";
+    }
+
+    if(typeof fields["phone"] !== "undefined"){
+    let phoneno = /^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$/;
+      if (!fields["phone"].match(phoneno)) {
+        formIsValid = false;
+        errors["phone"] = "phone number is in the format of 000-000-0000";
+      }
+
+
+
+
+
+}
+}
+
+    this.setState({errors: errors});
+    return formIsValid;
+  }
+
+  contactSubmit(e){
+    e.preventDefault();
+    if(this.handleValidation()){
+      alert("Thank you for your submission, we will reach you soon.");
+window.location.href="https://www.mystudentplan.ca/redriver-international/en/homepage#/";
+
+    }else{
+      alert("Form has errors.")
+    }
+
+  }
+
+  handleChange(field, e){    		
+    let fields = this.state.fields;
+    fields[field] = e.target.value;        
+    this.setState({fields});
+  }
+
+  render(){
+    return (
+      <p>        	
+        <form name="contactform" className="contactform" onSubmit= {this.contactSubmit.bind(this)}>
+          <div >
+            <fieldset>
+<span> Your Name</span><br/>
+              <input  type="text" size="30" onChange={this.handleChange.bind(this, "name")} value={this.state.fields["name"]}/>
+              <span className="error">{this.state.errors["name"]}</span><br/>
+              <span style={{"color" : "#707589"}}>{this.state.fields["name"]}</span>  
+              <br/>
+<span> Your Email</span><br/>
+              <input  type="text" size="30" onChange={this.handleChange.bind(this, "email")} value={this.state.fields["email"]}/>
+              <span className="error">{this.state.errors["email"]}</span><br/>
+        <span style={{"color" : "#707589"}}>{this.state.fields["email"]}</span>  
+              <br/>
+<span> Your Phone</span><br/>
+              <input  type="text" size="30"onChange={this.handleChange.bind(this, "phone")} value={this.state.fields["phone"]}/>
+      <span className="error">{this.state.errors["phone"]}</span><br/>
+        <span style={{"color" : "#707589"}}>{this.state.fields["phone"]}</span>  
+              <br/>
+<span> Your Address</span><br/>
+              <input type="text" size="30" onChange={this.handleChange.bind(this, "address")} value={this.state.fields["address"]}/><br/>
+        <span style={{"color" : "#707589"}}>{this.state.fields["address"]}</span>  
+              <br/><br/>
+            </fieldset>
+          </div>
+          <div >
+            <fieldset>
+<span> Your Query</span>
+              <textarea  style={{"width" : "100%"}}  onChange={this.handleChange.bind(this, "message")}>{this.state.fields["message"]}</textarea>
+            </fieldset>
+          </div>
+          <div >
+            <fieldset>
+              <input type="submit" className="btn btn-default" value="Submit" />
+            </fieldset>
+          </div>
+        </form>
+      </p>
+    )
+  }
+}
+
+
+class Mobilemenu extends React.Component{
+
+
+render()
+{
+return(
+
+
+ <p className="dropdown" >
+      <p className="menu" >MENU</p>
+      <p className="dropdown-content">
+<br/>
+      <Link to="/mybenefits"  >myBenefits</Link><br/>
+  <Link to="/coverages" >Coverage</Link><br/>
+       <Link to="/forms">Forms</Link><br/>
+        <Link to="/savings" >Savings</Link><br/>
+        <Link to="/claim">Claim</Link><br/>
+        <Link to="/assistance">Assistance</Link></p>
+    </p>)
+}
+}
+
+ReactDOM.render((
+  <HashRouter>
+
+    <App />
+  </HashRouter>
+
+
+
+
+), document.getElementById('roots1'))</script>
