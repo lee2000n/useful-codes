@@ -1,3 +1,13 @@
+<script crossorigin src="https://cdnjs.cloudflare.com/ajax/libs/react/15.6.1/react.min.js"></script>
+<script crossorigin src="https://cdnjs.cloudflare.com/ajax/libs/react/15.6.1/react-dom.min.js"></script>
+<script crossorigin src="https://unpkg.com/react-router-dom@4.0.0/umd/react-router-dom.min.js"></script>
+<script crossorigin src="https://cdnjs.cloudflare.com/ajax/libs/fetch-jsonp/1.0.6/fetch-jsonp.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/react-bootstrap/0.32.4/react-bootstrap.js" integrity="sha256-mtMgUciEXIA7bsEpUNkqCYv7ohlsKn5tZqvO48hit3I=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/react-bootstrap/0.32.4/react-bootstrap.min.js" integrity="sha256-67lC9fUR3RLV1Rt3Q0wS5mJxrdur+diYKYYHknRhrDM=" crossorigin="anonymous"></script>
+<!-- Load Babel Compiler -->
+<script src="https://unpkg.com/babel-standalone@6.15.0/babel.min.js"></script>
+
+
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" />
 <style>
     #searches img {
