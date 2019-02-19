@@ -1,0 +1,1838 @@
+<style>
+    #todo
+    {
+    margin-top:50px;
+    }
+    #Button6
+    {   font-family: Poppins, sans-serif;
+    width:300px;
+    height: 45px;
+    font-size: 14px;
+    background-color: #919596;
+    color: white;
+    border:none;
+    }
+    div.BusyText{
+    padding-top: 5%;
+    color: #7f8287;
+    }
+    div.ScienceProves{
+    color: #7f8287;
+    }
+</style>
+<style>
+    div.card { display: inline-block;
+    max-width: 270px;
+    position: relative;
+    background:#666762;
+    perspective: 1000;
+    transition: all 0.3s 0s ease-in;
+    margin: 10px;
+    margin-top:40px;
+    }
+    #whole
+    {
+    margin-left:40px;
+    max-width: 960px;
+    }
+    #click1
+    { margin-top:-45px;
+    margin-left: 230px;
+    height: 25px;
+    width: 25px;
+    border-radius: 50%;
+    border:1px solid white;
+    }
+    #click1:hover
+    { transform: translateY(-5px);
+    -webkit-transform: translateY(-5px);
+    box-shadow: 0 3px 0px 0 rgba(0, 0, 0, 0.26);
+    transition: all 0.2s 0s ease-out;
+    border: none;
+    cursor:pointer;
+    }
+    #click2
+    { margin-top:-45px;
+    margin-left: 230px;
+    height: 25px;
+    width: 25px;
+    border-radius: 50%;
+    border:1px solid white;
+    }
+    #click2:hover
+    { transform: translateY(-5px);
+    -webkit-transform: translateY(-5px);
+    box-shadow: 0 3px 0px 0 rgba(0, 0, 0, 0.26);
+    transition: all 0.2s 0s ease-out;
+    border: none;cursor:pointer;
+    }
+    #click4
+    { margin-top:-45px;
+    margin-left: 230px;
+    height: 25px;
+    width: 25px;
+    border-radius: 50%;
+    border:1px solid white;
+    }
+    #click4:hover
+    { transform: translateY(-5px);
+    -webkit-transform: translateY(-5px);
+    box-shadow: 0 3px 0px 0 rgba(0, 0, 0, 0.26);
+    transition: all 0.2s 0s ease-out;
+    border: none;cursor:pointer;
+    }
+    #click5
+    { margin-top:-45px;
+    margin-left: 230px;
+    height: 25px;
+    width: 25px;
+    border-radius: 50%;
+    border:1px solid white;
+    }
+    #click5:hover
+    { transform: translateY(-5px);
+    -webkit-transform: translateY(-5px);
+    box-shadow: 0 3px 0px 0 rgba(0, 0, 0, 0.26);
+    transition: all 0.2s 0s ease-out;
+    border: none;cursor:pointer;
+    }
+    #click6
+    { margin-top:-45px;
+    margin-left: 230px;
+    height: 25px;
+    width: 25px;
+    border-radius: 50%;
+    border:1px solid white;
+    }
+    #click6:hover
+    { transform: translateY(-5px);
+    -webkit-transform: translateY(-5px);
+    box-shadow: 0 3px 0px 0 rgba(0, 0, 0, 0.26);
+    transition: all 0.2s 0s ease-out;
+    border: none;cursor:pointer;
+    }
+    #click7
+    { margin-top:-45px;
+    margin-left: 230px;
+    height: 25px;
+    width: 25px;
+    border-radius: 50%;
+    border:1px solid white;
+    }
+    #click7:hover
+    { transform: translateY(-5px);
+    -webkit-transform: translateY(-5px);
+    box-shadow: 0 3px 0px 0 rgba(0, 0, 0, 0.26);
+    transition: all 0.2s 0s ease-out;
+    border: none;cursor:pointer;
+    }
+    #sp1,#sp2,#sp4,#sp5,#sp6,#sp7
+    { margin-left:75px;   margin-top: 10px;}
+    #redx:hover
+    { transform: translateY(-5px);
+    -webkit-transform: translateY(-5px);
+    box-shadow: 0 3px 0px 0 rgba(0, 0, 0, 0.26);
+    transition: all 0.2s 0s ease-out;
+    border: none;
+    }
+    #c1
+    {height: 186px;
+    width: 270px;
+    text-aligin:left;
+    }
+    #c5
+    {height: 186px;
+    width: 270px;
+    text-aligin:left;
+    }
+    #c6
+    {height: 186px;
+    width: 270px;
+    text-aligin:left;
+    }
+    #c7
+    {height: 186px;
+    width: 270px;
+    text-aligin:left;
+    }
+    .c11:hover
+    {
+    -webkit-transform: scale(1.15) rotate(0.01deg);
+    transform: scale(1.15) rotate(0.01deg);
+    -webkit-transition: all 0.4s;
+    transition: all 0.4s;
+    background-color:#809cbf;
+    }
+    #redx1 {
+    display:block;
+    height: 25px;
+    width: 25px;
+    border-radius: 50%;
+    color: white;
+    text-align: top;
+    text-align: center;
+    font-size: 16px;
+    margin-top:-45px;
+    margin-left: 230px;
+    cursor:default;
+    }
+    #redx1:hover
+    { transform: translateY(-5px);
+    -webkit-transform: translateY(-5px);
+    box-shadow: 0 3px 0px 0 rgba(0, 0, 0, 0.26);
+    transition: all 0.2s 0s ease-out;
+    border: none;cursor:pointer;
+    }
+    #redx {
+    display:block;
+    height: 25px;
+    width: 25px;
+    border-radius: 50%;
+    color: white;
+    text-align: top;
+    text-align: center;
+    font-size: 16px;
+    margin-top:-45px;
+    margin-left: 230px;
+    cursor:default;
+    }
+    #redx:hover
+    { transform: translateY(-5px);
+    -webkit-transform: translateY(-5px);
+    box-shadow: 0 3px 0px 0 rgba(0, 0, 0, 0.26);
+    transition: all 0.2s 0s ease-out;
+    border: none;cursor:pointer;
+    }
+    #redx4:hover
+    { transform: translateY(-5px);
+    -webkit-transform: translateY(-5px);
+    box-shadow: 0 3px 0px 0 rgba(0, 0, 0, 0.26);
+    transition: all 0.2s 0s ease-out;
+    border: none;cursor:pointer;
+    }
+    #redx4 {
+    display:block;
+    height: 25px;
+    width: 25px;
+    border-radius: 50%;
+    color: white;
+    text-align: top;
+    text-align: center;
+    font-size: 16px;
+    margin-top:-45px;
+    margin-left: 230px;
+    cursor:default;
+    }
+    #redx5 {
+    display:block;
+    height: 25px;
+    width: 25px;
+    border-radius: 50%;
+    color: white;
+    text-align: top;
+    text-align: center;
+    font-size: 16px;
+    margin-top:-45px;
+    margin-left: 230px;
+    cursor:default;
+    }
+    #redx5:hover
+    { transform: translateY(-5px);
+    -webkit-transform: translateY(-5px);
+    box-shadow: 0 3px 0px 0 rgba(0, 0, 0, 0.26);
+    transition: all 0.2s 0s ease-out;
+    border: none;cursor:pointer;
+    }
+    #redx6 {
+    display:block;
+    height: 25px;
+    width: 25px;
+    border-radius: 50%;
+    color: white;
+    text-align: top;
+    text-align: center;
+    font-size: 16px;
+    margin-top:-45px;
+    margin-left: 230px;
+    cursor:default;
+    }
+    #redx6:hover
+    { transform: translateY(-5px);
+    -webkit-transform: translateY(-5px);
+    box-shadow: 0 3px 0px 0 rgba(0, 0, 0, 0.26);
+    transition: all 0.2s 0s ease-out;
+    border: none;cursor:pointer;
+    }
+    #redx7 {
+    display:block;
+    height: 25px;
+    width: 25px;
+    border-radius: 50%;
+    color: white;
+    text-align: top;
+    text-align: center;
+    font-size: 16px;
+    margin-top:-45px;
+    margin-left: 230px;
+    cursor:default;
+    }
+    #redx7:hover
+    { transform: translateY(-5px);
+    -webkit-transform: translateY(-5px);
+    box-shadow: 0 3px 0px 0 rgba(0, 0, 0, 0.26);
+    transition: all 0.2s 0s ease-out;
+    border: none;cursor:pointer;
+    }
+    a.btn
+    {
+    background: #809cbf;
+    border-radius: 4px;
+    color: white;
+    display: inline-block;
+    padding: 6px 10px 8px;
+    position: relative;
+    text-align:center;
+    text-decoration: none;
+    border:none;
+    margin-left:90px;
+    }
+    a.btn:hover {cursor:pointer;
+    opacity:0.6
+    }
+    #ww1
+    { background-color: #ffffff;
+    display:none;
+    z-index:100;
+    }
+    #ww2
+    { background-color: #ffffff;
+    display:none;z-index:100;
+    }
+    #ww4
+    { background-color: #ffffff;
+    display:none;z-index:100;
+    }
+    #ww5
+    { background-color: #ffffff;
+    display:none;z-index:100;
+    }
+    #ww6
+    { background-color: #ffffff;
+    display:none;z-index:100;
+    }
+    #ww7
+    { background-color: #ffffff;
+    display:none;z-index:100;
+    }
+    .testblur:hover
+    {
+    -webkit-transform: scale(1.15) rotate(0.01deg);
+    transform: scale(1.15) rotate(0.01deg);
+    -webkit-transition: all 0.4s;
+    transition: all 0.4s;
+    background-color:#809cbf;
+    }
+    #c2{
+    height: 186px;
+    width: 270px;
+    }
+    #c4{
+    height: 186px;
+    width: 270px;
+    }
+    .c44:hover
+    {
+    -webkit-transform: scale(1.15) rotate(0.01deg);
+    transform: scale(1.15) rotate(0.01deg);
+    -webkit-transition: all 0.4s;
+    transition: all 0.4s;
+    background-color:#809cbf;
+    }
+    #toolboxtitle
+    {
+    margin-top: 10px;
+    font-size:20px;
+    color:#66676a;
+    font-weight:bold;
+    margin-left: 340px;
+    }
+    #toolboxtitle1
+    {
+    font-size:14px;
+    color:#66676a;
+    }
+    .blureff1
+    { -webkit-transform:scale(0.85); /* Safari and Chrome */
+    -moz-transform:scale(0.85); /* Firefox */
+    -ms-transform:scale(0.85); /* IE 9 */
+    -o-transform:scale(0.85); /* Opera */
+    transform:scale(0.85);
+    filter: blur(3px);
+    -webkit-filter:blur(2.2px);
+    -moz-filter:blur(2.2px);
+    -o-filter:blur(2.2px);
+    -ms-filter:blur(2.2px);
+    }
+    #w1,#w2,#w4,#w5,#w6,#w7
+    {
+    background:white;
+    height:66px;
+    width:270px;
+    margin-top:3px;
+    margin-left:-3px;
+    }
+    @media screen and (max-width: 499px) and (min-width: 300px)
+    { #toolboxtitle1
+    {
+    margin-left: -10px;
+    }
+    }
+    @media screen and (max-width: 600px) and (min-width: 500px)
+    { #toolboxtitle1
+    {
+    margin-left: -90px;
+    }
+    }
+    @media screen and (max-width: 679px) and (min-width: 601px)
+    { #toolboxtitle1
+    {
+    margin-left: -120px;
+    }
+    }
+    @media screen and (max-width: 987px) and (min-width: 855px)
+    { #toolboxtitle1
+    {
+    margin-left: -120px;
+    }
+    }
+    @media screen and (max-width: 997px) and (min-width: 988px)
+    { #toolboxtitle1
+    {
+    margin-left: -140px;
+    }
+    #toolboxtitle
+    {
+    margin-left: 220px;
+    }
+    }
+    @media screen and (max-width: 988px) and (min-width: 909px)
+    {
+    #toolboxtitle
+    {
+    margin-left: 220px;
+    }
+    }
+    @media screen and (max-width: 908px) and (min-width: 861px)
+    {
+    #toolboxtitle
+    {
+    margin-left: 240px;
+    }
+    }
+    @media screen and (max-width: 860px) and (min-width: 820px)
+    {
+    #toolboxtitle
+    {
+    margin-left: 220px;
+    }
+    }
+    @media screen and (max-width: 820px) and (min-width: 800px)
+    {
+    #toolboxtitle
+    {
+    margin-left: 200px;
+    }
+    }
+    @media screen and (max-width: 799px) and (min-width: 680px)
+    {
+    #toolboxtitle
+    {
+    margin-left: 220px;
+    }
+    }
+    @media screen and (max-width: 679px) and (min-width: 624px)
+    {
+    #toolboxtitle
+    {
+    margin-left: 80px;
+    }
+    }
+    @media screen and (max-width: 623px) and (min-width: 575px)
+    {
+    #toolboxtitle
+    {
+    margin-left: 50px;
+    }
+    }
+    @media screen and (max-width: 574px) and (min-width: 496px)
+    {
+    #toolboxtitle
+    {
+    margin-left: 70px;
+    }
+    }
+    @media screen and (max-width: 497px) and (min-width: 461px)
+    {
+    #toolboxtitle
+    {
+    margin-left: 100px;
+    }
+    }
+    @media screen and (max-width: 460px) and (min-width: 320px)
+    {
+    #toolboxtitle
+    {
+    margin-left: 70px;
+    }
+    }
+    @media screen and (max-width: 997px) and (min-width: 904px)
+    {
+    #whole
+    {
+    margin-left:160px;
+    }
+    }
+    @media screen and (max-width: 904px) and (min-width: 854px)
+    {
+    #whole
+    {
+    margin-left:130px;
+    }
+    }
+    @media screen and (max-width: 855px) and (min-width: 826px)
+    {
+    #whole
+    {
+    margin-left:70px;
+    }
+    }
+    @media screen and (max-width: 825px) and (min-width: 800px)
+    {
+    #whole
+    {
+    margin-left:90px;
+    }
+    }
+    @media screen and (max-width: 679px) and (min-width: 300px)
+    { .breaks1
+    {
+    display:none;
+    }
+    }
+    @media screen and (max-width: 679px) and (min-width: 600px)
+    {
+    #whole
+    {
+    margin-left:150px;
+    }
+    }
+    @media screen and (max-width: 600px) and (min-width: 500px)
+    { .breaks1
+    {
+    display:none;
+    }
+    #whole
+    {
+    margin-left:100px;
+    }
+    }
+    @media screen and (max-width: 413px) and (min-width: 350px)
+    { .breaks1
+    {
+    display:none;
+    }
+    #whole
+    {
+    margin-left:10px;
+    }
+    }
+    @media screen and (max-width: 349px) and (min-width: 319px)
+    { .breaks1
+    {
+    display:none;
+    }
+    #whole
+    {
+    margin-left:-5px;
+    }
+    }
+    #title2{ font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    color:#66676a;
+    }
+    #Button4,#Button2,#Button3,#Button5,#button611
+    {width:175px;
+    height: 55px;
+    background-color:#809cbf;
+    color: white;
+    font-family: Poppins, sans-serif;
+    font-size: 15px;
+    border: none;
+    }
+    #buttons4
+    {
+    width:100%;
+    padding:10px;
+    }
+    @media screen and (max-width: 617px) and (min-width:500px)
+    {
+    #buttons4
+    {
+    margin-left:65px;
+    }
+    }
+    @media screen and (max-width: 500px) and (min-width:100px)
+    {
+    #buttons4
+    {
+    margin-left:25px;
+    }
+    }
+    .Top.mainBGContainer
+    {
+    background: white;
+    }
+    #logos
+    {
+    width: 140px; height: 42px;
+    }
+    #headers
+    {
+    background-color: rgb(255, 255, 255);
+    margin-top:-20px;
+    }
+    .wellnessHeader div {
+    float: left;
+    }
+    .logoContainer {
+    width: 200px;
+    margin: 10px 0 10px 50px;
+    z-index: 1;
+    position: relative;
+    }
+    .logoContainer img {
+    max-width: 100%;
+    }
+    #haha, #hahaha, #ha, #ho {
+    margin-left: 60px;
+    margin-top: 20px;
+    font-size: 15px;
+    font-family: Poppins, sans-serif;
+    color: #66676a;
+    }
+    @media screen and (max-width: 960px) and (min-width: 100px)
+    {
+    #haha, #hahaha, #ha, #ho {
+    display:none;
+    }
+    }
+</style>
+<style>
+    @import url('https://fonts.googleapis.com/css?family=Poppins');
+    #spaces2
+    {
+    display: none;
+    }
+    #heads
+    {
+    margin-left: 80px;
+    font-weight: bold;
+    color: #66676a;
+    font-size: 34px;
+    line-height: 41px;
+    }
+    #subheads
+    {
+    margin-left: 80px;
+    color: #7f8287;
+    font-size: 15pt;
+    line-height: 40px;
+    }
+    #first
+    {
+    height: 500px;
+    background-color:  #e9f0f9;
+    box-shadow:
+    inset 0px 13px 8px -10px #CCC,
+    inset 0px 0px 8px -10px #CCC;
+    }
+    #spaces
+    {    line-height:56px;
+    }
+    #Button1
+    {       font-family: Poppins, sans-serif;
+    margin-left: 80px;
+    height: 55px;
+    width: 240px;
+    font-size: 15px;
+    font-weight: bold;
+    background-color:  #88b04b;
+    color: white;
+    border: none;
+    }
+    #Button6:hover
+    {cursor:pointer;
+    opacity: 0.6;
+    }
+    #button611:hover
+    {cursor:pointer;
+    opacity: 0.6;
+    }
+    #Button1:hover
+    {cursor:pointer;
+    opacity: 0.7;
+    }
+    #Button5:hover
+    {cursor:pointer;
+    opacity: 0.7;
+    }
+    #Button4:hover
+    {cursor:pointer;
+    opacity: 0.7;
+    }
+    #Button3:hover
+    {cursor:pointer;
+    opacity: 0.7;
+    }
+    #Button2:hover
+    {cursor:pointer;
+    opacity: 0.7;
+    }
+    #images1
+    {    margin-left:78px;
+    margin-top: 30px;
+    z-index:-1;
+    }
+    #mobileimage
+    {display: none;
+    }
+    #chaimage
+    {
+    margin-top: -280px;
+    margin-left: 600px;
+    }
+</style>
+<style>
+    @media screen and (max-width:359px) and (min-width: 320px)
+    {
+    #spaces2{
+    display: block;
+    }
+    #images1
+    {
+    margin-left: 84px;
+    }
+    #heads
+    {
+    margin-left: 44px;
+    font-weight: bold;
+    color: #66676a;
+    font-size: 20px;
+    line-height: 23px;
+    margin-top: 20px;
+    }
+    #subheads
+    {margin-left: 44px;
+    color: #7f8287;
+    font-size: 13px;
+    line-height: 14px;
+    margin-top : 20px;
+    }
+    #Button1{    margin-left: 44px;
+    margin-top: 15px;
+    width: 230px;
+    height: 55px;
+    }
+    #first
+    {
+    height: 650px;
+    }
+    #mobileimage
+    {
+    display: block;
+    margin-top: 127px;
+    margin-left: 25px;
+    }
+    #chaimage
+    {
+    display:none;
+    }
+    }
+    @media screen and (max-width:376px) and (min-width: 360px)
+    {
+    #spaces2{
+    display: block;
+    }
+    #spaces{
+    line-height: 70px;
+    }
+    #images1
+    {
+    margin-left: 94px;
+    }
+    #heads
+    {
+    margin-left: 54px;
+    font-weight: bold;
+    color: #66676a;
+    font-size: 20px;
+    line-height: 23px;
+    }
+    #subheads
+    {margin-left: 54px;
+    color: #7f8287;
+    font-size: 13px;
+    line-height: 14px;
+    margin-top : 20px;
+    }
+    #Button1{    margin-left: 54px;
+    margin-top: 15px;
+    width: 230px;
+    height: 55px;
+    }
+    #first
+    {
+    height: 650px;
+    }
+    #mobileimage
+    {
+    display: block;
+    margin-top: 119px;
+    margin-left: 30px;
+    }
+    #chaimage
+    {
+    display:none;
+    }
+    }
+    @media screen and (max-width:413px) and (min-width: 376px)
+    { #spaces2{
+    display: block;
+    }
+    #spaces{
+    line-height: 60px;
+    }
+    #images1
+    {
+    margin-left: 89px;
+    }
+    #heads
+    {
+    margin-left: 49px;
+    font-weight: bold;
+    color: #66676a;
+    font-size: 20px;
+    line-height: 23px;
+    }
+    #subheads
+    {margin-left: 49px;
+    color: #7f8287;
+    font-size: 14px;
+    line-height: 14px;
+    margin-top : 20px;
+    }
+    #Button1{    margin-left: 49px;
+    margin-top: 15px;
+    width: 230px;
+    height: 55px;
+    }
+    #first
+    {
+    height: 654px;
+    }
+    #mobileimage
+    {
+    display: block;
+    margin-top: 123px;
+    margin-left: 25px;
+    }
+    #chaimage
+    {
+    display:none;
+    }
+    }
+    @media screen and (max-width: 484px) and (min-width: 413px)
+    { #spaces2{
+    display: block;
+    }
+    #images1
+    {
+    margin-left: 119px;
+    }
+    #heads
+    {
+    margin-left: 49px;
+    font-weight: bold;
+    color: #66676a;
+    font-size: 25px;
+    line-height: 30px;
+    margin-top: 13px;
+    }
+    #subheads
+    {margin-left: 49px;
+    color: #7f8287;
+    font-size: 14px;
+    line-height: 17px;
+    margin-top : 20px;
+    }
+    #Button1{    margin-left: 49px;
+    margin-top: 15px;
+    width: 290px;
+    height: 55px;
+    }
+    #first
+    {
+    height: 660px;
+    }
+    #mobileimage
+    {
+    display: block;
+    margin-top: 125px;
+    margin-left: 50px;
+    }
+    #chaimage
+    {
+    display:none;
+    }
+    }
+    @media screen and (max-width: 570px) and (min-width: 484px)
+    { #spaces2{
+    display: none;
+    }
+    #images1
+    {
+    margin-left: 149px;
+    }
+    #heads
+    {
+    margin-left: 74px;
+    font-weight: bold;
+    color: #66676a;
+    font-size: 28px;
+    line-height: 33px;
+    margin-top: 15px;
+    }
+    #subheads
+    {margin-left: 74px;
+    color: #7f8287;
+    font-size: 14px;
+    line-height: 17px;
+    margin-top : 20px;
+    }
+    #Button1{    margin-left: 74px;
+    margin-top: 15px;
+    width: 290px;
+    height: 55px;
+    }
+    #first
+    {
+    height: 690px;
+    }
+    #mobileimage
+    {
+    display: block;
+    margin-top: 131px;
+    margin-left: 70px;
+    }
+    #chaimage
+    {
+    display:none;
+    }
+    }
+    @media screen and (max-width: 732px) and (min-width: 571px)
+    {
+    #Button1{    margin-left: 14px;
+    margin-top: 30px;
+    }
+    #images1
+    {
+    margin-left: 14px;
+    margin-top: 20px;
+    }
+    #heads
+    {
+    margin-left: 14px;
+    font-weight: bold;
+    color: #66676a;
+    font-size: 20px;
+    line-height: 35px;
+    margin-top: 35px;
+    }
+    #subheads
+    {
+    margin-left: 14px;
+    color: #7f8287;
+    font-size: 10px;
+    line-height: 14px;
+    margin-top : 20px;
+    }
+    #chaimage
+    {
+    margin-top: -280px;
+    margin-left: 290px;
+    }
+    }
+    @media screen and (max-width:890px) and (min-width: 732px)
+    { #Button1{    margin-left: 40px;
+    }
+    #images1
+    {
+    margin-left: 40px;
+    }
+    #heads
+    {margin-top: 50px;
+    margin-left: 40px;
+    font-weight: bold;
+    color: #66676a;
+    font-size: 25px;
+    line-height: 35px;
+    }
+    #subheads
+    {
+    margin-left: 40px;
+    color: #7f8287;
+    font-size: 12px;
+    line-height: 30px;
+    margin-top: -10px;
+    }
+    #chaimage
+    {
+    margin-top: -270px;
+    margin-left: 400px;
+    }
+    }
+    @media screen and (max-width:1024px) and (min-width: 891px)
+    {#heads
+    {margin-left: 20px;
+    margin-top: 20px;
+    }
+    #subheads
+    {
+    margin-left: 20px;
+    }
+    #Button1
+    {
+    margin-left: 20px;
+    }
+    #images1
+    {
+    margin-left: 20px;
+    }
+    #chaimage
+    {
+    margin-top: -280px;
+    margin-left: 580px;
+    }
+    }
+    #popup {
+    position: relative;
+    bottom: 1000px;
+    left: 13.8%;
+    width: 208px;
+    height: 80px;
+    padding: 10px;
+    background-color: #fd4703;
+    background-image: linear-gradient(top, #f97d4f 0%,#fc5d23 50%,#fd4703 51%,#fd4703 100%);
+    border: 2px solid #00234C;
+    -webkit-border-radius: 5px;
+    z-index: 9999;
+    text-align: center;
+    -webkit-box-shadow: 10px 10px 30px #333, -10px -10px 30px #333, -10px 10px 30px #333, 10px -10px 30px #333;
+    h4 {
+    color: white;
+    text-shadow: 0px -2px 0px #00234C;
+    font-size: 18px;
+    font-family: Belleza;
+    margin-top: 0;
+    margin-bottom: 0;
+    }
+    p {
+    color: white;
+    text-shadow: 0px -2px 0px #00234C;
+    font-size: 12px;
+    font-weight: bold;
+    font-family: Helvetica, Arial, sans-serif;
+    }
+    &::after {
+    position: absolute;
+    content: '';
+    height: 0px;
+    width: 0px;
+    left: 43%;
+    bottom: -20px;
+    border-left: 20px solid transparent;
+    border-right: 20px solid transparent;
+    border-top: 20px solid #FD4703;
+    z-index: 9999;
+    }
+    }
+    .popup-close-icon {
+    position: absolute;
+    width: 0px;
+    right: 20px;
+    top: 0px;
+    font-size: 24px;
+    font-weight: bolder;
+    color: white;
+    text-shadow: 0px -1px 1px #00234C;
+    cursor: pointer;
+    }
+    .bottom-bar {
+    position: absolute;
+    bottom: 8%;
+    left: 8px;
+    }
+    #schoolslogo
+    {width:192px;
+    height:60px;
+    }
+</style>
+<div id="wellness">&nbsp;</div>
+<script type="text/babel">
+class C extends React.Component {
+  render() {
+        return (
+
+<p>
+   <div  id="headers" className="wellnessHeader group" >
+    <div id="logos" className="logoContainer" >
+        <a id="mMyWellnessHeader_hypHeader" href="/redriver-international/en/wellnesshomepage">
+            <img src="/_uploads/images/myWellnessLogo.png" />
+        </a>
+ </div>
+  <div id="haha">Insurance Information</div><div id="hahaha">Mental Health Assessment</div><div id="ha">FAQ</div><div id="ho">About</div> 
+</div>
+<br/><br/><br/>
+<Firstdiv />
+<Secondiv />
+<Thirdiv />
+</p>
+
+        );
+    }
+}
+
+class Firstdiv extends React.Component {
+  render() {
+        return (
+
+<p>
+ <div id="first">
+<br id="spaces" />
+<p id="heads">Hello! Welcome to your <br />
+mental health support.</p>
+<p id="subheads">
+Have you taken your free mental health <br id="spaces2" />
+assessment?
+</p>
+<input id="Button1" type="button" value="Start my Assessment  >" />
+<div id="images1">
+<img id="schoolslogo" src="/_uploads/images/NAITSA/BCITSA-%E2%80%94-Student-Association(blue).png"  />
+<div>
+<div id="chaimage"><img  src="/_uploads/images/mywellness_characters.png?actions=r|229-317"  />
+</div>
+</div>
+</div>
+<div id="mobileimage"><img src="/_uploads/images/mywellness_characters_mobile.png?actions=r|296-203" /></div>
+</div>
+</p>
+
+
+        );
+    }
+}
+
+class Secondiv extends React.Component
+{
+
+render()
+{
+return(
+<p>
+<p id="title2">Your Support Resources</p>
+<div id="buttons4">
+<div style={{display:'inline-block',padding:'5px'}}>
+<input id="Button2" type="button" value="Online Counselling >" /></div>
+<div style={{display:'inline-block',padding:'5px'}}>
+<input id="Button3" type="button" value="Campus Support >" /></div>
+<div style={{display:'inline-block',padding:'5px'}}>
+<input id="button611" type="button"  value="Suicide Prevention >" /></div>
+<div style={{display:'inline-block',padding:'5px'}}>
+<input id="Button4" type="button"  value="Crisis Lines >" /></div>
+<div style={{display:'inline-block',padding:'5px'}}>
+<input id="Button5" type="button" value="Find a Doctor >" /></div>
+</div>
+
+</p>
+)
+
+
+}
+
+
+
+
+
+
+}
+
+
+class Thirdiv extends React.Component
+{
+
+ constructor() {
+    super();
+    this.state = {
+showclear :true,
+showclear1 :true,
+showclear2 :true,
+showclear3 :true,
+showclear4 :true,
+showclear5 :true,
+
+    };
+
+    this.blurit= this.blurit.bind(this);
+    this.blurit1= this.blurit1.bind(this);
+    this.blurit2= this.blurit2.bind(this);
+    this.blurit3= this.blurit3.bind(this);
+    this.blurit4= this.blurit4.bind(this);
+    this.blurit5= this.blurit5.bind(this);
+    this.unblurit= this.unblurit.bind(this);
+    this.unblurit1= this.unblurit1.bind(this);
+    this.unblurit2= this.unblurit2.bind(this);
+    this.unblurit3= this.unblurit3.bind(this);
+    this.unblurit4= this.unblurit4.bind(this);
+    this.unblurit5= this.unblurit5.bind(this);
+this.hover1=this.hover1.bind(this);
+this.hover=this.hover.bind(this);
+this.hover2=this.hover2.bind(this);
+this.hover3=this.hover3.bind(this);
+this.hover4=this.hover4.bind(this);
+this.hover5=this.hover5.bind(this);
+  }
+
+
+
+componentDidMount() {
+   document.getElementById("redx").style.display="none";
+   document.getElementById("redx1").style.display="none";
+   document.getElementById("redx4").style.display="none";
+   document.getElementById("redx5").style.display="none";
+   document.getElementById("redx6").style.display="none";
+   document.getElementById("redx7").style.display="none";
+  }
+
+
+
+
+blurit()
+{ this.setState({
+showclear :true,
+showclear1 :false,
+showclear2 :false,
+showclear3 :false,
+showclear4 :false,
+showclear5 :false,
+  
+    });
+    document.getElementById("redx").style.display="block";
+    document.getElementById("click1").style.display="none";
+ document.getElementById("c1").style.zIndex= "500";
+ document.getElementById("ww1").style.display= "block";
+}
+blurit1()
+{ this.setState({
+showclear1 :true,
+showclear :false,
+showclear2 :false,
+showclear3 :false,
+showclear4 :false,
+showclear5 :false,
+   
+    });
+    document.getElementById("redx1").style.display="block";
+    document.getElementById("click2").style.display="none";
+ document.getElementById("c2").style.zIndex= "500";
+ document.getElementById("ww2").style.display= "block";
+}
+
+blurit2()
+{ this.setState({
+showclear2 :true,
+showclear1 :false,
+showclear :false,
+showclear3 :false,
+showclear4 :false,
+showclear5 :false,
+   
+    });
+    document.getElementById("redx4").style.display="block";
+    document.getElementById("click4").style.display="none";
+ document.getElementById("c4").style.zIndex= "500";
+ document.getElementById("ww4").style.display= "block";
+}
+
+blurit3()
+{ this.setState({
+showclear3 :true,
+showclear1 :false,
+showclear2 :false,
+showclear :false,
+showclear4 :false,
+showclear5 :false,
+   
+    });
+  document.getElementById("redx5").style.display="block";
+    document.getElementById("click5").style.display="none";
+ document.getElementById("c5").style.zIndex= "500";
+ document.getElementById("ww5").style.display= "block";
+}
+
+blurit4()
+{ this.setState({
+showclear4 :true,
+showclear1 :false,
+showclear2 :false,
+showclear3 :false,
+showclear :false,
+showclear5 :false,
+   
+    });
+    document.getElementById("redx6").style.display="block";
+    document.getElementById("click6").style.display="none";
+ document.getElementById("c6").style.zIndex= "500";
+ document.getElementById("ww6").style.display= "block";
+}
+
+blurit5()
+{ this.setState({
+showclear5 :true,
+showclear1 :false,
+showclear2 :false,
+showclear3 :false,
+showclear4 :false,
+showclear :false,
+   
+    });
+    document.getElementById("redx7").style.display="block";
+    document.getElementById("click7").style.display="none";
+ document.getElementById("c7").style.zIndex= "500";
+ document.getElementById("ww7").style.display= "block";
+}
+
+unblurit()
+{
+ this.setState({
+showclear5 :true,
+showclear1 :true,
+showclear2 :true,
+showclear3 :true,
+showclear4 :true,
+showclear :true,
+   
+    });
+    document.getElementById("redx").style.display="none";
+    document.getElementById("click1").style.display="block";
+ document.getElementById("c1").style.zIndex= "1";
+ document.getElementById("ww1").style.display= "none";
+}
+
+unblurit1()
+{
+ this.setState({
+showclear5 :true,
+showclear1 :true,
+showclear2 :true,
+showclear3 :true,
+showclear4 :true,
+showclear :true,
+   
+    });
+    document.getElementById("redx1").style.display="none";
+    document.getElementById("click2").style.display="block";
+ document.getElementById("c2").style.zIndex= "1";
+ document.getElementById("ww2").style.display= "none";
+}
+unblurit2()
+{
+ this.setState({
+showclear5 :true,
+showclear1 :true,
+showclear2 :true,
+showclear3 :true,
+showclear4 :true,
+showclear :true,
+   
+    });
+    document.getElementById("redx4").style.display="none";
+    document.getElementById("click4").style.display="block";
+ document.getElementById("c4").style.zIndex= "1";
+ document.getElementById("ww4").style.display= "none";
+}
+unblurit3()
+{
+ this.setState({
+showclear5 :true,
+showclear1 :true,
+showclear2 :true,
+showclear3 :true,
+showclear4 :true,
+showclear :true,
+   
+    });
+    document.getElementById("redx5").style.display="none";
+    document.getElementById("click5").style.display="block";
+ document.getElementById("c5").style.zIndex= "1";
+ document.getElementById("ww5").style.display= "none";
+}
+unblurit4()
+{
+ this.setState({
+showclear5 :true,
+showclear1 :true,
+showclear2 :true,
+showclear3 :true,
+showclear4 :true,
+showclear :true,
+   
+    });
+    document.getElementById("redx6").style.display="none";
+    document.getElementById("click6").style.display="block";
+ document.getElementById("c6").style.zIndex= "1";
+ document.getElementById("ww6").style.display= "none";
+}
+unblurit5()
+{
+ this.setState({
+showclear5 :true,
+showclear1 :true,
+showclear2 :true,
+showclear3 :true,
+showclear4 :true,
+showclear :true,
+   
+    });
+    document.getElementById("redx7").style.display="none";
+    document.getElementById("click7").style.display="block";
+ document.getElementById("c7").style.zIndex= "1";
+ document.getElementById("ww7").style.display= "none";
+}
+hover()
+{
+ this.setState({
+
+showclear :true,
+
+
+ });
+
+ document.getElementById("redx1").style.display="none";
+    document.getElementById("click2").style.display="block";
+ document.getElementById("c2").style.zIndex= "1";
+ document.getElementById("ww2").style.display= "none";
+
+    document.getElementById("redx7").style.display="none";
+    document.getElementById("click7").style.display="block";
+ document.getElementById("c7").style.zIndex= "1";
+ document.getElementById("ww7").style.display= "none";
+
+
+    document.getElementById("redx4").style.display="none";
+    document.getElementById("click4").style.display="block";
+ document.getElementById("c4").style.zIndex= "1";
+ document.getElementById("ww4").style.display= "none";
+
+
+
+    document.getElementById("redx5").style.display="none";
+    document.getElementById("click5").style.display="block";
+ document.getElementById("c5").style.zIndex= "1";
+ document.getElementById("ww5").style.display= "none";
+
+    document.getElementById("redx6").style.display="none";
+    document.getElementById("click6").style.display="block";
+ document.getElementById("c6").style.zIndex= "1";
+ document.getElementById("ww6").style.display= "none";
+
+}
+hover1()
+{
+ this.setState({
+
+showclear1 :true,
+
+ });
+
+     document.getElementById("redx").style.display="none";
+    document.getElementById("click1").style.display="block";
+ document.getElementById("c1").style.zIndex= "1";
+ document.getElementById("ww1").style.display= "none";
+
+    document.getElementById("redx7").style.display="none";
+    document.getElementById("click7").style.display="block";
+ document.getElementById("c7").style.zIndex= "1";
+ document.getElementById("ww7").style.display= "none";
+
+
+    document.getElementById("redx4").style.display="none";
+    document.getElementById("click4").style.display="block";
+ document.getElementById("c4").style.zIndex= "1";
+ document.getElementById("ww4").style.display= "none";
+
+
+
+    document.getElementById("redx5").style.display="none";
+    document.getElementById("click5").style.display="block";
+ document.getElementById("c5").style.zIndex= "1";
+ document.getElementById("ww5").style.display= "none";
+
+    document.getElementById("redx6").style.display="none";
+    document.getElementById("click6").style.display="block";
+ document.getElementById("c6").style.zIndex= "1";
+ document.getElementById("ww6").style.display= "none";
+
+}
+
+
+hover2()
+{
+ this.setState({
+
+showclear2 :true,
+
+
+ });
+
+document.getElementById("redx1").style.display="none";
+    document.getElementById("click2").style.display="block";
+ document.getElementById("c2").style.zIndex= "1";
+ document.getElementById("ww2").style.display= "none";
+
+    document.getElementById("redx7").style.display="none";
+    document.getElementById("click7").style.display="block";
+ document.getElementById("c7").style.zIndex= "1";
+ document.getElementById("ww7").style.display= "none";
+
+
+     document.getElementById("redx").style.display="none";
+    document.getElementById("click1").style.display="block";
+ document.getElementById("c1").style.zIndex= "1";
+ document.getElementById("ww1").style.display= "none";
+
+
+
+    document.getElementById("redx5").style.display="none";
+    document.getElementById("click5").style.display="block";
+ document.getElementById("c5").style.zIndex= "1";
+ document.getElementById("ww5").style.display= "none";
+
+    document.getElementById("redx6").style.display="none";
+    document.getElementById("click6").style.display="block";
+ document.getElementById("c6").style.zIndex= "1";
+ document.getElementById("ww6").style.display= "none";
+
+
+}
+
+hover3()
+{
+ this.setState({
+
+showclear3 :true,
+
+
+ });
+
+document.getElementById("redx1").style.display="none";
+    document.getElementById("click2").style.display="block";
+ document.getElementById("c2").style.zIndex= "1";
+ document.getElementById("ww2").style.display= "none";
+
+    document.getElementById("redx7").style.display="none";
+    document.getElementById("click7").style.display="block";
+ document.getElementById("c7").style.zIndex= "1";
+ document.getElementById("ww7").style.display= "none";
+
+
+     document.getElementById("redx").style.display="none";
+    document.getElementById("click1").style.display="block";
+ document.getElementById("c1").style.zIndex= "1";
+ document.getElementById("ww1").style.display= "none";
+
+
+
+    document.getElementById("redx4").style.display="none";
+    document.getElementById("click4").style.display="block";
+ document.getElementById("c4").style.zIndex= "1";
+ document.getElementById("ww4").style.display= "none";
+
+    document.getElementById("redx6").style.display="none";
+    document.getElementById("click6").style.display="block";
+ document.getElementById("c6").style.zIndex= "1";
+ document.getElementById("ww6").style.display= "none";
+
+}
+hover4()
+{
+ this.setState({
+
+showclear4 :true,
+
+
+ });
+
+document.getElementById("redx1").style.display="none";
+    document.getElementById("click2").style.display="block";
+ document.getElementById("c2").style.zIndex= "1";
+ document.getElementById("ww2").style.display= "none";
+
+    document.getElementById("redx7").style.display="none";
+    document.getElementById("click7").style.display="block";
+ document.getElementById("c7").style.zIndex= "1";
+ document.getElementById("ww7").style.display= "none";
+
+
+     document.getElementById("redx").style.display="none";
+    document.getElementById("click1").style.display="block";
+ document.getElementById("c1").style.zIndex= "1";
+ document.getElementById("ww1").style.display= "none";
+
+
+
+    document.getElementById("redx4").style.display="none";
+    document.getElementById("click4").style.display="block";
+ document.getElementById("c4").style.zIndex= "1";
+ document.getElementById("ww4").style.display= "none";
+
+    document.getElementById("redx5").style.display="none";
+    document.getElementById("click5").style.display="block";
+ document.getElementById("c5").style.zIndex= "1";
+ document.getElementById("ww5").style.display= "none";
+
+
+}
+hover5()
+{
+ this.setState({
+
+showclear5 :true,
+
+
+ });
+
+document.getElementById("redx1").style.display="none";
+    document.getElementById("click2").style.display="block";
+ document.getElementById("c2").style.zIndex= "1";
+ document.getElementById("ww2").style.display= "none";
+
+    document.getElementById("redx6").style.display="none";
+    document.getElementById("click6").style.display="block";
+ document.getElementById("c6").style.zIndex= "1";
+ document.getElementById("ww6").style.display= "none";
+
+
+     document.getElementById("redx").style.display="none";
+    document.getElementById("click1").style.display="block";
+ document.getElementById("c1").style.zIndex= "1";
+ document.getElementById("ww1").style.display= "none";
+
+
+
+    document.getElementById("redx4").style.display="none";
+    document.getElementById("click4").style.display="block";
+ document.getElementById("c4").style.zIndex= "1";
+ document.getElementById("ww4").style.display= "none";
+
+    document.getElementById("redx5").style.display="none";
+    document.getElementById("click5").style.display="block";
+ document.getElementById("c5").style.zIndex= "1";
+ document.getElementById("ww5").style.display= "none";
+}
+
+render()
+{
+return(
+<p>
+<div id="whole">
+<p id="toolboxtitle">&nbsp; Your Toolbox</p>
+<p id="toolboxtitle1">
+Your toolbox contains a wide variety of helpful solutions and important
+information to help you strengthen your mental health.</p>
+<div id="c1" className={this.state.showclear? 'card' : 'card blureff1'} onMouseEnter={this.hover}>
+<table>
+    <tbody>
+        <tr>
+            <td><img id="sp1" src="/_uploads/images/stress-reduction-white.png" style={{width: "120px"}} />
+            <div id="w1">
+            <p style={{fontSize : "15px",textAlign: "left", color: "#7f8287", paddingLeft: "8px"}}><strong>
+            <br />
+            Stress Reduction
+            <br />
+            </strong></p>
+            </div>
+            <div >
+            <img  id="click1" src="/_uploads/images/open_button.png" onClick={this.blurit}/ ></div>
+            <span> <img   id="redx" src="/_uploads/images/Close_Button.png" onClick={this.unblurit} /></span>
+            <div id="ww1" style={{height: "100px"}}>
+            <p id="tip1" style={{textAlign: "left", fontSize : "12px", paddingLeft: "5px"}}>View the causes of stress and learn skills to cope and manage stress.</p>
+            <a id="outs" href="https://www.mystudentplan.ca/bcit/en/mywellness/stress-reduction" className="btn">Explore ></a>
+            </div>
+            </td>
+        </tr>
+    </tbody>
+</table>
+</div>
+<div id="c2"className={this.state.showclear1? 'card' : 'card blureff1'} onMouseEnter={this.hover1}>
+<table>
+    <tbody>
+        <tr>
+            <td>
+            <img id="sp2" src="/_uploads/images/helping-yourself-white.png"  style={{border: "none", width: "120px"}} />
+            <div id="w2">
+            <p style={{fontSize : "15px", textAlign: "left", color: "#7f8287",paddingLeft: "8px"}}><strong>  <br />
+            Helping Yourself
+            </strong></p>
+            </div>
+            <div>
+            <img   id="click2" src="/_uploads/images/open_button.png"  onClick={this.blurit1}/></div>
+            <span > <img id="redx1" src="/_uploads/images/Close_Button.png"  onClick={this.unblurit1} /></span>
+            <div id="ww2" style={{height: "110px"}}>
+            <p style={{textAlign: "left", fontSize : "12px", paddingLeft: "5px"}}>Learn how to help yourself through helpful apps, books, self-guided online therapy, and more!</p>
+            <a href="https://www.mystudentplan.ca/bcit/en/mywellness/helping-yourself" className="btn">Explore ></a>
+            </div>
+            </td>
+        </tr>
+    </tbody>
+</table>
+</div>
+
+
+<div id="c4" className={this.state.showclear2? 'card' : 'card blureff1'} onMouseEnter={this.hover2}>
+<table>
+    <tbody>
+        <tr>
+            <td>
+            <img id="sp4" src="/_uploads/images/helping-others-white.png"  style={{width: "120px"}} />
+            <div id="w4">
+            <p style={{fontSize : "15px",textAlign: "left", color: "#7f8287", paddingLeft: "8px"}}><strong>  <br />
+            Helping Others</strong>
+            </p>
+            </div>
+            <div>
+            <img  id="click4" src="/_uploads/images/open_button.png"  onClick={this.blurit2} /></div>
+            <span > <img id="redx4" src="/_uploads/images/Close_Button.png" onClick={this.unblurit2} /></span>
+            <div id="ww4" style={{height: "110px"}}>
+            <p style={{textAlign: "left", fontSize : "12px", paddingLeft: "5px"}}>Learn the symptoms of mental illness, and how to approach others with suicidal thoughts or mental illness.</p>
+            <a href="https://www.mystudentplan.ca/bcit/en/mywellness/helping-others" className="btn">Explore ></a>
+            </div>
+            </td>
+        </tr>
+    </tbody>
+</table>
+</div>
+
+<div id="c5" className={this.state.showclear3? 'card' : 'card blureff1'} onMouseEnter={this.hover3}>
+<table>
+    <tbody>
+        <tr>
+            <td><img id="sp5" src="/_uploads/images/mental-health-basics-white.png"  style={{width: "120px"}}/>
+            <div id="w5">
+            <p style={{fontSize : "15px",textAlign: "left", color: "#7f8287", paddingLeft: "8px"}}><strong>
+            <br />
+            Mental Health Essentials
+            <br />
+            </strong></p>
+            </div>
+            <div >
+            <img id="click5" src="/_uploads/images/open_button.png"  onClick={this.blurit3} /></div>
+            <span> <img  id="redx5" src="/_uploads/images/Close_Button.png" onClick={this.unblurit3}/></span>
+            <div id="ww5" style={{height: "110px"}}>
+            <p style={{textAlign: "left", fontSize : "12px", paddingLeft: "5px"}}>Learn the importance of addressing issues, what good stress and bad stress are, and why we don&rsquo;t always seek help.</p>
+            <a  href="https://www.mystudentplan.ca/bcit/en/mywellness/mh-essentials" className="btn">Explore ></a>
+            </div>
+            </td>
+        </tr>
+    </tbody>
+</table>
+</div>
+<div id="c6" className={this.state.showclear4? 'card' : 'card blureff1'} onMouseEnter={this.hover4}>
+<table>
+    <tbody>
+        <tr>
+            <td>
+            <img id="sp6" src="/_uploads/images/mental-health-problems-white.png"  style={{ width: "120px"}} />
+            <div id="w6">
+            <p style={{fontSize : "15px", textAlign: "left", color: "#7f8287",paddingLeft: "8px"}}><strong> <br />
+            Mental Health Problems
+            </strong></p>
+            </div>
+            <div>
+            <img  id="click6" src="/_uploads/images/open_button.png"  onClick={this.blurit4} /></div>
+            <span > <img id="redx6"  src="/_uploads/images/Close_Button.png" onClick={this.unblurit4}/></span>
+            <div id="ww6" style={{height: "110px"}}>
+            <p style={{textAlign: "left", fontSize : "12px", paddingLeft: "5px"}}>Understand more about mental illnesses, such as symptoms, how it impacts a person, and treatment.</p>
+            <a href="https://www.mystudentplan.ca/bcit/en/mywellness/mh-problems" className="btn">Explore ></a>
+            </div>
+            </td>
+        </tr>
+    </tbody>
+</table>
+</div>
+<div id="c7" className={this.state.showclear5? 'card' : 'card blureff1'} onMouseEnter={this.hover5}>
+<table>
+    <tbody>
+        <tr>
+            <td>
+            <img id="sp7" src="/_uploads/images/care-providers-white.png"  style={{border: "none", width: "120px"}} />
+            <div id="w7">
+            <p style={{fontSize : "15px", textAlign: "left", color: "#7f8287",paddingLeft: "8px"}}><strong>   <br />
+            Care Providers & Therapies</strong>
+            </p>
+            </div>
+            <div >
+            <img id="click7" src="/_uploads/images/open_button.png"  onClick={this.blurit5} /></div>
+            <span > <img id="redx7" src="/_uploads/images/Close_Button.png" onClick={this.unblurit5} /></span>
+            <div id="ww7" style={{height: "100px"}}>
+            <p style={{textAlign: "left", paddingLeft: "5px"}}>Learn about the different types of mental health professionals and types of therapy.</p>
+            <a href="https://www.mystudentplan.ca/bcit/en/mywellness/providers-therapies" className="btn">Explore ></a>
+            </div>
+            </td>
+        </tr>
+    </tbody>
+</table>
+</div>
+
+
+
+</div>
+<div id="wraps">
+<div id="busytxt" className="BusyText"><strong>No matter how busy you may be,your mental health needs to be a priority.</strong></div>
+<div id="busytext2" className="ScienceProves">
+Mental health affects your performance, your relationships, every aspect of your life. Science proves if you ignore your mental health, even your brain anatomy can change. With mywellness, you can assess your mental health in 5-10 minutes and immediately access tools for stress reduction and for managing your symptoms. It&rsquo;s free and anonymous! </div>
+</div><br/>
+<input id="Button6" type="button" value="Take my Mental Health Assessment >" />
+<img id="todo"  src="/_uploads/images/mywellness_assessment.png?actions=r|346-164"  />
+
+</p>
+)
+
+
+}
+
+
+
+
+
+
+}
+
+
+
+ReactDOM.render(<C />, document.getElementById('wellness'));
+
+</script>
+<script >
+document.getElementsByTagName("header")[0].style.display="none";
+</script>
