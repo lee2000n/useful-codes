@@ -1,0 +1,215 @@
+<div id="app">&nbsp;</div>
+<script type="text/babel">
+class Modal extends React.Component {
+	static propTypes = {
+		isModalOpen: React.PropTypes.bool.isRequired,
+		closeModal: React.PropTypes.func.isRequired,
+		style: React.PropTypes.shape({
+			modal: React.PropTypes.object,
+			overlay: React.PropTypes.object
+		})
+	};
+
+	constructor(props) {
+		super(props);
+
+		this.outerStyle = {
+			position: "fixed",
+			top: 0,
+			left: 0,
+			width: "100%",
+			height: "100%",
+			overflow: "auto",
+			zIndex: 1
+		};
+
+		// default style
+		this.style = {
+			modal: {
+				position: "relative",
+				width: "100%",
+				padding: 2,
+				boxSizing: "border-box",
+				backgroundColor: "#fff",
+				margin: "40px auto",
+				borderRadius: 3,
+				zIndex: 2,
+				textAlign: "left",
+				boxShadow: "0 20px 30px rgba(0, 0, 0, 0.2)",
+				...this.props.style.modal
+			},
+			overlay: {
+				position: "fixed",
+				top: 0,
+				bottom: 0,
+				left: 0,
+				right: 0,
+				width: "100%",
+				height: "100%",
+				backgroundColor: "rgba(0,0,0,0.5)",
+				...this.props.style.overlay
+			}
+		};
+	}
+
+	// render modal
+	render() {
+		return (
+			<div
+				style={{
+					...this.outerStyle,
+					display: this.props.isModalOpen ? "block" : "none"
+				}}
+			>
+				<div style={this.style.overlay} onClick={this.props.closeModal} />
+				<div onClick={this.props.closeModal} />
+				<div style={this.style.modal}>{this.props.children}</div>
+			</div>
+		);
+	}
+}
+
+// overwrite style
+const modalStyle = {
+	overlay: {
+		backgroundColor: "rgba(0, 0, 0,0.5)"
+	}
+};
+
+const mainStyle = {
+	app: {
+		margin: "120px 0"
+	},
+	button: {
+		backgroundColor: "#408cec",
+		border: 0,
+		padding: "12px 20px",
+		color: "#fff",
+		margin: "0 auto",
+		width: 150,
+		display: "block",
+		borderRadius: 3
+	}
+};
+
+class App extends React.Component {
+	constructor(props) {
+		super(props);
+
+		// set initial state
+		this.state = {
+			isModalOpen: false,
+			isInnerModalOpen: false
+		};
+
+		// bind functions
+		this.closeModal = this.closeModal.bind(this);
+		this.openModal = this.openModal.bind(this);
+	}
+
+	// close modal (set isModalOpen, true)
+	closeModal() {
+		this.setState({
+			isModalOpen: false
+		});
+	}
+
+	// open modal (set isModalOpen, false)
+	openModal() {
+		this.setState({
+			isModalOpen: true
+		});
+	}
+
+	// render app
+	render() {
+		return (
+			<div style={mainStyle.app}>
+				<input type="button" style={mainStyle.button} onClick={this.openModal} value="Open modal" />
+					
+			
+
+				<Modal
+					isModalOpen={this.state.isModalOpen}
+					closeModal={this.closeModal}
+					style={modalStyle}
+				>
+					<div id="faq" style={{padding: "15px"}}>
+<p style={{textAlign: "center"}}><strong><span style={{fontSize: "16px"}}>mywellness<br />
+Frequently Asked Questions</span></strong></p>
+<br />
+<strong>1. What is mywellness?</strong><br />
+Mywellness is a
+central resource providing students access to mental health and wellness
+information and supports.&nbsp;The information and tools available through mywellness
+have been developed to assist students in increasing and/or sustaining optimal
+health, so they can maintain a productive and positive lifestyle while
+completing their studies.<br />
+<strong><br />
+<br />
+2. How does it help Mental Illness?</strong><br />
+Mywellness focuses on: Awareness (with on
+campus information events), Education (with online toolbox, assessment and
+Personalized Action Plan&rsquo;s), and Care (with online counselling and referrals to
+resources on-campus and in the community).
+<p id="spaces"><strong><span>Online Counselling
+Module:</span></strong>&nbsp; One of our biggest
+developments has been the online video counselling add-on. After supporting
+students through awareness and assessment, navigating them to the appropriate
+care that is right for them, is the next step. Students can assess mental
+health professionals through secure and confidential online video counselling,
+with the highest level of security and encryption available today. This option
+is affordable and extremely easy to use. Students will be matched with
+counsellors most suited to their needs. Their mental health assessment can
+seamlessly link to their counselling notes as well, to enhance the match and
+care. Our path leads students from awareness to care.</p>
+<strong><br />
+3. Can anyone see the results of my assessment?</strong><br />
+No. Not only is your mywellness
+account completely anonymous and confidential, but only you will have access to
+your assessment results (Personal Action Plan). It is up to you if you wish to
+share this information with anyone.<br />
+<br />
+<strong><br />
+4. How accurate is the assessment?</strong><br />
+Developed by
+leading Mental Health Professionals, the Assessment is based
+on the latest Diagnostics and Statistical Manual of Mental Disorders, 5th
+Edition and gold-standards of evidence-based practice in mental health. The
+Personalized Action Plan that comes with the Assessment is developed based on
+the Canadian Network for Mood and Anxiety Treatment (CANMAT) Guidelines. The
+Assessment systematically asks questions to determine an area of risk as well
+as the level of risk related to the responses provided by the user.&nbsp; The Assessment does not aim to diagnose and
+does not replace the diagnosis of a professional mental health care provider.<br />
+<br />
+<strong><br />
+5. Can I only take the assessment once?</strong><br />
+You can take the assessment as
+many times as you want. In fact, it is encouraged that you take the assessment
+multiple times a year to see your progress or any changes to your results.<br />
+<br />
+<strong><br />
+6. Who can I talk to about my assessment results?</strong><br />
+We recommend reaching out to a campus counselor or any of the community resources listed under Support
+Resources.</div>
+					<input type="button"
+						style={{
+							...mainStyle.button,
+							margin: 0,
+							width: "auto",
+							marginTop: 10
+						}}
+						onClick={this.closeModal}
+					value="Close"/>
+						
+				
+				</Modal>
+			</div>
+		);
+	}
+}
+
+ReactDOM.render(<App />, document.getElementById("app"));
+
+
+</script>
